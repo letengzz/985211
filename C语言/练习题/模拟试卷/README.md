@@ -354,7 +354,7 @@ printf("Id:%d\nName:%s\nScore:%4.1f\n",p->id,p->name,p->score);
 ##### 1.编写程序，使用循环结构语句打印输出如下图形。![](img.png)
 
 ```c
-                          		   ＊
+                          		     ＊
 　　					   ＊＊＊
 　					  ＊＊＊＊＊
 					 ＊＊＊＊＊＊＊
