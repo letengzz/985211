@@ -168,11 +168,11 @@
 
   ​		用C语言编写的程序可以从一种环境不加或稍加改动就能搬到另一种环境中运行。
 
-  4. ​	C语言由**强大的处理能力。**既可以用于系统软件的开发，也适合应用软件的开发。
+  4. ​	C语言由**强大的处理能力**。既可以用于系统软件的开发，也适合应用软件的开发。
 
-  5. ​	C语言是一种中级语言，**生成的目标代码质量高，运行效率高。**
+  5. ​	C语言是一种中级语言，**生成的目标代码质量高，运行效率高**。
 
-  ​		它既**具有高级语言的通用性及易写易读的特点，又具有汇编语言(低级语言)的"位处理"、"地址操作"等能力。**C语言允许直接访问物理地址，能进行位操作，能实现汇编语言的大部分功能，可以直接对硬件进行操作。
+  ​		它既**具有高级语言的通用性及易写易读的特点，又具有汇编语言(低级语言)的"位处理"、"地址操作"等能力**。C语言允许直接访问物理地址，能进行位操作，能实现汇编语言的大部分功能，可以直接对硬件进行操作。
 
   ### C语言运行过程
 
@@ -263,9 +263,7 @@
 
    ​	C语言已经预先规定了一批标识符，它们在程序中都代表着固定的含义，不能另作他用，这些标识符称为关键字
 
-   **C语言标识符 -->  [Here](#C语言关键字)**
-
-   ------
+   **C语言关键字 -->  [Here](#C语言关键字)**
 
 
 2. #### 预定义标识符
@@ -290,7 +288,6 @@
 
 - 需要用比较简单的方式替代某些值	
 
-  
 
 ​	整型常量和实型常量又称为**数值型数据**，它们有正值和负值的区分。
 
@@ -363,7 +360,7 @@ int a=1;int b=2,c=3;
 
 3. **十六进制表示**：以`0X`或`0x`开头的连续数字和字母序列，序列中只能有0-9、A-F和 a-f这些数字和字母,字母a、b、c、d、e、f分别对应数字10、11、12、13、14、15，大小写均可
 
-**注：**八进制和十六进制只能是整数
+**注**：八进制和十六进制只能是整数
 
 ```c
 #include <stdio.h>
@@ -411,93 +408,7 @@ printf("f=%d",f);
 unsigned int g = 12;
 printf("%d \n",g);
 ```
-
-**补充知识：**
-
-​			在`C99`标准中定义了这些数据类型，具体定义在：`/usr/include/stdint.h   ISO C99: 7.18 Integer types`
-
-```c
-#ifndef __int8_t_defined  
-# define __int8_t_defined  
-typedef signed char             int8_t;   
-typedef short int               int16_t;  
-typedef int                     int32_t;  
-# if __WORDSIZE == 64  
-typedef long int                int64_t;  
-# else  
-__extension__  
-typedef long long int           int64_t;  
-# endif  
-#endif  
-  
-  
-typedef unsigned char           uint8_t;  
-typedef unsigned short int      uint16_t;  
-#ifndef __uint32_t_defined  
-typedef unsigned int            uint32_t;  
-# define __uint32_t_defined  
-#endif  
-#if __WORDSIZE == 64  
-typedef unsigned long int       uint64_t;  
-#else  
-__extension__  
-typedef unsigned long long int  uint64_t;  
-#endif  
-```
-
-首先要添加`stdint.h`
-
-```c
-#include <stdint.h>
-```
-
-**有符号类型**
-
-- ​	int8
-
-意思是8位整数(`8bit integer`)，八位等于一个字节 一个字节等于 -128-127所以`int8` 不超过-128-127
-
-```
-int8_t a = 1;
-```
-
-- ​	int16
-
-意思是16位整数(`16bit integer`)，相当于short 占2个字节  -32768 ~ 32767
-
-```
-int16_t a = 1;
-```
-
-- ​	int32
-
-意思是32位整数(`32bit integer`), 相当于 int   占4个字节  -2147483648 ~ 2147483647
-
-`int32_`就是常见int
-
-```c
-int32_t a = 1;
-```
-
-- ​	int64
-
-意思是64位整数(`64bit interger`), 相当于 long long  占8个字节  -9223372036854775808 ~ 9223372036854775807
-
-```
-int64_t a = 1;
-```
-
-**无符号类型**
-
-uint8是无符号 就是 0-255，uint8_t 实际是一个 char
-
-```c
-uint8_t a = 1;
-```
-
-​	**占位符**：
-
-
+**int补充知识**： -->  [Here](#int补充知识)
 
 - #### 实型常量
 
@@ -512,6 +423,8 @@ uint8_t a = 1;
   ​		2.3*10<sup>5</sup>
 
 - #### 实型变量
+
+  <img src="img/实型变量.png" style="zoom:50%;"  >
 
 **单精度类型**
 
@@ -842,19 +755,100 @@ A 65 a97
     		uint32_t  %u
     		uint64_t  %llu
     		％d：整型
-    	％ld：长整型
-    	％o：八进制数形式整数
-    	％u：十进制数unsigned(无符号)型数据
-    	％x：十六进制数形式整数，或字符串的地址
-    	%i ：十进制，八进制，十六进制整数
-    	％c：一个字符
-    	％s：一个字符串
-    	％f：小数形式的实数，默认情况下保留小数点6位
-    	％e：指数形式的实数
-    	％g：根据大小自动选f格式或e格式，且去掉无意义的零
-    	————————————————
-    	版权声明：本文为CSDN博主「放码过来呀！！！」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-    	原文链接：https://blog.csdn.net/m0_46671092/article/details/107443821
+      	％ld：长整型
+      	％o：八进制数形式整数
+      	％u：十进制数unsigned(无符号)型数据
+      	％x：十六进制数形式整数，或字符串的地址
+      	%i ：十进制，八进制，十六进制整数
+      	％c：一个字符
+      	％s：一个字符串
+      	％f：小数形式的实数，默认情况下保留小数点6位
+      	％e：指数形式的实数
+      	％g：根据大小自动选f格式或e格式，且去掉无意义的零
+      	————————————————
+      	版权声明：本文为CSDN博主「放码过来呀！！！」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+      	原文链接：https://blog.csdn.net/m0_46671092/article/details/107443821
   
   - ### 运算符的优先级和结合性
+  - ### int补充知识
 
+​			在`C99`标准中定义了这些数据类型，具体定义在：`/usr/include/stdint.h   ISO C99: 7.18 Integer types`
+
+```c
+#ifndef __int8_t_defined  
+# define __int8_t_defined  
+typedef signed char             int8_t;   
+typedef short int               int16_t;  
+typedef int                     int32_t;  
+# if __WORDSIZE == 64  
+typedef long int                int64_t;  
+# else  
+__extension__  
+typedef long long int           int64_t;  
+# endif  
+#endif  
+  
+  
+typedef unsigned char           uint8_t;  
+typedef unsigned short int      uint16_t;  
+#ifndef __uint32_t_defined  
+typedef unsigned int            uint32_t;  
+# define __uint32_t_defined  
+#endif  
+#if __WORDSIZE == 64  
+typedef unsigned long int       uint64_t;  
+#else  
+__extension__  
+typedef unsigned long long int  uint64_t;  
+#endif  
+```
+
+首先要添加`stdint.h`
+
+```c
+#include <stdint.h>
+```
+
+**有符号类型**
+
+- ​	int8_t
+
+意思是8位整数(`8bit integer`)，八位等于一个字节 一个字节等于 -128-127所以`int8` 不超过-128-127
+
+```
+int8_t a = 1;
+```
+
+- ​	int16_t
+
+意思是16位整数(`16bit integer`)，相当于short 占2个字节  -32768 ~ 32767
+
+```
+int16_t a = 1;
+```
+
+- ​	int32_t
+
+意思是32位整数(`32bit integer`), 相当于 int   占4个字节  -2147483648 ~ 2147483647
+
+`int32_`就是常见int
+
+```c
+int32_t a = 1;
+```
+
+- ​	int64_t
+
+意思是64位整数(`64bit interger`), 相当于 long long  占8个字节  -9223372036854775808 ~ 9223372036854775807
+
+```
+int64_t a = 1;
+```
+
+**无符号类型**
+
+uint8是无符号 就是 0-255，uint8_t 实际是一个 char
+
+```c
+uint8_t a = 1;
+```
