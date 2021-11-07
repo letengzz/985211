@@ -431,7 +431,32 @@
 
 
 
+![image-20211106091145009](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091145009.png)
 
+![image-20211106091308192](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091308192.png)
+
+
+
+sizeof（*books）/sizeof（char）？
+
+![image-20211106091707510](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091707510.png)
+
+数组名从来都不是指针,之所以数组名可以像指针那样用，是因为数组名会被自动转换为指针。
+
+这个是值传给指针
+
+.但是要让*book[i]成立将%s改为%c即可.此时输出该字符串的第一个字符
+
+%s本身就是从指针位置输出字符，直到'\0'，所以传的就是指针
+![image-20211107100648648](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107100648648.png)
+
+![image-20211107101238863](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101238863.png)
+
+![image-20211107101258478](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101258478.png)
+
+![image-20211107101419223](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101419223.png)
+
+![image-20211107101446296](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101446296.png)
 
 
 
