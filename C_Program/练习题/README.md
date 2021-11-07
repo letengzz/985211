@@ -458,6 +458,16 @@ sizeof（*books）/sizeof（char）？
 
 ![image-20211107101446296](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101446296.png)
 
+![image-20211107144555436](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144555436.png)
+
+![image-20211107144828880](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144828880.png)
+
+![image-20211107145246409](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145246409.png)
+
+![image-20211107145354122](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145354122.png)
+
+![image-20211107145811125](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145811125.png)
+
 
 
 
