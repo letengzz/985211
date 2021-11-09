@@ -191,6 +191,10 @@
 
 <img src = "img/计算机内存.png" style="zoom:67%;" >
 
+**注意**：
+
+1. 栈：**先进后出**原则。
+
   # C语言构成和格式
 
 **基本结构**：
@@ -216,7 +220,7 @@ void main(){
 **说明**：
 
 1. `#include`语句不是必须的 但是 如果由该语句 就必须将它放到程序的**开始处**，行尾不可以加";"。
-2. 一个`#include`命令只能包含一个头文件，多个头文件需要多个#include命令。
+2. 一个`#include`命令只能包含一个头文件，多个头文件需要多个`#include`命令。
 3. 使用尖括号`< >`和双引号`" "`的区别在于头文件的搜索路径不同：
    - 使用尖括号`< >`，编译器会到系统路径下查找头文件；
    - 使用双引号`" "`，编译器首先在当前目录下查找头文件，如果没有找到，再到系统路径下查找。
@@ -229,7 +233,7 @@ void main(){
 
 **注意**：
 
-1. 预处理指令是以#号开头的代码行，#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符，整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。
+1. 预处理指令是以`#`号开头的代码行，#号必须是该行除了任何空白字符外的第一个字符。`#`后是指令关键字，在关键字和`#`号之间允许存在任意个数的空白字符，整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。
 2. 预处理功能是C语言特有的功能，它是在对源程序正式编译前由**预处理程序**完成的，用**预处理命令**来调用这些功能。
 3. 宏定义可以带有参数，宏调用时是以实参代换形参，而不是“值传送”。
 4. 为了避免宏代换时发生错误，宏定义中的字符串应加括号，字符串中出现的形式参数两边也应加括号。
@@ -241,7 +245,7 @@ void main(){
 
 1) Windows 平台下的暂停函数的原型是`void Sleep(DWORD dwMilliseconds)`.参数的单位是“毫秒”，位于`<windows.h>`头文件。
 2) Linux 平台下暂停函数的原型是`unsigned int sleep (unsigned int seconds)`,参数的单位是“秒”，位于`<unistd.h>`头文件。
-3) #if. #elif、 #endif 就是**预处理命令**，它们都是在编译之前由**预处理程序**来执行的。
+3) `#if`、`#elif`、`#endif` 就是**预处理命令**，它们都是在编译之前由**预处理程序**来执行的。
 
 ```c
 #include <stdio.h>
@@ -388,7 +392,7 @@ int max(int a,int b)
 
 - 定义变量要初始化。定义变量时编译器并不一定清空了这块内存，它的值可能是无效数据，运行程序，会异常退出。
 
-- 变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz (驼峰法，小驼峰)[大驼峰 XxxYyyZzz]
+- 变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：`xxxYyyZzz` (驼峰法，小驼峰)[大驼峰 `XxxYyyZzz`]
 
   ```c
   int tankShotGame  = 1;
@@ -503,11 +507,11 @@ void main() {
 
 **区别**：  
 
-1. const定义的常数带类型，define不带类型。
+1. `const`定义的常数带类型，`define`不带类型。
 
-2. const是在编译、运行的时候起作用，而define是在编译的预处理阶段起作用。
+2. `const`是在编译、运行的时候起作用，而`define`是在编译的预处理阶段起作用。
 
-3. define只是简单的替换，没有类型检查。简单的字符串替换会导致边界效应。
+3. `define`只是简单的替换，没有类型检查。简单的字符串替换会导致边界效应。
 
    ```c
    #include <stdio.h>
@@ -523,9 +527,9 @@ void main() {
    }
    ```
 
-4. const常量可以进行调试的，define是不能进行调试的，主要是预编译阶段就已经替换掉了，调试的时候就没它了。
+4. `const`常量可以进行调试的，`define`是不能进行调试的，主要是预编译阶段就已经替换掉了，调试的时候就没它了。
    
-5. const不能重定义，不可以定义两个一样的，而define通过undef取消某个符号的定义再重新定义。
+5. `const`不能重定义，不可以定义两个一样的，而`define`通过`undef`取消某个符号的定义再重新定义。
    
      ```c
      #include <stdio.h>
@@ -541,7 +545,7 @@ void main() {
      }
      ```
      
-6. define可以配合#ifdef、#ifndef、_#endif来使用，可以让代码更加灵活，比如我们可以通过#define 来启动或者关闭调试信息。
+6. `define`可以配合`#ifdef`、`#ifndef`、`_#endif`来使用，可以让代码更加灵活，比如我们可以通过`#define`来启动或者关闭调试信息。
    
     ```c
     #include <stdio.h>
@@ -628,7 +632,7 @@ void main() {
 
 4. 函数内部声明/定义的局部变量，作用域仅限于**函数内部**。
 
-5. 在一个代码块，比如for/if中的**局部变量**，那么这个变量的作用域就在该代码块中。
+5. 在一个代码块，比如`for/if`中的**局部变量**，那么这个变量的作用域就在该代码块中。
 
    ```c
    #include <stdio.h>
@@ -715,11 +719,11 @@ void main(){
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
-​	**写二进制数据**：以0b开头为2进制，`0b11101101`
+​	**写二进制数据**：以`0b`开头为2进制，`0b11101101`
 
-​	**八进制数据**：以0开头为8进制，`045`，`021`
+​	**八进制数据**：以`0`开头为8进制，`045`，`021`
 
-​	**十六进制数据**以0x开头为16进制，`0x21458adf`
+​	**十六进制数据**以`0x`开头为16进制，`0x21458adf`
 
 ​	**进制**： --> [Here](#进制)
 
@@ -787,17 +791,15 @@ char name[20] = "你好";
 char name[] = "你好";
 ```
 
-![image-20211106093814067](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106093814067.png)
-
 **输出形式**：
 
-1. 可以直接跟字符串
+1. 可以直接跟字符串：
 
    ```c
    printf("%s\n", "abcd\0");
    ```
 
-2. 可以直接跟字符串的首地址
+2. 可以直接跟字符串的首地址：
 
    ```c
    printf("%s\n",字符串的首地址);
@@ -870,13 +872,13 @@ void main() {
 
   <img src="img/类型转换/数据类型自动转换表.png" style="zoom:67%;"   >
 
-​	 比如 int 型数据和 long 型数据进行相加或相减运算时，系统会先将 int 型数据转换成 long 型，然后再进行运算。这样的话运算结果的精度就不会降低。long 是“大水桶”，int 是“小水桶”。int 能存放的，long 肯定能存放；而 long 能存放的，int 不一定能存放。
+​	 比如 `int` 型数据和 `long` 型数据进行相加或相减运算时，系统会先将 `int` 型数据转换成 `long` 型，然后再进行运算。这样的话运算结果的精度就不会降低。`long` 是“大水桶”，`int` 是“小水桶”。`int` 能存放的，`long` 肯定能存放；而 `long` 能存放的，`int` 不一定能存放。
 
   - 所有的浮点运算都是以**双精度**进行的。
 
-​     在运算时，程序中所有的 float 型数据全部都会先转换成 double 型。即使只有一个 float 型数据，也会先转换成 double 型，然后再进行运算。因为 CPU 在运算的时候有“字节对齐”的要求，这样运算的速度是最快的。
+​     在运算时，程序中所有的 `float` 型数据全部都会先转换成 `double` 型。即使只有一个 `float` 型数据，也会先转换成 `double` 型，然后再进行运算。因为 CPU 在运算的时候有“字节对齐”的要求，这样运算的速度是最快的。
 
-  - char 型和 short 型数据参与运算时，必须先转换成 int 型。涉及 CPU 的运行原理。
+  - `char` 型和 `short` 型数据参与运算时，必须先转换成 `int` 型。涉及 CPU 的运行原理。
 
   - 有符号整型和无符号整型混合运算时，有符号型要转换成无符号型，运算的结果是无符号的。
 
@@ -925,8 +927,8 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 **说明**：
 
-1. sprintf是一个系统函数，可以将结果存放到字符串中。
-2. 格式化的结果，会存放到str中。
+1. `sprintf`是一个系统函数，可以将结果存放到字符串中。
+2. 格式化的结果，会存放到`str`中。
 
 - 字符串类型转成基本数据类型
 
@@ -958,7 +960,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 **注意**：
 
-1. 在将char数组类型转成基本数据类型时，要确保能够转成有效的数据，比如把"`123`"转成一个整数，不能把"`hello`"转成整数。
+1. 在将`char`数组类型转成基本数据类型时，要确保能够转成有效的数据，比如把"`123`"转成一个整数，不能把"`hello`"转成整数。
 2. 如果格式不正确，会默认转成`0`或者`0.0`。
 
 ## 构造数据类型
@@ -994,7 +996,7 @@ int main(){
 
 **注意**：
 
-1. C语言中，枚举类型是被当作int或者unsigned int类型来处理的，枚举类型必须连续是可以实现有条件的遍历。
+1. C语言中，枚举类型是被当作`int`或者`unsigned int`类型来处理的，枚举类型必须连续是可以实现有条件的遍历。
 
    ```c
    enum DAY{
@@ -1074,19 +1076,135 @@ int main(){
 
 - **数组** --> [Here](#数组)
 
-### 结构体未完成
+### 结构体￥
+
+![image-20211108155429256](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108155429256.png)
+
+![image-20211108155619785](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108155619785.png)
+
+![image-20211108155646479](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108155646479.png)
+
+![image-20211108160954514](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108160954514.png)
+
+![image-20211108160843860](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108160843860.png)
+
+![image-20211108160900969](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108160900969.png)
+
+![image-20211108161019218](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108161019218.png)
+
+![image-20211108161220153](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108161220153.png)
+
+![image-20211108161344806](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108161344806.png)
+
+![image-20211108162019561](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162019561.png)
+
+![image-20211108162348456](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162348456.png)
+
+![image-20211108162402915](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162402915.png)
+
+![image-20211108162455929](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162455929.png)
+
+![image-20211108162526666](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162526666.png)
+
+![image-20211108162706828](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162706828.png)
+
+![image-20211108163936960](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108163936960.png)
+
+![image-20211108162740348](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162740348.png)
+
+![image-20211108162835874](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108162835874.png)
 
 
 
-### 共用体未完成
+![image-20211108163840737](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108163840737.png)
+
+![image-20211108164006273](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164006273.png)
+
+![image-20211108164057540](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164057540.png)
+
+![image-20211108164130886](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164130886.png)可以叫匿名结构体
+
+![image-20211108164212716](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164212716.png)
+
+![image-20211108164336051](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164336051.png)
+
+![image-20211108164342106](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164342106.png)
+
+![image-20211108164451372](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164451372.png)
+
+![image-20211108164512280](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164512280.png)
+
+![image-20211108164656412](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164656412.png)
+
+![image-20211108164728543](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164728543.png)
+
+![image-20211108164824264](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164824264.png)
+
+不可以![image-20211108164931607](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108164931607.png)
+
+![image-20211108165030021](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108165030021.png)
+
+![image-20211108171303342](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108171303342.png)
+
+### 共用体￥
+
+![image-20211108173750823](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173750823.png)
+
+![image-20211108174021148](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174021148.png)
+
+![image-20211108174154894](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174154894.png)
+
+![image-20211108174345223](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174345223.png)
+
+匿名共用体![image-20211108174458066](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174458066.png)
+
+![image-20211108174617178](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174617178.png)
+
+![image-20211108174636769](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174636769.png)
+
+![image-20211108174939939](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108174939939.png)
+
+![image-20211108175020307](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108175020307.png)
+
+![image-20211108175056967](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108175056967.png)
+
+![image-20211108183230529](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183230529.png)![image-20211108183235802](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183235802.png)
+
+是字符'9'
+
+![image-20211108183410987](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183410987.png)
+
+![image-20211108183806623](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183806623.png)
 
 
 
-## 指针类型未完成
+![image-20211108183900655](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183900655.png)
+
+![image-20211108183951156](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183951156.png)
+
+![image-20211109002229027](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002229027.png)
+
+![image-20211109002442993](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002442993.png)
+
+![image-20211109002633203](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002633203.png)
+
+![image-20211109002817045](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002817045.png)
+
+![image-20211109002852204](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002852204.png)
+
+![image-20211109002925044](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002925044.png)
+
+![image-20211109002949905](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002949905.png)
+
+
+
+
+
+## 指针类型￥
 
 ​	指针表示一个**地址**(存放的是地址)。
 
-### 基本数据类型
+### 基本数据类型￥
 
 - 基本类型，都有对应的指针类型，形式为 `数据类型 *`
 
@@ -1117,9 +1235,9 @@ int main(){
     printf("ptr的存放数据%d",*ptr);
     ```
 
-  ### 	数组
+  ### 	数组￥
 
-![image-20211106082115247](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082115247.png)
+![image-20211106082115247](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082115247.png
 
 指针是C语言的精华，也是C语言的难点。
 指针，也就是内存的地址:所谓指针变量，也就是保存了内存地址的变量。关于
@@ -1130,9 +1248,9 @@ int main(){
 获取指针类型所指向的值，使用: *,比如: var ptr *int, 使用*ptr获取ptr指向的
 值
 
-![image-20211106082406042](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082406042.png)
+![image-20211106082406042](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082406042.png
 
-![image-20211106082544692](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082544692.png)
+![image-20211106082544692](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082544692.png
 
 指针是一个变量，其值为另一个变量的地址(前示意图已经说明)，即，内存位置的
 直接地址。就像其他变量或常量- -样，在使用指针存储其他变量地址之前，对其进
@@ -1142,44 +1260,44 @@ double *dp; /* -个double型的指针*/
 float *fp; /* 一个浮点型的指针*/
 char *ch; /* 一个字符型的指针*/
 
-![image-20211106083448500]![image-20211106083532589](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083532589.png)
+![image-20211106083448500]![image-20211106083532589](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083532589.png
 
-![image-20211106083510289](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083510289.png)
+![image-20211106083510289](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083510289.png
 
-![image-20211106083624032](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083624032.png)
+![image-20211106083624032](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083624032.png
 
-![image-20211106083710525](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083710525.png)
+![image-20211106083710525](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083710525.png
 
-![image-20211106084045318](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084045318.png)
+![image-20211106084045318](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084045318.png
 
-![image-20211106084109371](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084109371.png)
+![image-20211106084109371](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084109371.png
 
-![image-20211106084128654](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084128654.png)
+![image-20211106084128654](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084128654.png
 
-![image-20211106084321719](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084321719.png)
+![image-20211106084321719](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084321719.png
 
-![image-20211106084501857](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084501857.png)
+![image-20211106084501857](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084501857.png
 
-![image-20211106084805615](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084805615.png)
+![image-20211106084805615](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084805615.png
 
-![image-20211106084956392](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084956392.png)
+![image-20211106084956392](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084956392.png
 
-![image-20211106085117159](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085117159.png)
+![image-20211106085117159](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085117159.png
 
 
 
-![image-20211106085319191](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085319191.png)
+![image-20211106085319191](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085319191.png
 
-![image-20211106085347567](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085347567.png)
+![image-20211106085347567](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085347567.png
 
 指针可以用关系运算符进行比较，如==、<<=和>>=。如果p1和p2指向两个变量，
 比如同一个数组中的不同元素，则可对p1和p2进行大小比较,看下面代码，说明输
 
-![image-20211106085604464](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085604464.png)
+![image-20211106085604464](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085604464.png
 
-![image-20211106085924158](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085924158.png)
+![image-20211106085924158](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085924158.png
 
-![image-20211106090020662](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090020662.png)
+![image-20211106090020662](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090020662.png
 
 基本介绍
 要让数组的元素指向int或其他数据类型的指针。可以使用指针数组。
@@ -1189,27 +1307,27 @@ char *ch; /* 一个字符型的指针*/
 1) ptr 声明为一个指针数组
 2)由3个整数指针组成。因此，ptr 中的每个元素，都是一个指向int 值的指针。
 
-![image-20211106090108958](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090108958.png)
+![image-20211106090108958](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090108958.png
 
-![image-20211106090202906](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090202906.png)
+![image-20211106090202906](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090202906.png
 
-![image-20211106090355040](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090355040.png)
+![image-20211106090355040](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090355040.png
 
-![image-20211106090420483](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090420483.png)
+![image-20211106090420483](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090420483.png
 
-![image-20211106090602459](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090602459.png)
+![image-20211106090602459](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090602459.png
 
-![image-20211106090623130](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090623130.png)
+![image-20211106090623130](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090623130.png
 
-![image-20211106090825876](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090825876.png)
+![image-20211106090825876](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090825876.png
 
 ![image-20211106091021200](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-2021110609102120
 
-![image-20211106091103767](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091103767.png)
+![image-20211106091103767](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091103767.png
 
-![image-20211106091145009](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091145009.png)
+![image-20211106091145009](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091145009.png
 
-![image-20211106091308192](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091308192.png)
+![image-20211106091308192](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091308192.png
 
 指针数组应用实例
 请编写程序，定义一个指向字符的指针数组来存储字符串列表(四大名著书名)，并
@@ -1221,7 +1339,7 @@ char *ch; /* 一个字符型的指针*/
 
 sizeof（*books）/sizeof（char）？
 
-![image-20211106091707510](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091707510.png)
+![image-20211106091707510](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091707510.png
 
 数组名从来都不是指针,之所以数组名可以像指针那样用，是因为数组名会被自动转换为指针。
 
@@ -1232,7 +1350,7 @@ sizeof（*books）/sizeof（char）？
 对字符指针变量初始化，实际上是把字符串第1个元素的地址（即存放字符串的字符数组的首元素地址）赋给字符指针变量。
 
 %s本身就是从指针位置输出字符，直到'\0'，所以传的就是指针
-![image-20211106094156491](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094156491.png)
+![image-20211106094156491](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094156491.png
 
 定义并且初始化字符指针变量的形式:
 p保存着字符串"abcd"的首地址,等于其中字符'a’的首地址
@@ -1243,39 +1361,25 @@ d)不能通过字符指针变量修改字符串中每个字符的值
 如若放在一个指针中, 会被放在一个常量区, 只可以看不可以修改
 如果是一个指针字符串，只能看不能修改
 
-![image-20211106094237678](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094237678.png)
+![image-20211106094237678](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094237678.png
 
-![image-20211106094257717](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094257717.png)
+![image-20211106094257717](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094257717.png
 
 https://blog.csdn.net/qq_45905355/article/details/106113980
 
 字符串%s的特性，后面直接跟地址即可输出值
 
+  ### 	多级指针￥
 
-
-  ### 	结构体
-
-
-
-  ### 	共同体
-
-
-
-  ### 	二级指针
-
-
-
-  ### 	多级指针
-
-![image-20211106094818490](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094818490.png)
+![image-20211106094818490](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094818490.png
 
 指向指针的指针是一-种多级间接寻址的形式，或者说是一个指针链。通常，一个指
 针包含一个变量的地址。当我们定义一个指向指针的指针时，第一个指针包含了第
 二个指针的地址，第二个指针指向包含实际值的位置(如下图)
 
-![image-20211106094924561](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094924561.png)
+![image-20211106094924561](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094924561.png
 
-![image-20211106095004046](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095004046.png)
+![image-20211106095004046](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095004046.png
 
 多重指针(二级)快速入门案例
 1)一个指向指针的指针变量必须如下声明，
@@ -1289,57 +1393,57 @@ Q2)|
 运算符,比如**ptr
 ↓3)案例演示+内存布局图
 
-![image-20211106095428205](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095428205.png)
+![image-20211106095428205](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095428205.png
 
-![image-20211106095441578](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095441578.png)
+![image-20211106095441578](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095441578.png
 
-![image-20211106095515635](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095515635.png)
+![image-20211106095515635](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095515635.png
 
-![image-20211106095526971](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095526971.png)
+![image-20211106095526971](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095526971.png
 
-![image-20211106095701286](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095701286.png)
+![image-20211106095701286](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095701286.png
 
 三级指针
 
-![image-20211106095945778](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095945778.png)
+![image-20211106095945778](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095945778.png
 
 
 
-![image-20211106100037500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100037500.png)
+![image-20211106100037500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100037500.png
 
 当函数的形参类型是指针类型时，是使用该函数时，需要传递指针，或者地址，或
 
-![image-20211106100322523](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100322523.png)
+![image-20211106100322523](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100322523.png
 
-![image-20211106100604699](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100604699.png)
+![image-20211106100604699](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100604699.png
 
-![image-20211106100610890](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100610890.png)
+![image-20211106100610890](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100610890.png
 
-![image-20211106100655797](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100655797.png)
+![image-20211106100655797](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100655797.png
 
-![image-20211106100712936](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100712936.png)
+![image-20211106100712936](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100712936.png
 
 因为函数放在了主函数的下面所以要声明函数
 
-![image-20211106101209443](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101209443.png)
+![image-20211106101209443](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101209443.png
 
-![image-20211106101441612](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101441612.png)
+![image-20211106101441612](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101441612.png
 
-![image-20211106101813801](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101813801.png)
+![image-20211106101813801](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101813801.png
 
-![image-20211106101841170](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101841170.png)
+![image-20211106101841170](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101841170.png
 
-![image-20211106102142672](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102142672.png)
+![image-20211106102142672](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102142672.png
 
-![image-20211106102157423](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102157423.png)
+![image-20211106102157423](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102157423.png
 
-![image-20211106102340091](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102340091.png)
+![image-20211106102340091](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102340091.png
 
-![image-20211106102554210](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102554210.png)
+![image-20211106102554210](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102554210.png
 
-![image-20211106102822050](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102822050.png)
+![image-20211106102822050](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102822050.png
 
-![image-20211106102915088](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102915088.png)
+![image-20211106102915088](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102915088.png
 
 用指针作为函数返回值时需要注意，函数运行
 结束后会销毁在它内部定义的所有局部数据，
@@ -1353,23 +1457,23 @@ C语言不支持在调用函数时返回局部变量的地
 址，如果确实有这样的需求，需要定义局部变
 量为static变量[案例演示]
 
-![image-20211106103116752](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103116752.png)
+![image-20211106103116752](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103116752.png
 
-![image-20211106103158720](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103158720.png)
+![image-20211106103158720](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103158720.png
 
-![image-20211106103345535](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103345535.png)
+![image-20211106103345535](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103345535.png
 
-![image-20211106103434532](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103434532.png)
+![image-20211106103434532](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103434532.png
 
-![image-20211106103519516](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103519516.png)
+![image-20211106103519516](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103519516.png
 
-![image-20211106103533519](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103533519.png)
+![image-20211106103533519](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103533519.png
 
-![image-20211106103826403](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103826403.png)
+![image-20211106103826403](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103826403.png
 
-![image-20211106103946953](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103946953.png)
+![image-20211106103946953](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103946953.png
 
-![image-20211106104149990](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104149990.png)
+![image-20211106104149990](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104149990.png
 
 一个函数总是占用一段连续的内存区域，函数名在表达式中有时也会被转换为该
 函1数所在内存区域的首地址，这和数组名非常类似。
@@ -1377,7 +1481,7 @@ C语言不支持在调用函数时返回局部变量的地
 所在的内存区域，然后通过指针变量就可以找到并调用该函数。这种指针就是
 函数指针。
 
-![image-20211106104431189](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104431189.png)
+![image-20211106104431189](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104431189.png
 
 returnType为函数返回值类型
 pointerName为指针名称
@@ -1388,27 +1492,27 @@ param list为函数参数列表
 *pointerName(param list);就成了函数原型，它表明函数的返回值类型为
 returnType 
 
-![image-20211106104551291](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104551291.png)
+![image-20211106104551291](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104551291.png
 
-![image-20211106160748797](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106160748797.png)
+![image-20211106160748797](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106160748797.png
 
-![image-20211106163336204](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163336204.png)
+![image-20211106163336204](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163336204.png
 
 简单理解
 
-![image-20211106163513902](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163513902.png)
+![image-20211106163513902](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163513902.png
 
-![image-20211106163623239](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163623239.png)
+![image-20211106163623239](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163623239.png
 
-![image-20211106163910841](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163910841.png)
+![image-20211106163910841](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163910841.png
 
-![image-20211106164022869](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164022869.png)
+![image-20211106164022869](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164022869.png
 
-![image-20211106164053346](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164053346.png)
+![image-20211106164053346](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164053346.png
 
 
 
-![image-20211106164118936](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164118936.png)
+![image-20211106164118936](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164118936.png
 
 函数指针变量可以作为某个函数的
 参数来使用的，回调函数就是一个
@@ -1416,9 +1520,9 @@ returnType
 简单的讲:回调函数是由别人的函
 数执行时调用你传入的函数
 
-![image-20211106164717778](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164717778.png)
+![image-20211106164717778](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164717778.png
 
-![image-20211106165043018](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165043018.png)
+![image-20211106165043018](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165043018.png
 
 指针变量存放的是地址，从这个角度看指针的本质就是地址。
 变量声明的时候，如果没有确切的地址赋值，为指针变量赋-一个NULL 值是好的
@@ -1426,7 +1530,7 @@ returnType
 赋为NULL值的指针被称为空指针，NULL指针是一个定义在标准库<stdio.h>中 的
 值为零的常量#define NULL 0 [案例]
 
-![image-20211106165249198](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165249198.png)
+![image-20211106165249198](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165249198.png
 
 
 
@@ -1436,7 +1540,7 @@ returnType
 
 ## 值传递
 
-​	**默认传递值的类型**：基本数据类型(整型数据、实数类型、字符类型)，结构体，共用体。
+​	**默认传递值的类型**：**基本数据类型(整型数据、实数类型、字符类型)，结构体，共用体**。
 
 ​	**值传递**：将变量指向的存储内容，在传递/赋值时，拷贝一份给接受变量。
 
@@ -1444,7 +1548,7 @@ returnType
 
 ## 地址传递
 
-​	**默认传递地址的类型**：指针、数组。
+​	**默认传递地址的类型**：**指针、数组**。
 
 ​	**地址传递** 也叫 **指针传递**：如果指针，就将指针变量存储的地址，传递给接收变量，如果是**数组，就将数组的首地址传递给接收变量**。
 
@@ -1864,272 +1968,6 @@ returnType
 
 4. 不建议经常使用。
 
-# 进制
-
-**采用不同的进制的原因**是不同的领域用到的技术形式不相同　
-
-- 在计算机底层都以**二进制**形式存在。
-
-## 进位计数制
-
-​	**按照进位的方法进行计数，称为进位计数制。**
-
-​	**常见的进位计数制**：二进制、八进制、十进制、十二进制、十六进制等等。
-
-  **R进制数的特点：**
-
-- 具有R个不同的数符。0，1，2．．．，R－１
-
-- 逢R进一。
-
-  进位计数制的一般表达式(按权展开式)：
-
-  R进制的表示方法，任一R进制数S可表示为
-
-  > S=a<sub>n-1</sub> a<sub>n-2</sub> ... a<sub>1</sub> a<sub>0</sub> . a<sub>-1</sub>...+a<sub>-m</sub>           位置表示法
-  >
-  >   =a<sub>n-1</sub>R<sup>n-1</sup> + ... + a<sub>1</sub>R<sup>1</sup> + a<sub>0</sub>R<sup>0</sup> + a<sub>-1</sub>R<sup>-1</sup> ... +a<sub>-m</sub>R<sup>-m</sup> (按权展开式)
-  >
-  > 其中:a<sub>i</sub> : R 进制中的数字符号
-  >
-  > ​		 R：基数
-  >
-  > ​         R<sup>i</sup> : 位权，简称权
-
-##  十进制N<sub>D</sub>
-
-**特点：**
-
-1. 有十个数码：0~9
-
-2. 逢十进一
-
-加权展开式以10为基数，各位系数为0~9
-
-> ​	N<sub>D</sub> = d<sub>n-1</sub> * 10<sup>n-1</sup> + d<sub>n-2</sub> * 10<sup>n-2</sup>+...+d<sub>0</sub> * 10<sup>0</sup>+d<sub>-1</sub> * 10<sup>-1</sup>+...
-
-​	例:(1234.5)<sub>10</sub> = 1 * 10<sup>3</sup> + 2 * 10<sup>2</sup> +3 * 10<sup>1</sup> +  4 * 10<sup>0</sup> +5 * 10<sup>-1</sup> 
-
-## 	二进制N<sub>B</sub>
-
-**特点**：
-
-1. 有两个数码：0、1
-
-2. 逢二进一
-
-加权展开式以2为基数，各位系数为0、1
-
-> N<sub>B</sub> = b<sub>n-1</sub> * 2<sup>n-1</sup> + b<sub>n-2</sub> * 2<sup>n-2</sup>+...+b<sub>0</sub> * 2<sup>0</sup>+b<sub>-1</sub> * 2<sup>-1</sup>+...
-
-例: `1101.101B` = 1 * 2<sup>3</sup> + 1 * 2<sup>2</sup> +0 * 2<sup>1</sup> +  1 * 2<sup>0</sup> +1 * 2<sup>-1</sup> +0 * 10<sup>-2</sup> +1 * 2<sup>-3</sup> 
-
-**注意:**不够八位最好前面加上0 凑成八位
-
-## 八进制N<sub>O/Q</sub>
-
-**特点：**
-
-1. 有八个数码：0~7
-
-2. 逢八进一
-
-加权展开式以8为基数，各位系数为0、1
-
-> N<sub>O</sub> = b<sub>n-1</sub> * 8<sup>n-1</sup> + b<sub>n-2</sub> * 8<sup>n-2</sup>+...+b<sub>0</sub> * 8<sup>0</sup>+b<sub>-1</sub> * 8<sup>-1</sup>+...
-
-例: `7451` =  7 * 8<sup>3</sup> + 4 * 8<sup>2</sup> +5 * 8<sup>1</sup> +  1 * 8<sup>0</sup> 
-
-## 十六进制N<sub>H</sub>
-
-​	因为二进制太长 所以采用十六进制 
-
-​	一位十六进制可以表示四位二进制
-
-**特点：**
-
-1. 有十六个数码：0~9、A~F
-
-2. 逢十六进一
-
-加权展开式以16为基数，各位系数为0~9，A~F
-
-> N<sub>H</sub> = h<sub>n-1</sub> * 16<sup>n-1</sup> + h<sub>n-2</sub> * 16<sup>n-2</sup>+...+h<sub>0</sub> * 16<sup>0</sup>+h<sub>-1</sub> * 16<sup>-1</sup>+...
-
-例:`DFC.8H` = 13 * 16<sup>2</sup> +15 * 16<sup>1</sup> +  12 * 16<sup>0</sup> +8 * 16<sup>-1</sup> 
-
-**注意**
-
-不同进位制数以后缀区别,十进制数可不 带后缀。或加括弧，再在括弧之后注明。
-
-- `101`、`101D`、`101B`、`101H`、`101H`
-- (20)<sub>10</sub>、(1101)<sub>2</sub>、(345)<sub>16</sub>
-
-
-## 不同进制计数制的转换
-
-### 			二进制、十六进制转换成十进制
-
-**方法：**
-
-​			先将二、十六进制数按权展开，然后按照十进制运算法则求和
-
-**举例：** 
-
-​			`1011.1010B`=1 * 2<sup>3</sup>+1 * 2<sup>1</sup>+1 * 2<sup>0</sup>+1 * 2<sup>-1</sup>+1*2<sup>-3</sup>
-
-​								   =(11.625)<sub>10</sub>
-
-​			`DFC.8H`=13 * 16<sup>2</sup> + 15 * 16<sup>1</sup> + 12 * 16<sup>0</sup> + 8 * 16<sup>-1</sup> 
-
-​						  =(3580.5)<sub>10</sub>
-
-### 			十进制转换成二进制、十六进制
-
-**方法：**
-
-​	**整数部分,除基取余**
-
-​		不断**除以**所要转换的进制基数，直至**商为0**。每除一次取一个余数，从低位排向高位。
-
-​	**小数部分,乘基取整**
-​		用转换进制的基数乘以小数部分，直至小数为0或达到转换精度要求的位数。每**乘一次取一次整数**，从最高位排到最低位。
-
-**举例：**
-
-​	**二进制最好前面加上0 凑成八位**
-
-​	39转换成二进制数        
-​	(39)<sub>10</sub>=`00100111B`
-
-​	208转换成十六进制数   
-​	`208D` = `D0H`
-
-​	`0.625D`转换成十六进制数
-​	0.625 × 16 = 10.0	 `0.625D` = `0.AH`
-
-​	`208.625D` 转换成十六进制数 
-​	`208.625D`= `D0.AH`
-
-​	0.25十进制 转换成 二进制数
-​	`0.25D`=`0.01B`
-
-​	(15.8125)<sub>10</sub>转换成二进制数 	
-​	(15.8125)<sub>10</sub>=`00001111.1101`
-
-<img src="img/进制/15.8125.png" >
-
-​        
-
-### 二进制转换成十六进制
-
-​	由2<sup>4</sup>=16可知 四位二进制数对应一位十六进制数。
-例:   `3AF.2H` 
-​      		= <u>0011</u> <u>1010</u> <u>1111</u>.<u>0010</u> =`1110101111.001B` 	
-​				      3      A       F        2
-
-​           `1111101.11B` 
-​			   = <u>0111</u> <u>1101</u>.<u>1100</u>  = `7D.CH`         
-​					  7       D       C
-​    二进制转换为16进制时，整数部分从**最低位**进行划分，**每4位二进制数为一组**，不足4位的，最高位补零；**小数部分**从**最高位**进行划分，每4位二进制数为一组，不足4位的最低为补零
-
-## 技巧：
-
-​	按照`8421`方法，即对应二进制四位
-
-### 			十六进制转为二进制
-
-
-​				`8421`排列组合成十六进制数
-
-​				`37FH`
-
-​					=  	  3 	    7 	    F
-​					   	`8421` `8421` `8421`
-
-​						    **0011  0111  1111**
-
-### 			 二进制转换为十六进制
-
-
-​				每四位为一个 `8421`
-
-​				`0110111100B`
-
-​					=     <u>0001</u>  <u>1011</u>  <u>1100</u>
-​					   	`8421` `8421` `8421`
-
-​							    **1        B         C**		
-
-### 			八进制二进制互相转换
-
-
-​				同理，只不过将 `8421` 变为 `421`
-
-​				`11010110`
-
-​					=  	  11   010   110
-​					    	`421`  `421`  `421`
-
-​    						    **3       2       6**
-​				
-​				`765`
-
-​					=  	  7        6       5
-​					    	`421`  `421`  `421`
-
-​    			     	    **111    110     101**
-
-### 		十进制转换二进制
-
-
-​				可将十进制先转换成十六进制再转成二进制
-
-​				`39D`
-
-​					=  	 <u>39</u> / 16		余7 
-
-​								2	           余2
-​					
-​					=    `2    7  H`
-​					= `8421` `8421`
-
-​					= **0010   0111**  B
-​				`0.25D`
-
-​					=  	 <u>0.25</u> * 16		=4
-​					=    `0.4H`
-​					= `8421` 
-
-​					= **0.01**  B
-
-## 	原码、反码、补码
-
-对于有符号的而言：
-
- 1. 二进制的最高位是符号位：0表示正数，1表示负数。
-
- 2. 正数的原码、反码、补码都一样(三码合一)。
-
- 3. 负数的反码=他的原码符号位不变，其他位取反(0-->1 1-->0)。
-
- 4. 负数的补码=它的反码+1
-
- 5. 0的反码、补码都是0
-
- 6. 计算机运算的时候，都是以**补码的方式**来运算。	
-
-    ```c
-    //2的原码、反码、补码
-    //0000 0000 0000 0000 0000 0000 0000 0010
-    //-3的原码
-    //1000 0000 0000 0000 0000 0000 0000 0011
-    //-3的反码
-    //1111 1111 1111 1111 1111 1111 1111 1100
-    //-3的补码
-    //1111 1111 1111 1111 1111 1111 1111 1101
-    ```
-
 # 顺序控制结构
 
 ​	程序从上到下逐行地执行，中间没有任何判断和跳转
@@ -2154,7 +1992,7 @@ void main(){
 
 ​	**例**：`a = b + c`是赋值表达式，`a = b + c;`是赋值语句。`i++;`、`--i;`、`a=b,b=c;`也是赋值语句。
 
-## 数据输出未完成
+## 数据输出￥
 
 ​	把数据从计算机内部送到计算机外部设备上的操作称为"**输出**"。
 
@@ -2236,7 +2074,7 @@ printf语句是从右到左计算，从左到右输出
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
-## 数据输入未完成
+## 数据输入￥
 
 ​	在编程中，需要接受用户输入的数据，可以使用键盘输入语句获取。
 
@@ -2802,41 +2640,107 @@ void main(){
 }
 ```
 
-# 数组未完成
+# 数组￥
 
-![image-20211107100704366](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107100704366.png)
+![image-20211107100704366](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107100704366.png
 
-![image-20211107101238863](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101238863.png)
+![image-20211107101238863](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101238863.png
 
-![image-20211107101258478](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101258478.png)
+![image-20211107101258478](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101258478.png
 
-![image-20211107101415809](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101415809.png)
+![image-20211107101415809](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101415809.png
 
-![image-20211107101442470](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101442470.png)
+![image-20211107101442470](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101442470.png
 
-![image-20211107101540837](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101540837.png)
+![image-20211107101540837](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101540837.png
 
-![image-20211107101715792](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101715792.png)
+![image-20211107101715792](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101715792.png
 
-![image-20211107101816212](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101816212.png)
+![image-20211107101816212](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101816212.png
 
-![image-20211107140540240](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140540240.png)
+![image-20211107140540240](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140540240.png
 
-![image-20211107140731371](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140731371.png)
+![image-20211107140731371](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140731371.png
 
-![image-20211107140833105](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140833105.png)
+![image-20211107142958975](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107142958975.png
 
-![image-20211107142438716](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107142438716.png)
+![image-20211107140833105](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140833105.png
 
-## 冒泡排序
+![image-20211107143012177](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143012177.png
+
+![image-20211107143417375](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143417375.png
+
+![image-20211107143513660](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143513660.png
+
+![image-20211107143625416](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143625416.png
+
+![image-20211107143649887](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143649887.png
+
+![image-20211107143753640](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143753640.png
+
+![image-20211107143904642](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143904642.png
+
+![image-20211107144034263](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144034263.png
+
+![image-20211107144121085](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144121085.png
+
+![image-20211107144312489](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144312489.png
+
+![image-20211107144334590](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144334590.png
+
+![image-20211107144415166](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144415166.png
+
+## 字符数组￥
+
+![image-20211107145529152](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145529152.png
+
+![image-20211107153855334](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153855334.png
+
+![image-20211107153900440](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153900440.png
+
+![image-20211107153945765](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153945765.png
+
+![image-20211107154107307](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154107307.png
+
+这里确实讲错了，未定义完全的字符数组后面默认都是\0(int 型是0)
+
+![image-20211107154213753](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154213753.png
+
+![image-20211107154526500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154526500.png
+
+![image-20211107154711047](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154711047.png
+
+![image-20211107154831049](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154831049.png
+
+![image-20211107155736702](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155736702.png
+
+![image-20211107155748959](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155748959.png
+
+ ![image-20211107155936283](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155936283.png)
+
+最后的表达方式默认加入\0
+
+![image-20211109155657656](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155657656.png)
+
+![image-20211109155851841](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155851841.png)
+
+![image-20211109160005796](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160005796.png)
+
+![image-20211109160035800](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160035800.png)
+
+![image-20211109160113050](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160113050.png)
 
 
 
-## 顺序查找和二分查找
+## 冒泡排序￥
 
 
 
-## 二维数组
+## 顺序查找和二分查找￥
+
+
+
+## 二维数组￥
 
 
 
@@ -2957,188 +2861,393 @@ void main(){
 4. 如果函数有返回值，则将返回值赋给接受的变量。
 5. 当一个函数返回后，该函数对应的栈空间也就销毁。
 
-## 递归调用未完成
+## 递归调用
 
-一个函数在函数体内又调用了本身，我们称为递归调用
+一个函数在函数体内又调用了本身，我们称为**递归调用**。
 
-![image-20211028155308713](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028155308713.png)
+**示例一**：
 
+```c
+#include <stdio.h>
+void test(int n){
+    if(n > 2){
+        test(n-1);
+    }
+    printf("n=%d\n",n);
+}
+void main(){
+	test(4);//n=2\n n=3\n n=4\n
+}
+```
 
+<img src = "img/函数/递归调用1.png" style="zoom:67%;" >
 
-![image-20211028165848902](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028165848902.png)
+**示例二**：
 
-![image-20211028170020607](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028170020607.png)
+```c
+#include <stdio.h>
+void test(int n){
+    if(n > 2){
+        test(n-1);
+    } else{
+        printf("n=%d\n",n);
+    }
+}
+void main(){
+	test(4);
+}
+```
 
-栈：先进后出原则
+<img src = "img/函数/递归调用2.png" style="zoom:67%;" >
 
-![image-20211031000352074](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031000352074.png)
+**注意**：
 
-![image-20211031000412263](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031000412263.png)
+1. 栈：**先进后出**原则。
+2. 调用函数时，开辟的函数栈，都会完整的执行函数代码。
 
-![image-20211031000521724](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031000521724.png)
+**遵守的原则**：
 
-![image-20211031000605719](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031000605719.png)
-
-执行一个函数时，就创建-一个新的受保护的独立空间(新函数栈)
-函数的局部变量是独立的，不会相互影响
-递归必须向退出递归的条件逼近，否则就是无限递归，死龟了:)
-当一个函数执行完毕，或者遇到return,就会返回，遵守谁调用，就将结果返回
-给谁
+1. 执行一个函数时，就创建一个新的受保护的独立空间(新函数栈)。
+2. 函数的局部变量是独立的，不会相互影响。
+3. 递归必须向退出递归的条件逼近，否则就是无限递归，死龟了
+4. 当一个函数执行完毕，或者遇到return,就会返回，遵守谁调用，就将结果返回给谁
 
 ## 实参、形参未完成
 
-## 回调函数未完成
+## 回调函数
+
+函数指针变量可以作为某个函数的参数来使用的，回调函数就是一个通过函数指针调用的函数。
+简单的讲:回调函数是由别人的函数执行时调用你传入的函数（通过函数指针完成〉
 
-![image-20211106164236809](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164236809.png)
+**例**：用回调函数的方式，给一个整型数组int arr[10]赋10个随机数。
 
-![image-20211106164527792](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164527792.png)
+```c
+#include <stdio.h>
+#include <stdlib.h>
+//回调函数
+//int (*f)(void)
+//f就是 函数指针，它可以接收的函数是(返回int，没有形参的函数)
+//f在这里被initArray调用，充当了回调函数角色
+void initArray(int *array,int arraySize,int (*f)(void)){
+    int i;
+    for (int i = 0; i < arraySize; i++) {
+        array[i] = f();//通过函数指针调用了getNextRandomValue函数
+        //array[i] = (*f)();
+    }
+}
+//获取随机值
+int getNextRandomValue(void){
+    return rand();//rand系统函数，会返回一个随机整数
+}
 
-![image-20211106164535168](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164535168.png)
+int main(){
+    int myarray[10],i;
+    initArray(myarray,10,getNextRandomValue);
+    for (int i = 0; i < 10; ++i) {
+        printf("%d\n",myarray[i]);
+    }
+    getchar();
+    return 0;
+}
+```
 
-![image-20211106164558798](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164558798.png)
+## 常用函数
 
-![image-20211106164630391](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164630391.png)
+### 常用字符串函数
 
-也可以![image-20211106164641427](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164641427.png)
+**头文件**`<string.h>`
 
-![image-20211106164840086](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164840086.png)
+1. 得到字符串的长度：
 
+   ```c
+   size_t strlen(const char *str)
+   ```
 
+   计算字符串`str`的长度，直到空结束字符，但不包括空结束字符。
 
+2. 拷贝字符串：
 
+   ```c
+   char* strcpy(char* dest,const char *src)
+   ```
 
-## 常用字符串函数未完成
+   把`src`所指向的字符串复制到`dest`。
 
-![image-20211031003448731](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031003448731.png)
+   **注意**：拷贝字符串会将原来的内容覆盖。
 
-![image-20211031004057473](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004057473.png)
+3. 连接字符串：
 
-![image-20211031004105996](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004105996.png)
+   ```c
+   char* strcat(char* dest,const char *src)
+   ```
+
+   把`src`所指向的字符串追加到`dest`所指向的字符串的结尾。
+
+4. 从控制台读取字符并立即回显，用于从标准输入控制台读取字符：
+
+   ```c
+   getchar();
+   ```
 
-![image-20211031004125502](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004125502.png)
+5. 字符串比较：
 
-![image-20211031004149754](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004149754.png)
+   ```c
+   int strcmp(const char *str1,const char *str2)
+   ```
 
-![image-20211031004220686](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004220686.png)
+   把`str1`所指向的字符串和`str2`所指向的字符串进行比较。**返回0表示相等**，**非0表示不相等**。
 
-![image-20211031004314214](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004314214.png)
+**例**：
 
-![image-20211031004436952](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004436952.png)
+```c
+#include <stdio.h>
+#include <string.h>//头文件中声明字符串相关的系统函数
+void main(){
+    char src[50],dest[50];//定义了两个字符数组(字符串)，大小为50
+    char *str = "abcdef";
+    printf("str.len=%d",strlen(str));//统计字符串的大小
+    strcpy(src,"hello");//将hello拷贝到src
+    //注意：拷贝字符串会将原来的内容覆盖
+    strcpy(dest,"hh");
+    strcat(dest,src);//strcat是将src字符串的内容连接到dest，但不会覆盖dest原来的内容，而是连接
+    printf("最终目标字符串 %s",dest);//hellohh
+  //getchar();
+}
+```
 
-![image-20211031004449195](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004449195.png)
 
-getchar()函数：从控制台读取字符并立即回显，用于从标准输入控制台读取字符。
 
-![image-20211023231945939](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211023231945939.png)
 
 
 
-## 常用日期时间函数未完成
 
-![image-20211031004526206](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004526206.png)
+### 常用日期时间函数
 
-![image-20211031005039940](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031005039940.png)
+**头文件**`<time.h>`
 
-![image-20211031004824636](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004824636.png)
+1. 获取当前时间：
 
-![image-20211031004938465](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031004938465.png)
+   ```c
+   char* ctime(const time_t timer)
+   ```
 
-![image-20211031005138529](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031005138529.png)
+   返回一个表示当地时间的字符串，当地时间是基于参数`timer`。
 
-![image-20211031005156003](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031005156003.png)
+2. 统计函数执行时间：
 
+   ```c
+   double difftime(time_t time1,time_t time2)
+   ```
 
+   返回`time1`和`time2`之间相差的秒数(`time1`-`time2`)
 
-## 常用数学函数未完成
+**例**：
 
-![image-20211031005251545](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031005251545.png)
+```c
+#include <stdio.h>
+#include <time.h>//该头文件中，声明和日期和时间相关的函数
+int main(){
+    time_t curtime;//time_h是一个结构体类型
+    time(&curtime);//time()完成初始化
+    printf("当前时间=%s",ctime(&curtime));//返回一个表示当地时间的字符串
+    return 0;
+}
+```
 
-三角函数
+```c
+#include <stdio.h>
+#include <time.h>//该头文件中，声明和日期和时间相关的函数
+void test(){//运行test函数，查看执行花费时间
+    int i = 0;
+    int sum = 0;
+    int j = 0;
+    for(i=0;i<77777777;i++){
+        sum = 0;
+        for(j=0;j<10;j++){
+            sum +=j;
+        }
+    }
+}
+void main(){
+    //先得到执行test前的时间
+    time_t start_t,end_t;//time_h是一个结构体类型
+    double diff_t;//存放时间差
+    printf("程序启动...\n");
+    time(&start_t);//初始化得到当前时间
+    test();//执行test
+    //再得到执行test后的时间
+    time(&end_t);//得到当前时间
+    diff_t = difftime(end_t,start_t);//时间差，按秒end_t-start_t
+    //得到两个时间差就是耗用的时间
+    printf("执行时间 = %f\n",diff_t);
+  //getchar();
+}
+```
+
+### 常用数学函数
 
-![img](D:\Data\zhan885844@163.com\c2aad8de0f7248099535c6fc5428ab7f\截图.png)
+math.h头文件定义了各种数学函数和一个宏。在这个库中所有可用的功能都带有一个double类型的参数，且都返回double 类型的结果。
 
-![img](D:\Data\zhan885844@163.com\e86fa94080824a82956b44591b9d6ac9\截图.png)
+1. 返回e的x次幂的值：
 
+   ```c
+   double exp(double x)
+   ```
 
+2. 返回x的自然对数(基数为e的对数)：
 
-## 基本数据类型未完成
+   ```c
+   double log(double x)
+   ```
+
+3. 返回x的y次幂：
+
+   ```c
+   double pow(double x,double y)
+   ```
+
+4. 返回x的平方根：
+
+   ```c
+   double sqrt(double x)
+   ```
+
+5. 返回x的绝对值：
 
-## static关键字未完成
+   ```c
+   double fabs(double x)
+   ```
 
-### 静态变量未完成
+**例**：
+
+```c
+#include <stdio.h>
+#include <math.h>
+void main(){
+    double d1 = pow(2.0,3.0);
+    double d2 = sqrt(5.0);
+    printf("d1=%.2f",d1);
+    printf("d2=%.2f",d2);
+  //getchar();
+}
+```
 
-局部变量被static修饰后，我们称为静态局部变量
+## static关键字
 
+### 静态变量
 
+局部变量被`static`修饰后，我们称为**静态局部变量**。
 
-![image-20211101161538970](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101161538970.png)
-
-
-对应静态局部变量在声明时未赋初值，编译器
-也会把它初始化为0。
-静态局部变量存储于进程的静态存储区(全局性
-质)，只会被初始-次，即使函数返回，它的值
-也会保持不变[案例+图解]
-
-![image-20211104105632926](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104105632926.png)
-
-C99语法即使不加static，也会存在初始值
-
-![image-20211104105825497](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104105825497.png)
-
-![image-20211104105943538](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104105943538.png)
-
-![image-20211104110156525](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110156525.png)
-
-![image-20211104110205791](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110205791.png)
-
-![image-20211104110218109](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110218109.png)
-
-![image-20211104110229205](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110229205.png)
-
-![image-20211104110249006](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110249006.png)
-
-![image-20211104110301558](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110301558.png)
-
-![image-20211104110356888](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110356888.png)
-
-![image-20211104110409556](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110409556.png)
-
-![image-20211104110419501](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110419501.png)
-
-![image-20211104110704940](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110704940.png)
-
-![image-20211104110747935](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110747935.png)
-
-![image-20211104110937100](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110937100.png)
-
-![image-20211104110943625](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110943625.png)
-
-![image-20211104110958360](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104110958360.png)
-
-![image-20211104111106756](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111106756.png)
-
-![image-20211104111132785](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111132785.png)
-
-### 静态函数未完成
-
-![image-20211104111326985](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111326985.png)
-
-![image-20211104111435617](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111435617.png)
-
-![image-20211104111514546](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111514546.png)
-
-![image-20211104111540726](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111540726.png)
-
-![image-20211104111644236](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111644236.png)
-
-![image-20211104111745528](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111745528.png)
-
-![image-20211104111808227](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111808227.png)
-
-![image-20211104111821084](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104111821084.png)
-
-## 头文件未完成
+```c
+#include <stdio.h>
+void main(){
+    static int n;//n就是静态局部变量，默认初始化值为0
+    printf("\n n=%d",n);
+}
+```
+
+**说明**：
+
+1. 对应静态局部变量在声明时未赋初值，编译器也会把它**初始化**为0。
+2. 静态局部变量存储于进程的静态存储区(全局性质)，只会被初始一次，即使函数返回，它的值也会**保持不变**。
+
+  C语言内存布局 --> [Here](#C语言内存布局)
+
+**例**：
+
+```c
+#include <stdio.h>
+void fn(void){
+    int n = 10;//普通局部变量，每次执行都会初始化，n在栈区
+    printf("n = %d\n",n);
+    n++;
+    printf("n++=%d\n",n);
+}
+void fn_static(void){
+    static int n = 10;//静态局部变量，放在静态存储区，全局性质空间
+    printf("static n = %d\n",n);
+    n++;
+    printf("static n++ = %d\n",n);
+}
+int main(){
+    fn();//10 11
+    printf("---\n");
+    fn_static();//10 11
+    printf("---\n");
+    fn();//10 11
+    printf("---\n");
+    fn_static();//11 12
+    return 0;
+}
+```
+
+**注意**：
+
+1. 普通全局变量对整个工程可见，其他文件可以使用`extern`外部声明后直接使用。也就是说其他文件不能再定义一个与其相同名字的变量了(否则编译器会认为它们是同一个变量)，静态全局变量**仅对当前文件可见，其他文件不可访问**，其他文件可以定义与其同名的变量，两者互不影响。
+
+   `file01.c`:
+
+   ```c
+   int num = 10;//普通全局变量
+   static int num2 = 20;//静态全局变量，只能在本文件中使用，而不能在其他文件使用
+   ```
+
+   `file02.c`:
+
+   ```c
+   #include <stdio.h>
+   
+   extern int num;
+   //extern int num2;//显示没有找到num2
+   //int num = 20; 显示已经定义
+   int num2 = 60;//不会报错
+   void main(){
+       printf("\nnum = %d",num);
+   }
+   ```
+
+2. 定义不需要与其他文件共享的全局变量时，加上`static`关键字能够有效地降低程序模块之间的耦合，避免不同文件同名变量的冲突，且不会误使用。
+
+### 静态函数
+
+​	函数的使用方式与静态变量类似，在函数的返回类型前加上`static`，就是**静态函数**。
+
+**例**：
+
+```c
+#include <stdio.h>
+void fun1(void){//普通函数(非静态函数)
+	printf("hello from fun1 \n");
+}
+static void fun2(void){//静态函数 只能在本文件中使用
+	printf("hello from fun2 \n");
+}
+```
+
+**说明**：
+
+1. 非静态函数可以在另一个文件中通过extern引用。
+
+2. 静态函数只能在声明它的文件中可见,其他文件不能引用该函数。
+
+3. 不同的文件可以使用相同名字的静态函数，互不影响。
+
+   ```c
+   #include <stdio.h>
+   
+   extern void fun1(void);
+   //extern void fun2(void);//不可以
+   //void fun1(){}//不可以
+   void fun2(){//可以定义
+       ...
+   }
+   void main(){
+       fun1();
+   	//fun2(); 不可以
+   }
+   ```
+
+## 头文件￥
 
 ![image-20211027105238939](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105238939.png)
 
@@ -3164,7 +3273,7 @@ C99语法即使不加static，也会存在初始值
 
 ![image-20211028163532408](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028163532408.png)
 
-## 注意未完成
+## 注意￥
 
 ![image-20211031002559300](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031002559300.png)
 
@@ -3174,7 +3283,9 @@ C99语法即使不加static，也会存在初始值
 
 ![image-20211101123148062](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101123148062.png)
 
-![image-20211101154000404](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154000404.png)![image-20211101154011955](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154011955.png)
+![image-20211101154000404](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154000404.png)
+
+![image-20211101154011955](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154011955.png)
 
 ![image-20211101154024256](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154024256.png)
 
@@ -3437,9 +3548,9 @@ int main(){
 
 ​	C语言常见预处理指令 --> [Here](#C语言常见预处理指令)
 
-# 动态内存分布未完
+# 动态内存分布￥
 
-![image-20211106165431967](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165431967.png)
+![image-20211106165431967](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165431967.png
 
 全局变量--内存中的静态存储区
 非静态的局部变量- --内存中的动态存储区- -
@@ -3451,21 +3562,341 @@ stack栈
 名或者数组名来引用这些数据，只能通过指针来
 引用)
 
+![image-20211107160830406](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107160830406.png
+
+![image-20211107160925463](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107160925463.png
+
+realloc![image-20211107161007407](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161007407.png
+
+![image-20211107161045643](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161045643.png
+
+![image-20211107161137363](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161137363.png
+
+C99支持 如果不是要强制转换![image-20211107161313259](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161313259.png
+
+![image-20211107161449210](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161449210.png
+
+![image-20211107161952452](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161952452.png
+
+类似数组,p[i]取得第一个元素
+
+![image-20211107163139873](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163139873.png
+
+![image-20211107163150716](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163150716.png
+
+堆区里分配的连续区域的首个地址传过去就和数组的首地址一样了
+
+![image-20211107163429174](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163429174.png
+
+![image-20211107163538385](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163538385.png
+
+![image-20211107163826343](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163826343.png
+
+![image-20211107163832547](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163832547.png
+
+p带括号的就是指针，不带的就是后面的类型/数组/函数
+
+
+
+# 断点调试
+
+​	断点调试是指自己在程序的某一行设置**一个断点**，调试时，程序运行到这一行就会停住，然后你可以一步一步往下调试，调试过程中可以看各个变量当前的值，出错的话，调试到出错的代码行即显示错误，停下。然后程序可以进行分析从而找到这个Bug 【百度百科】
+**断点调试是程序员必须掌握的重要的技能**。
+使用断点调试也能帮助我们最终查看c程序源代码的执行过程，提高程序员的水平。
+
+**常用软件断点调试详解**：
+
+- Visual Studio --> [Here](https://blog.csdn.net/lindexi_gd/article/details/102831108?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163626948416780265478471%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163626948416780265478471&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-102831108.pc_search_result_hbase_insert&utm_term=Visual+Studio%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&spm=1018.2226.3001.4187)
+- Dev C++ --> [Here](https://blog.csdn.net/swordtraveller/article/details/86595363?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163626956416780271541839%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163626956416780271541839&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-86595363.pc_search_result_hbase_insert&utm_term=Dev+C%2B%2B%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&spm=1018.2226.3001.4187)
+- Visual C++ 6.0 --> [Here](https://blog.csdn.net/weixin_45468845/article/details/107854610?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163627010416780262527079%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163627010416780262527079&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-107854610.pc_search_result_hbase_insert&utm_term=Visual+C%2B%2B+6.0%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&spm=1018.2226.3001.4187)
+- Code::Blocks --> [Here](https://blog.csdn.net/amjgg66668/article/details/101844107?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163627012416780274138721%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163627012416780274138721&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-101844107.pc_search_result_hbase_insert&utm_term=Code%3A%3ABlocks%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&spm=1018.2226.3001.4187)
+- Turbo C --> [Here](https://blog.csdn.net/rankfyang/article/details/4325744?ops_request_misc=&request_id=&biz_id=102&utm_term=Turbo%20C%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-4325744.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
+- Clion --> [Here](https://blog.csdn.net/lblmlms/article/details/107846759?ops_request_misc=&request_id=&biz_id=102&utm_term=CLion%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107846759.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
+- Eclipse --> [Here](https://blog.csdn.net/u011781521/article/details/55000066/?ops_request_misc=&request_id=&biz_id=102&utm_term=Eclipse%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-55000066.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
+
+# 文件操作
+
 
 
 # 进度
 
-![image-20211105212734903](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211105212734903.png)
+![image-20211109235103673](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109235103673.png)
 
-![image-20211106165509065](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165509065.png)
+3![image-20211104165813163](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165813163.png)
 
-9(145  2.4)![image-20211104165906373](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165906373.png)
+4![image-20211104165552597](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165552597.png)
 
-3(85 1.4)![image-20211104165813163](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165813163.png)
+# 进制
 
-13(162 2.7)![image-20211104165552597](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165552597.png)
+**采用不同的进制的原因**是不同的领域用到的技术形式不相同　
+
+- 在计算机底层都以**二进制**形式存在。
+
+## 进位计数制
+
+​	**按照进位的方法进行计数，称为进位计数制。**
+
+​	**常见的进位计数制**：二进制、八进制、十进制、十二进制、十六进制等等。
+
+  **R进制数的特点：**
+
+- 具有R个不同的数符。0，1，2．．．，R－１
+
+- 逢R进一。
+
+  进位计数制的一般表达式(按权展开式)：
+
+  R进制的表示方法，任一R进制数S可表示为
+
+  > S=a<sub>n-1</sub> a<sub>n-2</sub> ... a<sub>1</sub> a<sub>0</sub> . a<sub>-1</sub>...+a<sub>-m</sub>           位置表示法
+  >
+  > =a<sub>n-1</sub>R<sup>n-1</sup> + ... + a<sub>1</sub>R<sup>1</sup> + a<sub>0</sub>R<sup>0</sup> + a<sub>-1</sub>R<sup>-1</sup> ... +a<sub>-m</sub>R<sup>-m</sup> (按权展开式)
+  >
+  > 其中:a<sub>i</sub> : R 进制中的数字符号
+  >
+  > ​		 R：基数
+  >
+  > ​         R<sup>i</sup> : 位权，简称权
+
+##  十进制N<sub>D</sub>
+
+**特点：**
+
+1. 有十个数码：0~9
+
+2. 逢十进一
+
+加权展开式以10为基数，各位系数为0~9
+
+> ​	N<sub>D</sub> = d<sub>n-1</sub> * 10<sup>n-1</sup> + d<sub>n-2</sub> * 10<sup>n-2</sup>+...+d<sub>0</sub> * 10<sup>0</sup>+d<sub>-1</sub> * 10<sup>-1</sup>+...
+
+​	例:(1234.5)<sub>10</sub> = 1 * 10<sup>3</sup> + 2 * 10<sup>2</sup> +3 * 10<sup>1</sup> +  4 * 10<sup>0</sup> +5 * 10<sup>-1</sup> 
+
+## 	二进制N<sub>B</sub>
+
+**特点**：
+
+1. 有两个数码：0、1
+
+2. 逢二进一
+
+加权展开式以2为基数，各位系数为0、1
+
+> N<sub>B</sub> = b<sub>n-1</sub> * 2<sup>n-1</sup> + b<sub>n-2</sub> * 2<sup>n-2</sup>+...+b<sub>0</sub> * 2<sup>0</sup>+b<sub>-1</sub> * 2<sup>-1</sup>+...
+
+例: `1101.101B` = 1 * 2<sup>3</sup> + 1 * 2<sup>2</sup> +0 * 2<sup>1</sup> +  1 * 2<sup>0</sup> +1 * 2<sup>-1</sup> +0 * 10<sup>-2</sup> +1 * 2<sup>-3</sup> 
+
+**注意:**不够八位最好前面加上0 凑成八位
+
+## 八进制N<sub>O/Q</sub>
+
+**特点：**
+
+1. 有八个数码：0~7
+
+2. 逢八进一
+
+加权展开式以8为基数，各位系数为0、1
+
+> N<sub>O</sub> = b<sub>n-1</sub> * 8<sup>n-1</sup> + b<sub>n-2</sub> * 8<sup>n-2</sup>+...+b<sub>0</sub> * 8<sup>0</sup>+b<sub>-1</sub> * 8<sup>-1</sup>+...
+
+例: `7451` =  7 * 8<sup>3</sup> + 4 * 8<sup>2</sup> +5 * 8<sup>1</sup> +  1 * 8<sup>0</sup> 
+
+## 十六进制N<sub>H</sub>
+
+​	因为二进制太长 所以采用十六进制 
+
+​	一位十六进制可以表示四位二进制
+
+**特点：**
+
+1. 有十六个数码：0~9、A~F
+
+2. 逢十六进一
+
+加权展开式以16为基数，各位系数为0~9，A~F
+
+> N<sub>H</sub> = h<sub>n-1</sub> * 16<sup>n-1</sup> + h<sub>n-2</sub> * 16<sup>n-2</sup>+...+h<sub>0</sub> * 16<sup>0</sup>+h<sub>-1</sub> * 16<sup>-1</sup>+...
+
+例:`DFC.8H` = 13 * 16<sup>2</sup> +15 * 16<sup>1</sup> +  12 * 16<sup>0</sup> +8 * 16<sup>-1</sup> 
+
+**注意**
+
+不同进位制数以后缀区别,十进制数可不 带后缀。或加括弧，再在括弧之后注明。
+
+- `101`、`101D`、`101B`、`101H`、`101H`
+- (20)<sub>10</sub>、(1101)<sub>2</sub>、(345)<sub>16</sub>
 
 
+## 不同进制计数制的转换
+
+### 			二进制、十六进制转换成十进制
+
+**方法：**
+
+​			先将二、十六进制数按权展开，然后按照十进制运算法则求和
+
+**举例：** 
+
+​			`1011.1010B`=1 * 2<sup>3</sup>+1 * 2<sup>1</sup>+1 * 2<sup>0</sup>+1 * 2<sup>-1</sup>+1*2<sup>-3</sup>
+
+​								   =(11.625)<sub>10</sub>
+
+​			`DFC.8H`=13 * 16<sup>2</sup> + 15 * 16<sup>1</sup> + 12 * 16<sup>0</sup> + 8 * 16<sup>-1</sup> 
+
+​						  =(3580.5)<sub>10</sub>
+
+### 			十进制转换成二进制、十六进制
+
+**方法：**
+
+​	**整数部分,除基取余**
+
+​		不断**除以**所要转换的进制基数，直至**商为0**。每除一次取一个余数，从低位排向高位。
+
+​	**小数部分,乘基取整**
+​		用转换进制的基数乘以小数部分，直至小数为0或达到转换精度要求的位数。每**乘一次取一次整数**，从最高位排到最低位。
+
+**举例：**
+
+​	**二进制最好前面加上0 凑成八位**
+
+​	39转换成二进制数        
+​	(39)<sub>10</sub>=`00100111B`
+
+​	208转换成十六进制数   
+​	`208D` = `D0H`
+
+​	`0.625D`转换成十六进制数
+​	0.625 × 16 = 10.0	 `0.625D` = `0.AH`
+
+​	`208.625D` 转换成十六进制数 
+​	`208.625D`= `D0.AH`
+
+​	0.25十进制 转换成 二进制数
+​	`0.25D`=`0.01B`
+
+​	(15.8125)<sub>10</sub>转换成二进制数 	
+​	(15.8125)<sub>10</sub>=`00001111.1101`
+
+<img src="img/进制/15.8125.png" >
+
+​        
+
+### 二进制转换成十六进制
+
+​	由2<sup>4</sup>=16可知 四位二进制数对应一位十六进制数。
+例:   `3AF.2H` 
+​      		= <u>0011</u> <u>1010</u> <u>1111</u>.<u>0010</u> =`1110101111.001B` 	
+​				      3      A       F        2
+
+​           `1111101.11B` 
+​			   = <u>0111</u> <u>1101</u>.<u>1100</u>  = `7D.CH`         
+​					  7       D       C
+​    二进制转换为16进制时，整数部分从**最低位**进行划分，**每4位二进制数为一组**，不足4位的，最高位补零；**小数部分**从**最高位**进行划分，每4位二进制数为一组，不足4位的最低为补零
+
+## 技巧：
+
+​	按照`8421`方法，即对应二进制四位
+
+### 			十六进制转为二进制
+
+
+​				`8421`排列组合成十六进制数
+
+​				`37FH`
+
+​					=  	  3 	    7 	    F
+​					   	`8421` `8421` `8421`
+
+​						    **0011  0111  1111**
+
+### 			 二进制转换为十六进制
+
+
+​				每四位为一个 `8421`
+
+​				`0110111100B`
+
+​					=     <u>0001</u>  <u>1011</u>  <u>1100</u>
+​					   	`8421` `8421` `8421`
+
+​							    **1        B         C**		
+
+### 			八进制二进制互相转换
+
+
+​				同理，只不过将 `8421` 变为 `421`
+
+​				`11010110`
+
+​					=  	  11   010   110
+​					    	`421`  `421`  `421`
+
+​    						    **3       2       6**
+​				
+​				`765`
+
+​					=  	  7        6       5
+​					    	`421`  `421`  `421`
+
+​    			     	    **111    110     101**
+
+### 		十进制转换二进制
+
+
+​				可将十进制先转换成十六进制再转成二进制
+
+​				`39D`
+
+​					=  	 <u>39</u> / 16		余7 
+
+​								2	           余2
+​					
+​					=    `2    7  H`
+​					= `8421` `8421`
+
+​					= **0010   0111**  B
+​				`0.25D`
+
+​					=  	 <u>0.25</u> * 16		=4
+​					=    `0.4H`
+​					= `8421` 
+
+​					= **0.01**  B
+
+## 	原码、反码、补码
+
+对于有符号的而言：
+
+ 1. 二进制的最高位是符号位：0表示正数，1表示负数。
+
+ 2. 正数的原码、反码、补码都一样(三码合一)。
+
+ 3. 负数的反码=他的原码符号位不变，其他位取反(0-->1 1-->0)。
+
+ 4. 负数的补码=它的反码+1
+
+ 5. 0的反码、补码都是0
+
+ 6. 计算机运算的时候，都是以**补码的方式**来运算。	
+
+    ```c
+    //2的原码、反码、补码
+    //0000 0000 0000 0000 0000 0000 0000 0010
+    //-3的原码
+    //1000 0000 0000 0000 0000 0000 0000 0011
+    //-3的反码
+    //1111 1111 1111 1111 1111 1111 1111 1100
+    //-3的补码
+    //1111 1111 1111 1111 1111 1111 1111 1101
+    ```
+
+# 项目
+
+## 家庭收支记账软件
+
+## 客户信息管理系统
 
 
 
@@ -3697,6 +4128,7 @@ error C2143 语法错误 缺少;
 
 **解决办法**：编译失败，注意错误出现的行数，再到源代码中指定位置改错
 
-## hello world
+## 作者
 
-k
+Github --> [Here]()
+

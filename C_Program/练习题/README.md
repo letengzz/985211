@@ -468,7 +468,29 @@ sizeof（*books）/sizeof（char）？
 
 ![image-20211107145811125](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145811125.png)
 
+![image-20211108165046951](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108165046951.png)
 
+![image-20211108171712338](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108171712338.png)
+
+![image-20211108172003579](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108172003579.png)
+
+![image-20211108172403473](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108172403473.png)
+
+![image-20211108172526558](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108172526558.png)
+
+![image-20211108172532804](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108172532804.png)
+
+![image-20211108172806174](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108172806174.png)
+
+![image-20211108173225407](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173225407.png)
+
+![image-20211108173432932](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173432932.png)
+
+![image-20211108173527988](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173527988.png)
+
+yekeyi![image-20211108173551505](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173551505.png)
+
+![image-20211108173610383](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173610383.png)
 
 
 
