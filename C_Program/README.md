@@ -1,4 +1,4 @@
-# 程序设计基本概念
+# X程序设计基本概念
 
 计算机不过是一种具有**内部存储能力**、由**程序自动控制**的电子设备。
 
@@ -135,6 +135,18 @@
 
 <img src="img/概述/C语言编译程序功能.png" style="zoom:50%;" >
 
+​	C语言**最小的程序单元**是**语句**。
+
+# C语言工具使用
+
+- Visual Studio --> [Here]()
+- Dev C++ --> [Here]()
+- Visual C++ 6.0 --> [Here]()
+- Code::Blocks --> [Here]()
+- Turbo C --> [Here]()
+- Clion --> [Here]()
+- Eclipse --> [Here]()
+
   # C语言的诞生
 
   - 70年代，由美国贝尔实验室的`Thompson` (肯·汤普森) 和`D.M.Ritchie` (丹尼斯·里奇)合作开发的**UNIX**操作系统和C语言诞生了，C语言**最初用于开发系统级程序**，UNIX操作系统和C语言像一对孪生姐妹，她们以自己崭新的面貌一开始就引起了人们的广泛注意。后来又经过不断改进和实践的考验，这对姐妹已迅速成长和成熟，展示出了强大的生命力，被公认为最优秀的**操作系统**和**计算机语言**之一。近30年来，C语言帮助了UNIX的成功，UNIX的发展又推动了C语言的普及和发展。C语言应用非常广泛，我们熟知的Windows操作系统基本上是用C语言编写的。
@@ -179,7 +191,7 @@
   5. C语言由**强大的处理能力**。既可以用于系统软件的开发，也适合应用软件的开发。
   6. C语言是一种中级语言，**生成的目标代码质量高，运行效率高**。
 
-  ​它既**具有高级语言的通用性及易写易读的特点，又具有汇编语言(低级语言)的"位处理"、"地址操作"等能力**。C语言允许直接访问物理地址，能进行位操作，能实现汇编语言的大部分功能，可以直接对硬件进行操作。
+  它既**具有高级语言的通用性及易写易读的特点，又具有汇编语言(低级语言)的"位处理"、"地址操作"等能力**。C语言允许直接访问物理地址，能进行位操作，能实现汇编语言的大部分功能，可以直接对硬件进行操作。
 
   # C语言运行过程
 
@@ -191,21 +203,51 @@
 
 <img src = "img/计算机内存.png" style="zoom:67%;" >
 
+## 栈区
+
+​	在需要的时候由系统分配，在不需要的时候自动清除的变量存储区。
+
+​	存储的变量通常是局部变量、函数参数等。
+
 **注意**：
 
 1. 栈：**先进后出**原则。
+
+## 堆区
+
+由程序员调用系统内存分配函数分配的内存块。编译器不会自行释放。
+
+## 静态存储区/全局区
+
+
+
+## 代码区
+
+
 
   # C语言构成和格式
 
 **基本结构**：
 
 ```c
-#include <stdio.h>
-void main(){
-    int a;
-    printf("Hello World");
-}
+/*------文件名:Hello World.c-------*/
+#include <stdio.h>//头文件
+void main()//主函数，入口点
+{//函数开始
+    int a;//定义变量
+    a = 1;//赋值语句
+    printf("Hello World");//打印字符串
+  //getchar//防止屏幕一闪而过 等待用户敲入回车
+}//函数结束
 ```
+
+C语言5种类型语句：
+
+1. 表达式语句。操作或者动作可称为**表达式**。以`;`结尾的表达式，称为表达式语句。
+2. 9种流程控制语句。如循环语句、选择语句、跳转控制语句。
+3. 函数调用构成函数调用语句。
+4. 只有一个`;`的空语句。
+5. 复合语句，即用"`{}`"包括起来的语句。
 
 ## 预处理命令
 
@@ -326,19 +368,20 @@ int main(){
 
 - ## 	正确的注释和注释风格
 
-  如果注释的一个函数，可以使用**块注释**。
 
-  如果注释函数中的某一个语句，使用**单行注释**。
+如果注释的一个函数，可以使用**块注释**。
+
+如果注释函数中的某一个语句，使用**单行注释**。
 
 - ## 	正确的缩进和空白
 
-  使用一次tab操作，实现缩进，默认整体向右边移动。
+使用一次tab操作，实现缩进，默认整体向右边移动。
 
-  运算符两边习惯性各加一个空格。例：`2 + 4 * 5 `
+运算符两边习惯性各加一个空格。例：`2 + 4 * 5 `
 
-# 	块的风格
+## 	块的风格
 
-## 行尾风格
+### 行尾风格
 
 ```c
 int max(int a,int b){
@@ -350,7 +393,7 @@ int max(int a,int b){
 }
 ```
 
-## 次行风格
+### 次行风格
 
 ```c
 int max(int a,int b)
@@ -365,6 +408,16 @@ int max(int a,int b)
 	}
 }
 ```
+
+局部变量应使用小写字母。
+
+全局变量应由大写字母开头。
+
+函数名应该写为动作性的结构名，应该带有整体性。
+
+使用有描述意义的变量名或函数名。
+
+语句应该随着在程序中的层次不同采取相应的缩进。
 
   # 标识符
 
@@ -414,6 +467,13 @@ int max(int a,int b)
 
 ​	由用户根据**需要**定义的标识符称为用户标识符，又称自定义标识符。用户标识符一般用来给变量、函数、数组等命名。程序中使用的用户标识符除要遵守标识符命名规则外,还应注意做到"**见名知义**”,即选择具有一定含义的英文单词或汉语拼音作为标识符,如number1 , red 、yellow , green , work等,以增加程序的可读性。
 ​	如果用户标识符与关键字相同,则在对程序进行编译时系统将给出出错信息;如果用户标识符与预定义标识符相同,系统并不报错,只是该预定义标识符将失去原定含义,代之以用户确认的含义,这样有可能会引发一些运行时错误。
+
+**注意**：
+
+1. 标识符的长度没有统一规定，随系统的不同而不同。有些古老系统规定只能取8个字符，如果超过8个字符，将截取前8个字符。
+2. 要对程序中的用法提供**提示**的名称。
+3. 要使用缩写的时候，整个程序要统一。在所有的缩写处**注释其全称**。
+4. 多个单词构成的标识符，在每个单词之间加上下划线 (`_`) ，或者每个单词第一个字母大写 (`xxxYyyZzz`) 。
 
 # 常量
 
@@ -493,6 +553,8 @@ void main() {
 }
 ```
 
+**宏定义**：-->[Here](宏定义)
+
 ## const关键字定义常量
 
 ```c
@@ -567,7 +629,7 @@ void main() {
 
 **变量使用基本步骤**：
 
-   1. 声明变量：
+   1. 声明 (declare) 变量：
 
       ```c
       int num;
@@ -602,11 +664,11 @@ void main() {
 **注意事项**:
 
 1. 变量表示内存中的一个存储区域(不同的数据类型，占用的空间大小不一样)。
-2. 该区域有自己的名称和类型。
+2. 该区域有自己的名称和类型。变量名一般**小写**。
 3. 变量必须先声明，后使用。
 4. 该区域的数据可以在**同一类型范围**内不断变化。
-5. 变量在同一作用域内不能重名。
-6. 变量的三要素(数据类型、变量名、值)缺一不可。
+5. 变量在同一作用域内**不能重名**。
+6. 变量的三要素(数据类型、变量名、值)**缺一不可**。
 
 ## 变量作用域
 
@@ -701,13 +763,23 @@ void main(){
 }
 ```
 
+## 变量声明的意义
+
+1. 建立变量符号表，帮助远离由于疏忽而将变量名写错的情况。
+2. 变量的数据类型指示系统分配多少内存空间，准确的为变量分配确定大小的内存空间。
+3. 变量的数据类型指示了系统如何解释存储空间中的值，同样的数值，不同的类型将不同的解释。
+4. 变量的数据类型确定了该变量的取值范围。
+5. 不同的数据类型有不同的操作。
+
 # 数据类型
 
 ​	每一种数据都定义了明确的数据类型，在内存中分配了不同大小的内存空间(字节来表示)。
 
-​	<img src="img/数据类型/概述.png" style="zoom:67%;" >
+​	<img src="img/数据类型/概述.png" style="zoom: 67%;" >
 
 ## 基本数据类型
+
+​	基本类型是最基础的简单数据类型，**其值无法再分解为其他类型**，基本数据类型都是自我说明的。
 
 ### 整型数据
 
@@ -735,11 +807,19 @@ void main(){
 
 ​	在内存中，实数一律以**指数形式**存放。**浮点数是近似值，存在误差**。
 
-​	**浮点数** = **符号位** + **指数位** + **尾数位**。
+**确定小数点位置**：
+
+​	规定小数点位置**固定不变**，称为**定点数**。
+
+​	小数点的位置不固定，**可以浮动**，称为**浮点数**。
+
+​	**浮点数** = **基数** (Base) + **指数位** (Exponent) + **尾数位** (Mantissa) 。
 
 ​	**单精度**：数字后面加 "f"或"F" `2.3f`   不加"f" 是从double到float截断。
 
 ​	**双精度**：2.3，默认为双精度。
+
+​	**整型常量**： --> [Here](常量/实型常量)
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
@@ -807,7 +887,9 @@ char name[] = "你好";
 
 **注意**：
 
-1.  字符串占用内存是连续的，一个字符挨着一个字符，一旦碰到`\0`则表示字符串的结束。
+1.  编译器在编译字符串的时候，自动在该字符后面添加一个`\0`，用来表示字符串结束。
+
+1.  字符串占用内存是连续的，一个字符挨着一个字符，包括字符串结束符，一旦碰到`\0`则表示字符串的结束。
 
 2. 字符串简单**内存示意**：
 
@@ -823,7 +905,7 @@ char name[] = "你好";
 
 3. C语言标准(C99)提供了_Bool型，_Bool仍是整数类型，但与一般整型不同的是，Bool变量只能赋值0或1，非0的值都会被储存位1。
 
-   C99还提供了一个头文件`<stdbool.h>`定义了`bool`代表`_Bool`，true代表1，false代表0。只要导入 stdbool.h，就能方便的操作布尔类型了，比如bool flag = false;
+   `C99`还提供了一个头文件`<stdbool.h>`定义了`bool`代表`_Bool`，true代表1，false代表0。只要导入 `stdbool.h`，就能方便的操作布尔类型了，比如`bool flag = false;`
 
    ```c
    #include <stdbool.h>
@@ -840,134 +922,9 @@ char name[] = "你好";
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
-  ### 自定义类型
-
-​	使用`typedef` 自定义类型，相当于取个别名。
-
-```c
-#include <stdio.h>
-#include <stdint.h>
-typedef int64_t hjc_int;
-typedef char hjc_char;
-void main() {
-    hjc_int a = 5;
-	hjc_char b = 'a';
-    printf("%d",a);
-
-}
-```
-
-  ## 数据类型的转换
-
-### 基本数据类型的转换
-
- C语言允许表达式中混合有不同类型的常量和变量。
-
-  1. **系统自动转换**：容易出现意外结果
-
-​      当参与运算的数据的**类型不同**时，编译系统会自动先将它们转换成**同一类型**，然后再进行运算。
-
-  - 转换的基本规则是“**按数据长度增加的方向进行转换**”，以保证精度不降低。
-    <img src="img/类型转换/精度大小.png" >
-
-  <img src="img/类型转换/数据类型自动转换表.png" style="zoom:67%;"   >
-
-​	 比如 `int` 型数据和 `long` 型数据进行相加或相减运算时，系统会先将 `int` 型数据转换成 `long` 型，然后再进行运算。这样的话运算结果的精度就不会降低。`long` 是“大水桶”，`int` 是“小水桶”。`int` 能存放的，`long` 肯定能存放；而 `long` 能存放的，`int` 不一定能存放。
-
-  - 所有的浮点运算都是以**双精度**进行的。
-
-​     在运算时，程序中所有的 `float` 型数据全部都会先转换成 `double` 型。即使只有一个 `float` 型数据，也会先转换成 `double` 型，然后再进行运算。因为 CPU 在运算的时候有“字节对齐”的要求，这样运算的速度是最快的。
-
-  - `char` 型和 `short` 型数据参与运算时，必须先转换成 `int` 型。涉及 CPU 的运行原理。
-
-  - 有符号整型和无符号整型混合运算时，有符号型要转换成无符号型，运算的结果是无符号的。
-
-  - 在赋值运算中，赋值号两边量的数据类型不同时，**赋值号右边量的类型将转换为左边量的类型**，如果右边变量的数据类型长度比左边长时，将丢失一部分数据。**会降低精度**，丢失的部分按**四舍五入向前舍入**。
-
-  2. **强制转换**
-
-​     将精度高的数据类型转换为精度小的数据类型，使用时要加上强制转换符()，但可能造成精度降低或溢出，格外注意。强制类型转换操作**并不改变**操作数本身。
-
-**强制转换表达式**：(数据类型符)表达式; 或 (数据类型符)变量;
-
-   ```c
-  double a = 1.5;
-  int b = (int)a;
-   ```
-
-**注意：**
-
-​	强制类型转换只对最近的数有效，如果希望更多的表达式转换，使用`()`。
-
-```c
-int num = (int)(3.5 * 10 + 6 * 5.1);
-```
-
-### 基本数据类型和字符串类型的转换
-
-- 基本数据类型转成字符串类型
-
-  **sprintf函数打印到字符串中。包含在stdio.h的头文件中**。
-
-  ```c
-  #include <stdio.h>
-  
-  void main(){
-      char str1[20];//字符数组，即字符串String
-      char str2[20];
-      char str3[20];
-      int a = 20984,b=48090;
-      double d = 14.309948;
-      sprintf(str1,"%d %d",a,b);
-      sprintf(str2,"%.2f",d);
-      sprintf(str3,"%8.2f",d);//整数前6位，整数后两位
-      printf("str1= %s str2= %s str3= %s",str1,str2,str3);
-  }
-  ```
-
-**说明**：
-
-1. `sprintf`是一个系统函数，可以将结果存放到字符串中。
-2. 格式化的结果，会存放到`str`中。
-
-- 字符串类型转成基本数据类型
-
-  通过`<stdlib.h>`的函数调用`atoi` `atof`即可。
-
-  ```c
-  #include <stdio.h>
-  #include <stdlib.h>
-  
-  void main(){
-      //字符数组
-      char str[10] = "123456";
-      char str2[10] = "12.67423";
-      char str3[2] = "a";
-      char str4[4] = "111";
-      int num1 = atoi(str);
-      short s1 = atoi(str4);
-      double d = atof(str2);
-      char c = str3[0];
-      printf("num1 = %d d = %f c = %c s1 = %d",num1,d,c,s1);
-  }
-  ```
-
-**说明**：
-
-1. `atoi(str)`将`str`转成整数。
-2. `atof(str2)`将`str2`转成小数。
-3. `str3[0]`获取`str3`字符串(数组)的第一个元素。
-
-**注意**：
-
-1. 在将`char`数组类型转成基本数据类型时，要确保能够转成有效的数据，比如把"`123`"转成一个整数，不能把"`hello`"转成整数。
-2. 如果格式不正确，会默认转成`0`或者`0.0`。
-
-## 构造数据类型
-
 ### 枚举类型
 
-​	**枚举**是C语言的一种**构造数据类型**，可以让数据更简洁，更易读，对于**只有几个有限的特定数据**，可以使用枚举。
+​	**枚举**是C语言的一种**基本类型**，可以让数据更简洁，更易读，对于**只有几个有限的特定数据**，可以使用枚举。
 
 ​	枚举对应英文(enumeration，简写enum)
 
@@ -1072,11 +1029,34 @@ int main(){
      }day;//这样使用枚举，该枚举类型只能使用一次
      ```
 
+  ### 自定义类型
+
+​	使用`typedef` 自定义类型，相当于取个别名。
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+typedef int64_t hjc_int;
+typedef char hjc_char;
+void main() {
+    hjc_int a = 5;
+	hjc_char b = 'a';
+    printf("%d",a);
+
+}
+```
+
+## 构造数据类型
+
+​	构造类型是根据已定义的**一个或多个**数据类型用构造的方法来定义的。**构造数据类型是由多个其他数据类型组合构成的**。也就是说，一个构造类型的值可以分解成若干个"成员"或"元素"，其中每个"每个成员"要么是一个基本数据类型，要么又是一个构造类型。
+
 ### 数组
 
 - **数组** --> [Here](#数组)
 
 ### 结构体￥
+
+不同数据类型的组合
 
 ![image-20211108155429256](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108155429256.png)
 
@@ -1147,6 +1127,8 @@ int main(){
 ![image-20211108171303342](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108171303342.png)
 
 ### 共用体￥
+
+多个元素不同数据类型，但是共用一块内存。
 
 ![image-20211108173750823](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108173750823.png)
 
@@ -1533,6 +1515,116 @@ returnType
 ![image-20211106165249198](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165249198.png
 
 
+
+## 空类型
+
+​	空类型表示**没有类型**。 
+
+  ## 数据类型的转换
+
+### 基本数据类型的转换
+
+ C语言允许表达式中混合有不同类型的常量和变量。
+
+    1. **系统自动转换**：容易出现意外结果
+
+​      当参与运算的数据的**类型不同**时，编译系统会自动先将它们转换成**同一类型**，然后再进行运算。
+
+  - 转换的基本规则是“**按数据长度增加的方向进行转换**”，以保证精度不降低。
+    <img src="img/类型转换/精度大小.png" >
+
+  <img src="img/类型转换/数据类型自动转换表.png" style="zoom:67%;"   >
+
+​	 比如 `int` 型数据和 `long` 型数据进行相加或相减运算时，系统会先将 `int` 型数据转换成 `long` 型，然后再进行运算。这样的话运算结果的精度就不会降低。`long` 是“大水桶”，`int` 是“小水桶”。`int` 能存放的，`long` 肯定能存放；而 `long` 能存放的，`int` 不一定能存放。
+
+  - 所有的浮点运算都是以**双精度**进行的。
+
+​     在运算时，程序中所有的 `float` 型数据全部都会先转换成 `double` 型。即使只有一个 `float` 型数据，也会先转换成 `double` 型，然后再进行运算。因为 CPU 在运算的时候有“字节对齐”的要求，这样运算的速度是最快的。
+
+  - `char` 型和 `short` 型数据参与运算时，必须先转换成 `int` 型。涉及 CPU 的运行原理。
+
+  - 有符号整型和无符号整型混合运算时，有符号型要转换成无符号型，运算的结果是无符号的。
+
+  - 在赋值运算中，赋值号两边量的数据类型不同时，**赋值号右边量的类型将转换为左边量的类型**，如果右边变量的数据类型长度比左边长时，将丢失一部分数据。**会降低精度**，丢失的部分按**四舍五入向前舍入**。
+
+    2. **强制转换**
+
+​     将精度高的数据类型转换为精度小的数据类型，使用时要加上强制转换符()，但可能造成精度降低或溢出，格外注意。强制类型转换操作**并不改变**操作数本身。
+
+**强制转换表达式**：(数据类型符)表达式; 或 (数据类型符)变量;
+
+   ```c
+  double a = 1.5;
+  int b = (int)a;
+   ```
+
+**注意：**
+
+​	强制类型转换只对最近的数有效，如果希望更多的表达式转换，使用`()`。
+
+```c
+int num = (int)(3.5 * 10 + 6 * 5.1);
+```
+
+### 基本数据类型和字符串类型的转换
+
+- 基本数据类型转成字符串类型
+
+  **sprintf函数打印到字符串中。包含在stdio.h的头文件中**。
+
+  ```c
+  #include <stdio.h>
+  
+  void main(){
+      char str1[20];//字符数组，即字符串String
+      char str2[20];
+      char str3[20];
+      int a = 20984,b=48090;
+      double d = 14.309948;
+      sprintf(str1,"%d %d",a,b);
+      sprintf(str2,"%.2f",d);
+      sprintf(str3,"%8.2f",d);//整数前6位，整数后两位
+      printf("str1= %s str2= %s str3= %s",str1,str2,str3);
+  }
+  ```
+
+**说明**：
+
+1. `sprintf`是一个系统函数，可以将结果存放到字符串中。
+2. 格式化的结果，会存放到`str`中。
+
+- 字符串类型转成基本数据类型
+
+  通过`<stdlib.h>`的函数调用`atoi` `atof`即可。
+
+  ```c
+  #include <stdio.h>
+  #include <stdlib.h>
+  
+  void main(){
+      //字符数组
+      char str[10] = "123456";
+      char str2[10] = "12.67423";
+      char str3[2] = "a";
+      char str4[4] = "111";
+      int num1 = atoi(str);
+      short s1 = atoi(str4);
+      double d = atof(str2);
+      char c = str3[0];
+      printf("num1 = %d d = %f c = %c s1 = %d",num1,d,c,s1);
+  }
+  ```
+
+**说明**：
+
+1. `atoi(str)`将`str`转成整数。
+2. `atof(str2)`将`str2`转成小数。
+3. `str3[0]`获取`str3`字符串(数组)的第一个元素。
+
+**注意**：
+
+1. 在将`char`数组类型转成基本数据类型时，要确保能够转成有效的数据，比如把"`123`"转成一个整数，不能把"`hello`"转成整数。
+2. 如果格式不正确，会默认转成`0`或者`0.0`。
 
 # 传递参数
 
@@ -1992,7 +2084,63 @@ void main(){
 
 ​	**例**：`a = b + c`是赋值表达式，`a = b + c;`是赋值语句。`i++;`、`--i;`、`a=b,b=c;`也是赋值语句。
 
-## 数据输出￥
+## 数据输入￥Input
+
+​	在编程中，需要接受用户输入的数据，可以使用键盘输入语句获取。
+
+**调用格式**：
+
+```c
+scanf(格式控制,输入项1,输入项2,...)
+```
+
+
+
+![IMG_0800](:\Users\LetengZzz\Desktop\IMG_0800.JPG)
+
+**步骤**：
+
+1. **include <stdio.h>**。
+2. 使用**scanf**函数。
+3. 使用适当的**格式参数**接受输入。
+
+```c
+#include <stdio.h>
+void main(){
+    char name[] = "";
+    int age = 0;
+    double sal = 0.0;
+    char gender = ' ';
+    printf("请输入名字");
+    scanf("%s",name);
+    printf("请输入年龄");
+    scanf("%d",&age);//需要存放到age变量指向的地址
+    printf("请输入薪水");
+    scanf("%lf",&sal);
+    printf("请输入性别");
+	scanf("%c",&gender);//接收到上面的回车符
+    scanf("%c",&gender);//等待用户输入
+    printf("\nname:%s age:%d sal:%.2f gender:%c",name,age,sal,gender);
+}
+```
+
+**说明**：
+
+ 	1. 在scanf函数调用之后加上"`;`"，构成**输入语句**。
+
+
+
+![IMG_0801](:\Users\LetengZzz\Desktop\IMG_0801.JPG)
+
+![IMG_0802](:\Users\LetengZzz\Desktop\IMG_0802.JPG)
+
+![IMG_0803](:\Users\LetengZzz\Desktop\IMG_0803.JPG)
+
+
+
+​	**占位符**： -->  [Here](#C语言占位符)
+
+## 数据输出￥ Output
 
 ​	把数据从计算机内部送到计算机外部设备上的操作称为"**输出**"。
 
@@ -2071,62 +2219,6 @@ print(格式输入,输出项1，输出项2,...);
 ![IMG_0799](:\Users\LetengZzz\Desktop\IMG_0799.JPG)
 
 printf语句是从右到左计算，从左到右输出
-
-​	**占位符**： -->  [Here](#C语言占位符)
-
-## 数据输入￥
-
-​	在编程中，需要接受用户输入的数据，可以使用键盘输入语句获取。
-
-**调用格式**：
-
-```c
-scanf(格式控制,输入项1,输入项2,...)
-```
-
-
-
-![IMG_0800](:\Users\LetengZzz\Desktop\IMG_0800.JPG)
-
-**步骤**：
-
-1. **include <stdio.h>**。
-2. 使用**scanf**函数。
-3. 使用适当的**格式参数**接受输入。
-
-```c
-#include <stdio.h>
-void main(){
-    char name[] = "";
-    int age = 0;
-    double sal = 0.0;
-    char gender = ' ';
-    printf("请输入名字");
-    scanf("%s",name);
-    printf("请输入年龄");
-    scanf("%d",&age);//需要存放到age变量指向的地址
-    printf("请输入薪水");
-    scanf("%lf",&sal);
-    printf("请输入性别");
-	scanf("%c",&gender);//接收到上面的回车符
-    scanf("%c",&gender);//等待用户输入
-    printf("\nname:%s age:%d sal:%.2f gender:%c",name,age,sal,gender);
-}
-```
-
-**说明**：
-
- 	1. 在scanf函数调用之后加上"`;`"，构成**输入语句**。
-
-
-
-![IMG_0801](:\Users\LetengZzz\Desktop\IMG_0801.JPG)
-
-![IMG_0802](:\Users\LetengZzz\Desktop\IMG_0802.JPG)
-
-![IMG_0803](:\Users\LetengZzz\Desktop\IMG_0803.JPG)
-
-
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
@@ -2576,7 +2668,7 @@ void main(){
 
 ## return语句
 
-return使用在函数，表示跳出所在的函数。
+`return`使用在函数，表示终止函数的执行，从函数中**返回到**调用的地方。
 
 **基本语法**：
 
@@ -2607,8 +2699,8 @@ label:statment
 
 **注意**：
 
-1. C语言的goto语句可以无条件地转移到程序中指定的行。
-2. goto语句通常与条件语句配合使用，可以来实现条件转移，跳出循环体等功能。
+1. C语言的`goto`语句可以无条件地转移到程序中指定的行。
+2. `goto`语句通常与条件语句配合使用，可以来实现条件转移，跳出循环体等功能。
 3. 在C程序设计中一般不主张使用goto语句，以免造成程序流程的混乱，使理解和调试程序都产生困难。
 
 **例**：
@@ -2641,6 +2733,8 @@ void main(){
 ```
 
 # 数组￥
+
+数组：所有元素都是同一类型，即数组类型是多个同一数据类型元素的集合
 
 ![image-20211107100704366](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107100704366.png
 
@@ -2692,29 +2786,29 @@ void main(){
 
 ## 字符数组￥
 
-![image-20211107145529152](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145529152.png
+![image-20211107145529152](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145529152.png)
 
-![image-20211107153855334](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153855334.png
+![image-20211107153855334](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153855334.png)
 
-![image-20211107153900440](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153900440.png
+![image-20211107153900440](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153900440.png)
 
-![image-20211107153945765](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153945765.png
+![image-20211107153945765](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153945765.png)
 
-![image-20211107154107307](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154107307.png
+![image-20211107154107307](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154107307.png)
 
 这里确实讲错了，未定义完全的字符数组后面默认都是\0(int 型是0)
 
-![image-20211107154213753](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154213753.png
+![image-20211107154213753](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154213753.png)
 
-![image-20211107154526500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154526500.png
+![image-20211107154526500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154526500.png)
 
-![image-20211107154711047](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154711047.png
+![image-20211107154711047](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154711047.png)
 
-![image-20211107154831049](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154831049.png
+![image-20211107154831049](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154831049.png)
 
-![image-20211107155736702](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155736702.png
+![image-20211107155736702](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155736702.png)
 
-![image-20211107155748959](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155748959.png
+![image-20211107155748959](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155748959.png)
 
  ![image-20211107155936283](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155936283.png)
 
@@ -2729,6 +2823,12 @@ void main(){
 ![image-20211109160035800](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160035800.png)
 
 ![image-20211109160113050](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160113050.png)
+
+![image-20211110110135792](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110135792.png)
+
+![image-20211110110159306](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110159306.png)
+
+![image-20211110110218249](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110218249.png)
 
 
 
@@ -2761,13 +2861,27 @@ void main(){
 }
 ```
 
+**函数原型**(prototype)由返回类型、函数名、形参列表构成。
+
+```c
+返回类型　函数名(形参列表)
+```
+
+函数**被调用之前**，要让编译器知道函数原型。告诉编译器函数原型的动作叫做**函数声明**。
+
+```c
+返回类型　函数名(形参列表);
+```
+
 **说明**：
+
+ 1. 函数的声明和函数定义中的返回值类型、形参列表、函数名**要一致**。
 
  1. 形参列表：表示函数的输入。
 
- 2. 函数中的语句：表示为了实现某一功能代码块。
+ 3. 函数中的语句：表示为了实现某一功能代码块。
 
- 3. 函数可以有返回值，也可以没有，如果没有返回值，返回类型声明为void。当有返回值时，返回值类型要**明确**，要求返回值和返回类型要**匹配**，或者可以相互转换(**自动或强制**)。
+ 3. 函数可以有返回值，也可以没有，如果没有返回值，返回类型声明为`void`。当有返回值时，返回值类型要**明确**，要求返回值和返回类型要**匹配**，或者可以相互转换(**自动或强制**)。
 
     ```c
     double getSum(int n1,int n2){
@@ -3779,7 +3893,7 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 ​	(15.8125)<sub>10</sub>转换成二进制数 	
 ​	(15.8125)<sub>10</sub>=`00001111.1101`
 
-<img src="img/进制/15.8125.png" >
+<img src="img/进制/15.8125.png" > 
 
 ​        
 
