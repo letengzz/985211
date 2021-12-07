@@ -8,4 +8,3 @@
 
 ## 数据结构---》[Here](https://github.com/letengzz/985211/tree/master/Principle%20of%20Microcomputer)
 
-![image-20211207190405162](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/image-20211207190405162.png)

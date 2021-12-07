@@ -1,4 +1,4 @@
-﻿# 程序设计基本概念
+﻿﻿# 程序设计基本概念
 
 计算机不过是一种具有**内部存储能力**、由**程序自动控制**的电子设备。
 
@@ -95,14 +95,16 @@
 	- 当型循环的特点是：当指定的条件满足(成立)时，就执行循环体，否则就不执行。
 	![当型循环流程图](https://img-blog.csdnimg.cn/bf2cdfb046834814a2640facafcc6a0d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 	- 直到型循环的特点是：执行循环体直到指定的条件满足(成立)时就不再执行循环体。
-	![直到型循环流程图](https://img-blog.csdnimg.cn/d72e57734ec84b3c9049b3628755c5c1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_20,color_FFFFFF,t_70,g_se,x_16)
+	![直到型循环流程图](https://img-blog.csdnimg.cn/d72e57734ec84b3c9049b3628755c5c1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 
 已经证明，由三种基本结构组成的算法可以解决任何复杂的问题。由三种基本结构所构成的算法称为**结构化算法**；由三种基本结构所构成的程序称作**结构化程序**。
 
 例：先后输人若干个整数,要求打印出其中最大的数,当输人的数小于0时结束。用N-S流程图表示算法。
 
 解题的思路是:先输人一个数,在没有其他数参加比较之前,它显然是当前最大的数，把它放到变量max中。让max始终存放当前已比较过的数中的最大值。然后输入第二个数,并与max比较,如果第二个数大于max，则用第二个数取代max中原来的值。如此先后输人和比较,每次比较后都将值大者放在max中,直到输入人的数小于0时结束。最后max中的值就是所有输入数中的最大值。
+
 ![例题](https://img-blog.csdnimg.cn/369e3426de00484a830b3ea426370b23.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+
 ## 模块化结构
 
 ​	当计算机在处理较复杂的任务时,所编写的程序经常由上万条语句组成,需要由许多人来共同完成。这时常常把这个复杂的任务分解为若千个子任务,每个子任务，又分成很多个小子任务，每个小子任务只完成一项简单的功能。在程序设计时,用一个个小模块来实现这些功能,每个程序设计人员分别完成一个或多个小模块。我们称这样的**程序设计方法为“模块化”的方法,由一个个功能模块构成的程序结构为模块化结构。**
@@ -186,7 +188,7 @@
 ​	**编辑**C源程序后经过 C编译程序**编译**之后生成一个后缀`.OBJ`的二进制文件(被称为**目标文件**，在计算机底层执行)，然后由称为**连接程序(Link)**  的软件，把此`.OBJ`文件与C语言提供的各种库函数**连接**起来**生成**一个后缀为`.EXE`的**可执行文件**。(在计算机底层执行) 在操作系统环境下，只需**点击或输入**此文件的名字(而不必输入后缀`.EXE`)，该可执行文件就可以**运行**。
 ![编译和执行过程](https://img-blog.csdnimg.cn/81508466f43b46309d53b13abc621c5b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ## C语言内存布局
-![C程序内存](https://img-blog.csdnimg.cn/01aaad7b6948421fbe6898f4745bdc28.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_20,color_FFFFFF,t_70,g_se,x_16)
+![C程序内存](https://img-blog.csdnimg.cn/01aaad7b6948421fbe6898f4745bdc28.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ### 栈区
 
 ​	在需要的时候由系统分配，在不需要的时候自动清除的变量存储区。
@@ -677,6 +679,7 @@ void main() {
     int a=1;int b=2,c=3;
     ```
     
+
 **注意事项**:
 
 1. 变量表示内存中的一个**存储区域**(不同的数据类型，占用的空间大小不一样)。
@@ -1157,7 +1160,7 @@ struct Student{
    ```
 
    **图示**：
-![结构体类型](https://img-blog.csdnimg.cn/a755757bb57e4ba3b4741b6ee46185a8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+   ![结构体类型](https://img-blog.csdnimg.cn/a755757bb57e4ba3b4741b6ee46185a8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
    **构造方式**：
 
    1. 先定义结构体，再创建结构体变量。
@@ -3368,7 +3371,7 @@ int main(){
    ```
 
    计算字符串`str`的长度，直到空结束字符，但不包括空结束字符(`\0`)。
- 
+
 
 2. 拷贝字符串：
 
@@ -4554,5 +4557,4 @@ error C2143 语法错误 缺少;
 
 <h2 id="作者">作者</h2>
 - Github --> [Here]()
-
 
