@@ -1,30 +1,30 @@
-# 程序设计基本概念
+﻿# 程序设计基本概念
 
 计算机不过是一种具有**内部存储能力**、由**程序自动控制**的电子设备。
 
-**"程序"(program)：**连续执行的一条条能被计算机识别和执行的**有序指令**的集合。
+**"程序"(program)**：连续执行的一条条能被计算机识别和执行的**有序指令**的集合。
 
-**"程序设计语言"**：人与机器"对话"的一类媒介和工具，由语句(statement)组成。
+**"程序设计语言"**：人与机器"对话"的一类媒介和工具，由 语句(`statement `)组成。
 
-**"语句"：**组成程序的**基本单位**。一个";"表示一个语句，单行一个";"叫空语句。每条语句都可以认为是一条指令
+**"语句"：**组成程序的**基本单位**。一个"`;`"表示一个语句，单行一个"`;`"叫空语句。每条语句都可以认为是一条指令。
 
-**机器语言：**(machine language)计算机直接使用的**二进制**形式的程序语言或机器代码。
+**机器语言：**(`machine language`)计算机直接使用的**二进制**形式的程序语言或机器代码。
 
-**汇编语言：**(assembler language)一种面向机器的用**符号**表示的低级程序语言。相当于机器指令的助记符号，与机器语言相近。
+**汇编语言：**(`assembler language`)一种面向机器的用**符号**表示的低级程序语言。相当于机器指令的助记符号，与机器语言相近。
 
-**高级语言：**(high-level language)是易为人们所理解的**完全符号化**的程序设计语言。
+**高级语言：**(`high-level language`)是易为人们所理解的**完全符号化**的程序设计语言。
 
 **源程序**：用户用高级语言编写的程序。**C语言源程序文件名字后缀一般必须为"`.C`"**。
 
-**目标程序：**由二进制代码组成的程序。**形式:0、1** C语言**后缀为"`.obj`"**。
+**目标程序**：由**二进制代码组成**的程序。形式:`0`、`1 `，C语言后缀为"`.obj`"。
 
-**编译程序：**具有翻译功能的软件。由编译程序**转换**为**机器代码**。
+**编译程序**：具有**翻译功能**的软件。由编译程序**转换**为**机器代码**。
 
-**解释程序：**具有翻译功能的软件。由解释程序**转换**直接为**机器代码**。一条一条解释为二进制，必须从头到尾执行一遍。
+**解释程序**：具有**翻译功能**的软件。由解释程序**转换**直接为**机器代码**。一条一条解释为二进制，必须从头到尾执行一遍。
 
-**可执行程序**:二进制文件，可以运行的文件。
+**可执行程序**：**二进制文件**，可以运行的文件。
 
-**连接器**：用于连接相关的目标文件以生成可执行文件。
+**连接器**：用于**连接**相关的目标文件以生成可执行文件。
 
 **编译**: 有了C源文件，通过编译器将其编译成`.obj`文件(目标文件)。
 
@@ -37,9 +37,7 @@
 **表达式**：由数字、算符、数字分组符号（括号）、自由变量和约束变量等以能求得数值的有意义排列方法所得的**组合**。约束变量在表达式中已被指定数值，而自由变量则可以在表达式之外另行指定数值。
 
 ****
-
 ## 程序设计
-
 **简单的程序设计一般包含以下几个部分**：
 
 - (1)**确定数据结构**。根据任务书提出的要求、指定的输人数据和输出结果，确定存放数据的数据结构。
@@ -53,9 +51,7 @@
 - (5)**整理并写出文档资料。**
 
 ## 算法
-
-​	**算法**是指为解决某个特定问题而采取的确定且有限的步骤。一个算法应当具有以下特征：
-
+**算法**是指为解决某个特定问题而采取的确定且有限的步骤。一个算法应当具有以下特征：
 - (1)**有穷性**。一个算法包含的操作步骤应该是有限的。也就是说,在执行若干个操作步票之后,算法将结束，而且每一步都在合理的时间内完成。
 
 - (2)**确定性**。算法中每一条指令必须有确切的含义,不能有二义性,对于相同的输人必能得出相同的执行结果。
@@ -67,7 +63,7 @@
 - (5)**有一个或多个输出**。算法的目的是为了求“解”,这些“解”只有通过输出才能得到。
 
   算法可以用各种描述方法来进行描述,最常用的是**伪代码**和**流程图**。
-
+  
 ## 伪代码
 
 ​	伪代码是一种近似于高级语言但又不受语法约束的一种语言描述方式,这在英语国家中使用起来更为方便。
@@ -75,9 +71,7 @@
 ## 流程图
 
 ​	流程图是算法的一种**图像化**表示方式。能直观、清晰，更有利于人们设计与理解算法。
-
-​	<img src="img/流程图/流程图基本图形.png" style="zoom: 50%;" >
-
+![流程图基本图形](https://img-blog.csdnimg.cn/326a084355b44ac290d0282f405734a7.png)
 ​	由这些基本图形中的框和流程线组成的流程图来表示算法形象直观,简单方便。但是,这种流程图对于流程线的走向没有任何限制,可以任意转向,在描述复杂的算法时所占篇幅较多，费时费力且不易阅读。
 
 ​	随着结构化程序设计方法的出现,**1973年**美国学者`I.Nassi`和`B.Shneiderman`提出了一种新的流程图形式,这种流程图完全去掉了流程线,算法的每一步都用一个矩形框来描述,把一个个矩形框按执行的次序连接起来就是一个完整的算法描述。这种流程图用两位学者名字的第一个英文字母命名,称为**N-S流程图**。
@@ -89,36 +83,26 @@
 - **顺序结构**
 
   如赋值语句、输入、输出语句都可构成顺序结构。当执行这些语句构成的程序时，将按照这些语句的先后顺序**逐条执行**，**没有分支**，**没有转移**。
-
-  <img src="img/流程图/顺序结构流程图.png" style="zoom: 50%;" >
-
+![顺序结构流程图](https://img-blog.csdnimg.cn/a53f8a7ef3e04e8e9a183a1b77690e0c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 - **选择结构**
 
   如if语句、switch语句都可以构成选择结构。当执行到这些语句时，将根据不同的条件去执行不同分支中的语句
-
-  <img src="img/流程图/选择结构流程图.png" style="zoom: 50%;" >
-
+![选择结构流程图](https://img-blog.csdnimg.cn/57e52eb9e0234e6ea563f6565bf6cdbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 - **循环结构**
 
   如for循环、while循环、do-while循环。将根据各自的条件，使同一组语句重复执行多次或一次也不执行。
 
-  - 当型循环的特点是：当指定的条件满足(成立)时，就执行循环体，否则就不执行。
-
-  
-  <img src="img/流程图/当型循环流程图.png" style="zoom: 50%;" >
-  
-  - 直到型循环的特点是：执行循环体直到指定的条件满足(成立)时就不再执行循环体。
-  
-  <img src="img/流程图/直到型循环流程图.png" style="zoom: 50%;" >
+	- 当型循环的特点是：当指定的条件满足(成立)时，就执行循环体，否则就不执行。
+	![当型循环流程图](https://img-blog.csdnimg.cn/bf2cdfb046834814a2640facafcc6a0d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+	- 直到型循环的特点是：执行循环体直到指定的条件满足(成立)时就不再执行循环体。
+	![直到型循环流程图](https://img-blog.csdnimg.cn/d72e57734ec84b3c9049b3628755c5c1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 已经证明，由三种基本结构组成的算法可以解决任何复杂的问题。由三种基本结构所构成的算法称为**结构化算法**；由三种基本结构所构成的程序称作**结构化程序**。
 
 例：先后输人若干个整数,要求打印出其中最大的数,当输人的数小于0时结束。用N-S流程图表示算法。
 
 解题的思路是:先输人一个数,在没有其他数参加比较之前,它显然是当前最大的数，把它放到变量max中。让max始终存放当前已比较过的数中的最大值。然后输入第二个数,并与max比较,如果第二个数大于max，则用第二个数取代max中原来的值。如此先后输人和比较,每次比较后都将值大者放在max中,直到输入人的数小于0时结束。最后max中的值就是所有输入数中的最大值。
-
-<img src="img/流程图/例题.png" style="zoom: 50%;" >
-
+![例题](https://img-blog.csdnimg.cn/369e3426de00484a830b3ea426370b23.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ## 模块化结构
 
 ​	当计算机在处理较复杂的任务时,所编写的程序经常由上万条语句组成,需要由许多人来共同完成。这时常常把这个复杂的任务分解为若千个子任务,每个子任务，又分成很多个小子任务，每个小子任务只完成一项简单的功能。在程序设计时,用一个个小模块来实现这些功能,每个程序设计人员分别完成一个或多个小模块。我们称这样的**程序设计方法为“模块化”的方法,由一个个功能模块构成的程序结构为模块化结构。**
@@ -132,60 +116,63 @@
 # C语言简介
 
 ​	C语言是结构化程序设计语言的代表作
-
-<img src="img/概述/C语言编译程序功能.png" style="zoom:50%;" >
-
+![C语言编译程序功能](https://img-blog.csdnimg.cn/57a88fe950be4c2c8ed2ef95f62bac9c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ​	C语言**最小的程序单元**是**语句**。
 
 ## C语言工具使用
 
-- Visual Studio --> [Here]()
-- Dev C++ --> [Here]()
-- Visual C++ 6.0 --> [Here]()
-- Code::Blocks --> [Here]()
-- Turbo C --> [Here]()
-- Clion --> [Here]()
-- Eclipse --> [Here]()
+- Visual Studio --> [Here](https://visualstudio.microsoft.com/zh-hans/downloads/)
 
-  # C语言的诞生
+- Dev C++ --> [Here](https://sourceforge.net/projects/orwelldevcpp/)
 
-  - 70年代，由美国贝尔实验室的`Thompson` (肯·汤普森) 和`D.M.Ritchie` (丹尼斯·里奇)合作开发的**UNIX**操作系统和C语言诞生了，C语言**最初用于开发系统级程序**，UNIX操作系统和C语言像一对孪生姐妹，她们以自己崭新的面貌一开始就引起了人们的广泛注意。后来又经过不断改进和实践的考验，这对姐妹已迅速成长和成熟，展示出了强大的生命力，被公认为最优秀的**操作系统**和**计算机语言**之一。近30年来，C语言帮助了UNIX的成功，UNIX的发展又推动了C语言的普及和发展。C语言应用非常广泛，我们熟知的Windows操作系统基本上是用C语言编写的。
-  - 1972年哦1月 C语言诞生。
+- Visual C++ 6.0 --> [Here](http://www.downza.cn/soft/229484.html)
+
+- Code::Blocks --> [Here](http://www.codeblocks.org/)
+
+- Clion --> [Here](https://www.jetbrains.com/zh-cn/clion/)
+
+- Eclipse --> [Here](https://www.eclipse.org/downloads/)
+
+
+ ## C语言的诞生
+  - 最早的一门语言叫 `Algol 60`，是 1960 年产生的，它是真正的第一门面向问题的语言。但是这门语言离硬件比较远，所以 1963 年剑桥大学在 `Algol 60` 的基础上研发出了 `CPL`。`CPL` 同 `Algol 60` 相比更接近硬件一些，但规模比较大，难以实现。1967 年剑桥大学的`Martin Richards`(马丁·理查兹)对 `CPL` 进行了简化，产生了 `BCPL`。`BCPL` 中的 `B` 就是 `Basic` 的缩写，即“简化的”。
+  - 1970 年，美国 `AT&T` 公司贝尔实验室（`AT&T Bell Laboratory`）的研究员`Ken Thompson`（肯·汤普森）以 `BCPL` 为基础，设计出了很简单而且很接近硬件的B语言（取 `BCPL`的首字母）。B语言是贝尔实验室开发的一种通用程序设计语言。虽然它没有流行起来，但是它很重要。肯·汤普森用`B语言`做了一件很重要的事情，一直影响至今，即他用B语言写出了世界上第一个操作系统——`UNIX` 操作系统。
+  - 1971 年，贝尔实验室的`Dennis Ritchie`（丹尼斯·里奇）加入了肯·汤普森的开发项目，合作开发 `UNIX`。他的主要工作是改造B语言，使其更加成熟。
+  - 1972 年，丹尼斯·里奇在B语言的基础上最终设计出了一种新的语言，他以 `BCPL` 的第二个字母作为这种语言的名字，即C语言。
+  - 1973 年年初，C语言的主体完成。肯·汤普森和丹尼斯·里奇开始用C语言完全重写 `UNIX`，这就是 `UNIX `第 5 版。随着 `UNIX`的发展，C语言自身也在不断地完善。直到今天，各种版本的 `UNIX` 内核和周边工具仍然使用C语言作为其最主要的开发语言，其中还有不少继承肯·汤普森和丹尼斯·里奇之手的代码。
   - 1977年出现了不依赖于具体机器的C语言编译文本"可移植C语言编译程序"，使C语言移植到其他机器的工作大大简化。
   - 1978年11月贝尔实验室正式发布C语言。
-  - 1983年，美国国家标准化协会(ANSI)根据C语言各种版本对C的发展和扩充，制定了新的标准ANSI C，比标准C 有了很大的发展。
-  - 1987年，ANSI 公布了新标准--87 ANSI C。
-  - 1988年，K&R 按照ANSI C修改了他们的《The C Programming Language》。
-  - 1989年12月，ANSI完成标准的制定(ANSI C 或C89)
-  - 1990年，国际标准化组织接受了87 ANSI C 为ISO C的标准(`ISO9899-1990`)。(ISO C或C90)
-  - 1994年，ISO又修订了C语言标准。
-  - 1999年，ISO发布了最近的C语言规范，被称为`C99`。
-  - 2011年12月8日，国际标准化组织(ISO)和国际电工委员会(IEC)发布的`C11`标准是C语言的第三个官方标准，也是C语言的最新标准，该语言更好的支持了汉字函数名和汉字标识符，一定程度上实现了汉字编程。
+  - 1983年，美国国家标准化协会(`ANSI`)根据C语言各种版本对C的发展和扩充，制定了新的标准`ANSI C`，比标准C 有了很大的发展。
+  - 1987年，`ANSI` 公布了新标准--`87 ANSI C`。
+  - 1988年，`K&R` 按照`ANSI C`修改了他们的《The C Programming Language》。
+  - 1989年12月，`ANSI`完成标准的制定(`ANSI C` 或`C89`)
+  - 1990年，国际标准化组织接受了`87 ANSI C` 为`ISO C`的标准(`ISO9899-1990`)。(`ISO C`或`C90`)
+  - 1994年，`ISO`又修订了C语言标准。
+  - 1999年，`ISO`发布了最近的C语言规范，被称为`C99`。
+  - 2011年12月8日，国际标准化组织(`ISO`)和国际电工委员会(`IEC`)发布的`C11`标准是C语言的第三个官方标准，也是C语言的最新标准，该语言更好的支持了汉字函数名和汉字标识符，一定程度上实现了汉字编程。
 
-  目前流行的C语言编译系统大多是以ANSI　C为基础进行开发的从而使C发展成一种独立于UNIX、独立于具体计算机类型的计算机语言。之后，C语言先后移植到大、中、小、微型计算机上，已独立于UNIX和PDP，风靡世界，成为当今世界上最为流行的、广大程序设计者最为喜爱的计算机语言之一。
+  目前流行的C语言编译系统大多是以`ANSI C`为基础进行开发的从而使C发展成一种独立于`UNIX`、独立于具体计算机类型的计算机语言。之后，C语言先后移植到大、中、小、微型计算机上，已独立于`UNIX`和`PDP`，风靡世界，成为当今世界上最为流行的、广大程序设计者最为喜爱的计算机语言之一。
 
   **说明**：不同版本 的C编译系统所实现的语言功能和语法规则略有差别，因此要了解所用的C语言智能编译系统的特点。
 
-  # C语言的特点
-
+  ## C语言的特点
   1. **代码级别的跨平台**。
   2. C语言是一种**结构化语言。**层次清晰，便于按**模块化方式组织程序**，易于**调试和维护**。
   3. C语言语句**简洁、紧凑、使用方便、灵活。**
-  
-       - 只有37个关键字，分为四个大类：
-         
-           - 数据结构关键字12个。
-           - 控制语句关键字12个。
-           - 存储类型关键字4个。
-           - 其他关键字9字。
-       
-       - 9种控制语句
-       
-       - 数据构造能力强
-       
-       - 运算符丰富，共有34种运算符，可以实现其他高级语言难以实现的一些运算
-       
-       - 程序书写格式自由
+     - 只有37个关键字，分为四个大类：
+     
+       - 数据结构关键字12个。
+       - 控制语句关键字12个。
+       - 存储类型关键字4个。
+       - 其他关键字9字。
+
+     - 9种控制语句
+
+     - 数据构造能力强
+
+     - 运算符丰富，共有34种运算符，可以实现其他高级语言难以实现的一些运算
+
+     - 程序书写格式自由
   4. C语言程序**易于移植。**用C语言编写的程序可以从一种环境不加或稍加改动就能搬到另一种环境中运行。
 
   5. C语言由**强大的处理能力**。既可以用于系统软件的开发，也适合应用软件的开发。
@@ -196,16 +183,10 @@
 
 ## C语言运行过程
 
-​	**编辑**C源程序后经过 C编译程序**编译**之后生成一个后缀`.OBJ`的二进制文件(被称为**目标文件**，在计算机底层执行)，然后由称为**"连接程序"(Link)**的软件，把此`.OBJ`文件与C语言提供的各种库函数**连接**起来**生成**一个后缀为`.EXE`的**可执行文件**。(在计算机底层执行) 在操作系统环境下，只需**点击或输入**此文件的名字(而不必输入后缀`.EXE`)，该可执行文件就可以**运行**。
-
-  <img src="img/概述/编译和执行过程.png" style="zoom: 67%;" >
-
-​	详细编译流程 ---> [Here](#编译流程)
-
+​	**编辑**C源程序后经过 C编译程序**编译**之后生成一个后缀`.OBJ`的二进制文件(被称为**目标文件**，在计算机底层执行)，然后由称为**连接程序(Link)**  的软件，把此`.OBJ`文件与C语言提供的各种库函数**连接**起来**生成**一个后缀为`.EXE`的**可执行文件**。(在计算机底层执行) 在操作系统环境下，只需**点击或输入**此文件的名字(而不必输入后缀`.EXE`)，该可执行文件就可以**运行**。
+![编译和执行过程](https://img-blog.csdnimg.cn/81508466f43b46309d53b13abc621c5b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ## C语言内存布局
-
-<img src = "img/计算机内存.png" style="zoom:67%;" >
-
+![C程序内存](https://img-blog.csdnimg.cn/01aaad7b6948421fbe6898f4745bdc28.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_20,color_FFFFFF,t_70,g_se,x_16)
 ### 栈区
 
 ​	在需要的时候由系统分配，在不需要的时候自动清除的变量存储区。
@@ -250,7 +231,7 @@ C语言5种类型语句：
 4. 只有一个`;`的空语句。
 5. 复合语句，即用"`{}`"包括起来的语句。
 
-### 预处理
+<h3 id="预处理">预处理</h3>
 
 ​	以#开始的语句称为**预处理器命令**。
 
@@ -264,7 +245,7 @@ C语言5种类型语句：
 
  **头文件**：含有函数的声明和预处理语句，用于帮助访问外部定义的函数。头文件的扩展名"`.h`"
 
- **引入头文件** --> [Here](函数/头文件)
+ **引入头文件** --> [Here](#头文件)
 
 **语法规则**：
 
@@ -282,6 +263,7 @@ C语言5种类型语句：
    ```
 
 5. 宏定义与文件包含命令一般**放在程序的开头**。
+
 6. 所有预处理命令的**作用域**都是**从定义起到其所在源程序的末尾**。
 
 **说明**：
@@ -358,31 +340,31 @@ int main(){
 
 1. C程序**有且只有一个**主函数。
 2. C都是由**主函数**开始执行 从**主函数**结束执行。
-3. main()函数是C程序的起点 main()函数可以返回一个值 也可以不返回值 如果某个函数没有返回值，那么在它的前面有一个关键字void。
+3. main()函数是C程序的起点 main()函数可以返回一个值 也可以不返回值 如果某个函数没有返回值，那么在它的前面有一个关键字`void`。
 
 ### 函数体
 
-​	在函数的起始行后面用一对花括号"{ }" 括起来的部分为**函数体**。
+​	在函数的起始行后面用一对花括号"`{ }`" 括起来的部分为**函数体**。
 
 **说明**：
 
-1. 在函数定义的后面有一个左大括号 即"{"它表示函数的**开始**，后面是函数的**主体**。
-2. 大括号也可以将语句块括起来,在函数定义的**结尾**处有一个右大括号 即"}"。
-3. 函数体内通常有定义(说明)部分和执行语句部分。
-   - "int a" 为程序的**定义部分**。
-   - "printf("Hello World");"为程序的**执行部分**。
+1. 在函数定义的后面有一个左大括号 即"`{`"它表示函数的**开始**，后面是函数的**主体**。
+2. 大括号也可以将语句块括起来,在函数定义的**结尾**处有一个右大括号 即"`}`"。
+3. 函数体内通常有**定义(说明)部分**和**执行语句部分**。
+   - "`int a`" 为程序的**定义部分**。
+   - "`printf("Hello World");`"为程序的**执行部分**。
 
-执行部分的语句称为可执行语句，**必须放在定义部分之后**，语句的数量不限，程序中有这些语句向计算机系统发出操作指令。
+执行部分的语句称为**可执行语句**，**必须放在定义部分之后**，语句的数量不限，程序中有这些语句向计算机系统发出操作指令。
 
 4. 函数主体中的每个语句都以**分号**结束。C程序中的一个语句可以跨越多行，并且用分号**通知编译器该语句已结束**。
 
 ### 注释
 
 1. 必须成对出现。
-2. "/" 和 "*" 之间不能有空格。
+2. "`/`" 和 "`*`" 之间不能有空格。
 3. 注释可以出现在程序的任何地方。
 4. 注释部分对程序运行不起作用。
-5. 在注释之间不可以再嵌套/* */。
+5. 在注释之间不可以再嵌套`/* */`。
 
 - **多行注释**
 
@@ -399,15 +381,23 @@ int main(){
   ```
 
 ## 规范代码风格
+局部变量应使用**小写字母**。
 
-- ## 	正确的注释和注释风格
+全局变量应由**大写字母开头**。
+
+常量应**都用大写，中间用_**
+
+函数名应该写为动作性的结构名，应该带有整体性。使用**有描述意义的变量名或函数名**。
+
+语句应该随着在程序中的层次不同**采取相应的缩进**。
+- ### 	正确的注释和注释风格
 
 
 如果注释的一个函数，可以使用**块注释**。
 
 如果注释函数中的某一个语句，使用**单行注释**。
 
-- ## 	正确的缩进和空白
+- ### 	正确的缩进和空白
 
 使用一次tab操作，实现缩进，默认整体向右边移动。
 
@@ -443,16 +433,6 @@ int max(int a,int b)
 }
 ```
 
-局部变量应使用小写字母。
-
-全局变量应由大写字母开头。
-
-函数名应该写为动作性的结构名，应该带有整体性。
-
-使用有描述意义的变量名或函数名。
-
-语句应该随着在程序中的层次不同采取相应的缩进。
-
   # 标识符
 
 ​	在C语言中，有许多符号的命名，如变量名、函数名、数组名等，都必须遵守一定的规则，按此规则命名的符号称为**标识符**。
@@ -471,7 +451,7 @@ int max(int a,int b)
 
 - 标识符长度：C语言编译系统是有规定的，即标识符的前若干个字符有效，超过的字符不被识别。
 
-- 所有宏定义、枚举类型、常量(只读变量)全用大写字母命名，用下划线分割单词。如：
+- 所有**宏定义**、**枚举类型**、**常量(只读变量**)全用大写字母命名，用下划线分割单词。如：
 
   ```c
   #define FILE_PATH "/usr/tmp"
@@ -531,10 +511,10 @@ int max(int a,int b)
 1. **十进制**表示：用一串连续的数字表示十进制数。例:345 31684 0  -23456。
        **只有十进制可以是负数。**
 2. **八进制**表示：以数字0开头的一个连续数字序列，序列中只能有0-7这八个数字。
-   例:045、`06745l`是合法的八进制数而019、423、-078是非法的八进制数。
+   例:045、06745l是合法的八进制数而019、423、-078是非法的八进制数。
 3. **十六进制**表示：以`0X`或`0x`开头的连续数字和字母序列，序列中只能有0-9、A-F和 a-f这些数字和字母,字母a、b、c、d、e、f分别对应数字10、11、12、13、14、15，大小写均可。
-4. **无符号整数**表示：以后缀为 `U`为无符号整数(unsigned)，后缀可以是大写也可以小写。
-5. **长整数**表示：以后缀为 `L`为长整数(long)，后缀可以是大写也可以小写。
+4. **无符号整数**表示：以后缀为 `U`为无符号整数(`unsigned`)，后缀可以是大写也可以小写。
+5. **长整数**表示：以后缀为 `L`为长整数(`long`)，后缀可以是大写也可以小写。
 
 **注**：八进制和十六进制只能是整数。
 
@@ -549,7 +529,7 @@ main(){
 }
 ```
 
-## 	实型常量
+<h2 id ="实型常量" >实型常量</h2>
 
 ​	必须用带小数点的数表示，例如3.14159、0.0等。
 
@@ -587,9 +567,9 @@ void main() {
 }
 ```
 
-**预处理命令** -->[Here](#C语言构成和格式\预处理)
+**预处理命令** -->[Here](#预处理)
 
-**宏定义**：-->[Here](宏定义)
+**宏定义**：-->[Here](#宏定义)
 
 ## 定义静态常量
 
@@ -626,39 +606,39 @@ void main() {
    ```
 
 4. `const`常量可以进行调试的，`define`是不能进行调试的，主要是预编译阶段就已经替换掉了，调试的时候就没它了。
-   
-5. `const`不能重定义，不可以定义两个一样的，而`define`通过`undef`取消某个符号的定义再重新定义。
-   
-     ```c
-     #include <stdio.h>
-     
-     const double PI = 1.2;
-     //const double PI = 3.14;
-     #define PI 3.14
-     #undef PI
-     #define PI 3.15
-     void main(){
-         //C = A/A+3*3 = 1/1+3*3=1+9=10
-         printf("%f",PI);
-     }
-     ```
-     
-6. `define`可以配合`#ifdef`、`#ifndef`、`_#endif`来使用，可以让代码更加灵活，比如我们可以通过`#define`来启动或者关闭调试信息。
-   
-    ```c
-    #include <stdio.h>
-    
-    #define DEBUG
-    void main(){
-    #ifdef DEBUG
-        printf("调试信息");
-    #endif
-    #ifndef DEBUG
-        printf("调试信息失败");
-    #endif
-    }
-    ```
 
+5. `const`不能重定义，不可以定义两个一样的，而`define`通过`undef`取消某个符号的定义再重新定义。
+
+   ```c
+   #include <stdio.h>
+   
+   const double PI = 1.2;
+   //const double PI = 3.14;
+   #define PI 3.14
+   #undef PI
+   #define PI 3.15
+   void main(){
+       //C = A/A+3*3 = 1/1+3*3=1+9=10
+       printf("%f",PI);
+   }
+   ```
+
+6. `define`可以配合`#ifdef`、`#ifndef`、`_#endif`来使用，可以让代码更加灵活，比如我们可以通过`#define`来启动或者关闭调试信息。
+
+   ```c
+   #include <stdio.h>
+   
+   #define DEBUG
+   void main(){
+   #ifdef DEBUG
+       printf("调试信息");
+   #endif
+   #ifndef DEBUG
+       printf("调试信息失败");
+   #endif
+   }
+   ```
+   
 # 变量
 
 ​	在程序的运行过程中，值可以改变的量称为**变量**。**变量是程序的基本组成单位**。
@@ -687,7 +667,7 @@ void main() {
 
  1. 每个变量有一个名字作为标识，它是属于用户标识符。
 
- 2. 变量必须先定义后使用**(定义后还得赋值才能用)**。
+ 2. 变量必须先定义后使用(**定义后还得赋值才能用**)。
 
     ```c
     //定义变量后，给变量赋值
@@ -696,12 +676,12 @@ void main() {
     //定义时初始化变量
     int a=1;int b=2,c=3;
     ```
-
+    
 **注意事项**:
 
-1. 变量表示内存中的一个存储区域(不同的数据类型，占用的空间大小不一样)。
+1. 变量表示内存中的一个**存储区域**(不同的数据类型，占用的空间大小不一样)。
 2. 该区域有自己的名称和类型。变量名一般**小写**。
-3. 变量必须先声明，后使用。
+3. 变量必须**先声明，后使用**。
 4. 该区域的数据可以在**同一类型范围**内不断变化。
 5. 变量在同一作用域内**不能重名**。
 6. 变量的三要素(数据类型、变量名、值)**缺一不可**。
@@ -714,19 +694,19 @@ void main() {
 
 1. C语言规定，只能从小的作用域向大的作用域中去寻找变量，而不能反过来，使用更小的作用域中的变量。
 2. 在同一个作用域，变量名**不能重复**，在不同的作用域，变量名可以重复，使用时编译器采用**就近原则**。
-3. 由`{ }`包围的代码块也拥有独立的作用域。
+3. 由`{ }`包围的代码块也拥有**独立的作用域**。
 
 ## 局部变量
 
-​	**局部变量(Local Variable)**保存在**栈**中，函数被调用时才动态地为变量分配存储单元，它的**作用域**仅限于**函数内部**。
+​	**局部变量**(`Local Variable`)保存在**栈**中，函数被调用时才动态地为变量分配存储单元，它的**作用域**仅限于**函数内部**。
 
 **说明**：
 
-1. 局部变量，系统不会对其**初始化**，必须对局部变量初始化才能使用，否则，程序运行后可能会**异常退出**。
+1. 局部变量，系统不会对其**初始化**，必须**对局部变量初始化才能使用**，否则，程序运行后可能会**异常退出**。
 
 2. 正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值。
 
-3. 函数的参数，形式参数，被当作该函数的局部变量，如果与全局变量同名会**优先使用局部变量**。(编译器使用就近原则)。
+3. **函数的参数**，**形式参数**，被当作该函数的局部变量，如果与全局变量同名会**优先使用局部变量**。(编译器使用**就近原则**)。
 
 4. 函数内部声明/定义的局部变量，作用域仅限于**函数内部**。
 
@@ -744,18 +724,17 @@ void main() {
        //printf("%d",k);//这里不能使用for中定义的k变量
    }
    ```
-
+6. 局部变量的**缺省存储类别**是auto(自动变量)。
 ## 全局变量
 
 ​	在所有函数**外部定义的变量**叫**全局变量**，**作用域在整个程序中有效**。
 
-​	**全局变量(Global Variable)**保存在内存的全局储存区中，占用静态的存储单元，它的**作用域默认是整个程序**，也就是所有的代码文件，包括源文件(.c文件)和头文件(.h文件)。
+​	**全局变量**(`Global Variable`)保存在内存的全局储存区中，占用静态的存储单元，它的**作用域默认是整个程序**，也就是所有的代码文件，包括源文件(.c文件)和头文件(.h文件)。
 
 **说明**：
 
 1. 全局变量未初始化，系统会自动对其初始化(正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值)。
-
-   <img src = "img/初始化默认值.png">
+![初始化默认值](https://img-blog.csdnimg.cn/4d3ab8ed59424ebd99e80e25c05a1e6f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 
 **例**：
 
@@ -810,19 +789,15 @@ void main(){
 # 数据类型
 
 ​	每一种数据都定义了明确的数据类型，在内存中分配了不同大小的内存空间(字节来表示)。
-
-​	<img src="img/数据类型/概述.png" style="zoom: 67%;" >
-
+![数据类型概述](https://img-blog.csdnimg.cn/46e2425727cc4532b0e0704c87cc3fb4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ## 基本数据类型
 
-​	基本类型是最基础的简单数据类型，**其值无法再分解为其他类型**，基本数据类型都是自我说明的。
+​	基本类型是最基础的简单数据类型，**其值无法再分解为其他类型**，基本数据类型都是**自我说明**的。
 
 ### 整型数据
 
 ​	分为基本型、短整型、长整型、无符号四种。**整数可以精确存放**。
-
-<img src="img/数据类型/整型变量.png" style="zoom:50%;"  >
-
+![整型变量](https://img-blog.csdnimg.cn/0b7d237c9e4e4631a1e21e5f92cf524d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_20,color_FFFFFF,t_70,g_se,x_16)
 ​	在不同系统上，数据类型的长度不一样 int 2字节或4字节。
 
 ​	**占位符**： -->  [Here](#C语言占位符)
@@ -838,9 +813,7 @@ void main(){
 ​	**int补充知识**： -->  [Here](#int补充知识)
 
 ### 实型数据
-
-<img src="img/数据类型/实型变量.png" style="zoom:50%;"  >
-
+![实型变量](https://img-blog.csdnimg.cn/4dd07b503ddd4140aea707442a3ef8dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ​	在内存中，实数一律以**指数形式**存放。**浮点数是近似值，存在误差**。
 
 **确定小数点位置**：
@@ -849,20 +822,18 @@ void main(){
 
 ​	小数点的位置不固定，**可以浮动**，称为**浮点数**。
 
-​	**浮点数** = **基数** (Base) + **指数位** (Exponent) + **尾数位** (Mantissa) 。
+​	**浮点数** = **基数** (`Base`) + **指数位** (`Exponent`) + **尾数位** (`Mantissa`) 。
 
 ​	**单精度**：数字后面加 "f"或"F" `2.3f`   不加"f" 是从double到float截断。
 
 ​	**双精度**：2.3，默认为双精度。
 
-​	**整型常量**： --> [Here](常量/实型常量)
+​	**实型常量**： --> [Here](#实型常量)
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
 ### 字符型数据
-
-<img src="img/数据类型/字符型变量.png" style="zoom:50%;"  >
-
+![字符型变量](https://img-blog.csdnimg.cn/1a779a7908f943b9bfb72f7bff1ab186.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 ​	字符类型可以表示**单个字符**，允许使用单个字符、转义字符、ASCII、Unicode。
 
 ​	字符类型 存储到计算机中，需要将字符对应的**码值**(整数)找出来。
@@ -923,13 +894,12 @@ char name[] = "你好";
 
 **注意**：
 
-1.  编译器在编译字符串的时候，自动在该字符后面添加一个`\0`，用来表示字符串结束。
+1. 编译器在编译字符串的时候，自动在该字符后面添加一个`\0`，用来表示字符串结束。
 
-1.  字符串占用内存是连续的，一个字符挨着一个字符，包括字符串结束符，一旦碰到`\0`则表示字符串的结束。
+2. 字符串占用内存是连续的，一个字符挨着一个字符，包括字符串结束符，一旦碰到`\0`则表示字符串的结束。
 
-2. 字符串简单**内存示意**：
-
-   <img src="img/数据类型/字符串内存.png" style="zoom:67%;" >
+3. 字符串简单**内存示意**：
+![字符串内存](https://img-blog.csdnimg.cn/383c39b7504e4124aaa3a805d553e2a5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
@@ -939,7 +909,7 @@ char name[] = "你好";
 
 2. 但这种做法不直观，所以我们可以借助c语言的宏定义。
 
-3. C语言标准(C99)提供了_Bool型，_Bool仍是整数类型，但与一般整型不同的是，Bool变量只能赋值0或1，非0的值都会被储存位1。
+3. C语言标准(`C99`)提供了`_Bool型`，`_Bool`仍是整数类型，但与一般整型不同的是，`Bool`变量只能赋值0或1，非0的值都会被储存位1。
 
    `C99`还提供了一个头文件`<stdbool.h>`定义了`bool`代表`_Bool`，true代表1，false代表0。只要导入 `stdbool.h`，就能方便的操作布尔类型了，比如`bool flag = false;`
 
@@ -951,7 +921,7 @@ char name[] = "你好";
    }
    ```
 
-   **可用于**：
+ **可用于**：
 
    - 条件控制语句;
    - 循环控制语句;
@@ -962,9 +932,9 @@ char name[] = "你好";
 
 ​	**枚举**是C语言的一种**基本类型**，可以让数据更简洁，更易读，对于**只有几个有限的特定数据**，可以使用枚举。
 
-​	枚举对应英文(enumeration，简写enum)
+​	枚举对应英文(`enumeration`，简写`enum`)
 
-​	枚举是一组常量的集合，包含一组**有限的**`特定的`数据
+​	枚举是一组常量的集合，包含一组**有限的**特定的数据
 
 **格式**：
 
@@ -989,7 +959,7 @@ int main(){
 
 **注意**：
 
-1. C语言中，枚举类型是被当作`int`或者`unsigned int`类型来处理的，枚举类型必须连续是可以实现有条件的遍历。
+1. C语言中，枚举类型是被当作`int`或者`unsigned int`类型来处理的，枚举类型**必须连续是可以实现有条件的遍历**。
 
    ```c
    enum DAY{
@@ -1005,7 +975,7 @@ int main(){
    }
    ```
 
-2. 每一个枚举成员的默认值为整型的0，后续枚举成员的值在前一个成员上加1。如果把第一个枚举成员的值定义为1，第二个值就为2。
+2. 每一个枚举成员的**默认值**为整型的0，后续枚举成员的值在前一个成员上加1。如果把第一个枚举成员的值定义为1，第二个值就为2。
 
    ```c
    enum DAY{
@@ -1133,7 +1103,7 @@ struct Student{
 **成员**：
 
 ​	也可以叫**结构体包含的变量**。
-​	成员是结构体的一个**组成部分**，一般是**基本数据类型**、也可以是**数组**、**指针**、**结构体等**。比如我们前面定义cat结构体的int age 就是一个成员。
+​	成员是结构体的一个**组成部分**，一般是**基本数据类型**、也可以是**数组**、**指针**、**结构体等**。比如我们前面定义`cat`结构体的`int age` 就是一个成员。
 
 **成员的说明**：
 
@@ -1187,9 +1157,7 @@ struct Student{
    ```
 
    **图示**：
-
-   <img src="img/数据类型/结构体类型.png" style="zoom:67%;" >
-
+![结构体类型](https://img-blog.csdnimg.cn/a755757bb57e4ba3b4741b6ee46185a8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
    **构造方式**：
 
    1. 先定义结构体，再创建结构体变量。
@@ -1319,9 +1287,9 @@ void main(){
 }
 ```
 
-### 共用体￥
+### 共用体
 
-​	**共用体(Union)**属于构造类型。共用体也被称为**联合**或者**联合体**。
+​	**共用体**(`Union`)属于构造类型。共用体也被称为**联合**或者**联合体**。
 
 ​	**多个元素不同数据类型，但是共用一块内存**。
 
@@ -1414,33 +1382,33 @@ void main(){
 }
 ```
 
-![image-20211108183230529](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183230529.png)![image-20211108183235802](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183235802.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-71PvB3TD-1638798816847)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183230529.png)][外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-XgeSm356-1638798816849)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183235802.png)]
 
 是字符'9'
 
-![image-20211108183410987](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183410987.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-VVpExqaE-1638798816850)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183410987.png)]
 
-![image-20211108183806623](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183806623.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-cypSpCGk-1638798816850)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183806623.png)]
 
 
 
-![image-20211108183900655](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183900655.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Zjiu8Y9f-1638798816851)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183900655.png)]
 
-![image-20211108183951156](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183951156.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ql8bmiSn-1638798816852)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183951156.png)]
 
-![image-20211109002229027](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002229027.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-pCq9AvFx-1638798816852)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002229027.png)]
 
-![image-20211109002442993](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002442993.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-a8bYEBj5-1638798816853)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002442993.png)]
 
-![image-20211109002633203](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002633203.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-dslvltNc-1638798816853)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002633203.png)]
 
-![image-20211109002817045](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002817045.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-HxBc9oPu-1638798816854)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002817045.png)]
 
-![image-20211109002852204](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002852204.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-cqZlDdWT-1638798816855)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002852204.png)]
 
-![image-20211109002925044](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002925044.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-luNbyS7V-1638798816856)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002925044.png)]
 
-![image-20211109002949905](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002949905.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-K3mWbKAI-1638798816856)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002949905.png)]
 
 
 
@@ -1550,8 +1518,9 @@ char *ch; /* 一个字符型的指针*/
 指针数组定义
 数据类型*指针数组名[大小;
 比如: int *ptr[3];
+
 1) ptr 声明为一个指针数组
-2)由3个整数指针组成。因此，ptr 中的每个元素，都是一个指向int 值的指针。
+   2)由3个整数指针组成。因此，ptr 中的每个元素，都是一个指向int 值的指针。
 
 ![image-20211106090108958](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090108958.png
 
@@ -1975,7 +1944,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
   double a = 10 / 4; //2.000000 
   double b = 10.0 / 4; //如果希望保留小数，参与运算数必须有浮点数
   ```
-  
+
 - 如果双目运算符两边运算数的类型不一致，系统将自动进行类型转换，使运算符两边类型达到一致后，再进行计算。
 
 - 单目运算符"+"和 "-"、"++"和 "- -"的结合性是**从右到左**的，其余运算符的结合性都是**从左到右**。
@@ -2374,7 +2343,7 @@ scanf(格式控制,输入项1,输入项2,...)
 
 
 
-![IMG_0800](:\Users\LetengZzz\Desktop\IMG_0800.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WMghLexB-1638798816857)(:\Users\LetengZzz\Desktop\IMG_0800.JPG)]
 
 **步骤**：
 
@@ -2408,11 +2377,11 @@ void main(){
 
 
 
-![IMG_0801](:\Users\LetengZzz\Desktop\IMG_0801.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EyqpBVRP-1638798816858)(:\Users\LetengZzz\Desktop\IMG_0801.JPG)]
 
-![IMG_0802](:\Users\LetengZzz\Desktop\IMG_0802.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-KyjRDIhK-1638798816858)(:\Users\LetengZzz\Desktop\IMG_0802.JPG)]
 
-![IMG_0803](:\Users\LetengZzz\Desktop\IMG_0803.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-HfeuRGg5-1638798816859)(:\Users\LetengZzz\Desktop\IMG_0803.JPG)]
 
 
 
@@ -2490,11 +2459,11 @@ print(格式输入,输出项1，输出项2,...);
 
 2. 对于float和double类型的实数，可以用"`n1.n2`"的形式来指定输出宽度(n1，n2分别代表一个整常数)，
 
-![IMG_0797](:\Users\LetengZzz\Desktop\IMG_0797.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2NO2tVlm-1638798816860)(:\Users\LetengZzz\Desktop\IMG_0797.JPG)]
 
-![IMG_0798](:\Users\LetengZzz\Desktop\IMG_0798.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-10oSteN6-1638798816861)(:\Users\LetengZzz\Desktop\IMG_0798.JPG)]
 
-![IMG_0799](:\Users\LetengZzz\Desktop\IMG_0799.JPG)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wMz3tKWN-1638798816861)(:\Users\LetengZzz\Desktop\IMG_0799.JPG)]
 
 printf语句是从右到左计算，从左到右输出
 
@@ -2663,7 +2632,7 @@ switch(表达式){
 2. `case`子句是**可选**的，当没有匹配的`case`时，执行`default`。
 3. `break`语句用来在执行完一个`case`分支后使程序跳出`switch`语句块。
 4. 如果没有`break` 程序会一直往下走 直到`break` 或**程序结束**。这种现象叫做**穿透**。
-4. `switch`后面的表达式**必须放在括号中**，且**表达式的类型任意**。如果表达式为实型则**自动转换**成整型值，然后再与`case`分支进行比较。**各个分支的常量必须为整型常量**。各个分支的常量的值要**各不相同**。另外`case`与常量之间**至少**间隔一个空格。
+5. `switch`后面的表达式**必须放在括号中**，且**表达式的类型任意**。如果表达式为实型则**自动转换**成整型值，然后再与`case`分支进行比较。**各个分支的常量必须为整型常量**。各个分支的常量的值要**各不相同**。另外`case`与常量之间**至少**间隔一个空格。
 
 **例**：
 
@@ -3018,7 +2987,7 @@ label:statment
 1. C语言的`goto`语句可以无条件地转移到程序中指定的行。
 2. `goto`语句通常与条件语句配合使用，可以来实现条件转移，跳出循环体等功能。
 3. 在C程序设计中一般不主张使用`goto`语句，以免造成程序流程的混乱，使理解和调试程序都产生困难。
-3. `goto`语句的**跳转范围**仅限于**本函数**内。
+4. `goto`语句的**跳转范围**仅限于**本函数**内。
 
 **例**：
 
@@ -3103,49 +3072,49 @@ void main(){
 
 ## 字符数组￥
 
-![image-20211107145529152](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145529152.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-IzqEJFto-1638798816863)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145529152.png)]
 
-![image-20211107153855334](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153855334.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-dSYYGzOp-1638798816864)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153855334.png)]
 
-![image-20211107153900440](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153900440.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-f9hnbg02-1638798816865)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153900440.png)]
 
-![image-20211107153945765](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153945765.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-v9E5r60H-1638798816865)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153945765.png)]
 
-![image-20211107154107307](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154107307.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-h55bl8qq-1638798816866)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154107307.png)]
 
 这里确实讲错了，未定义完全的字符数组后面默认都是\0(int 型是0)
 
-![image-20211107154213753](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154213753.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Axqvvioh-1638798816867)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154213753.png)]
 
-![image-20211107154526500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154526500.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-P7R0kxLJ-1638798816867)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154526500.png)]
 
-![image-20211107154711047](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154711047.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-tJHMEIRa-1638798816868)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154711047.png)]
 
-![image-20211107154831049](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154831049.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-uNp4wJ5V-1638798816868)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154831049.png)]
 
-![image-20211107155736702](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155736702.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-kw6jXLKz-1638798816873)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155736702.png)]
 
-![image-20211107155748959](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155748959.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-24rdEi9z-1638798816874)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155748959.png)]
 
- ![image-20211107155936283](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155936283.png)
+ [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oelLARES-1638798816874)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155936283.png)]
 
 最后的表达方式默认加入\0
 
-![image-20211109155657656](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155657656.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-PmP8Xks4-1638798816881)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155657656.png)]
 
-![image-20211109155851841](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155851841.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-9lYvMe0A-1638798816882)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155851841.png)]
 
-![image-20211109160005796](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160005796.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-3KM1UakP-1638798816882)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160005796.png)]
 
-![image-20211109160035800](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160035800.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Smz2Nskn-1638798816882)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160035800.png)]
 
-![image-20211109160113050](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160113050.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WEVBQr1Q-1638798816883)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160113050.png)]
 
-![image-20211110110135792](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110135792.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EtrvOgCm-1638798816883)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110135792.png)]
 
-![image-20211110110159306](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110159306.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-eLlyoNTM-1638798816884)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110159306.png)]
 
-![image-20211110110218249](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110218249.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-5BbK0Ng6-1638798816884)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110218249.png)]
 
 
 
@@ -3166,7 +3135,7 @@ void main(){
 # 指针￥
 
 # 函数
-
+函数的存储类型就是函数定义时函数名前面的数据类型前面的存储类型，缺省时应该是：extern ，表示该函数属外部函数（即可以被本C文件外的其他C源程序文件中的函数调用
 ​	为完成某一功能的程序指令(语句)的集合，称为**函数**。也可称为**方法**等叫法。
 
 ​	**函数的目的**：为了解决传统方式的代码冗余(即有过多重复的代码)、不利于代码的维护的弊病。
@@ -3198,11 +3167,11 @@ void main(){
 
  1. 函数的声明和函数定义中的返回值类型、形参列表、函数名**要一致**。
 
- 1. 形参列表：表示函数的输入。
+ 2. 形参列表：表示函数的输入。
 
  3. 函数中的语句：表示为了实现某一功能代码块。
 
- 3. 函数可以有返回值，也可以没有，如果没有返回值，返回类型声明为`void`。当有返回值时，返回值类型要**明确**，要求返回值和返回类型要**匹配**，或者可以相互转换(**自动或强制**)。
+ 4. 函数可以有返回值，也可以没有，如果没有返回值，返回类型声明为`void`。当有返回值时，返回值类型要**明确**，要求返回值和返回类型要**匹配**，或者可以相互转换(**自动或强制**)。
 
     ```c
     double getSum(int n1,int n2){
@@ -3348,7 +3317,7 @@ void main(){
 4. 当一个函数执行完毕，或者遇到return,就会返回，遵守谁调用，就将结果返回给谁
 
 ## 实参、形参未完成
-
+形参 或者说所有的变量，缺省的存储类别都是auto的。c语言中四种存储类别 auto static extern register 除非标了，否则都是auto。
 ## 回调函数
 
 函数指针变量可以作为某个函数的参数来使用的，回调函数就是一个通过函数指针调用的函数。
@@ -3398,7 +3367,8 @@ int main(){
    size_t strlen(const char *str)
    ```
 
-   计算字符串`str`的长度，直到空结束字符，但不包括空结束字符。
+   计算字符串`str`的长度，直到空结束字符，但不包括空结束字符(`\0`)。
+ 
 
 2. 拷贝字符串：
 
@@ -3682,95 +3652,95 @@ static void fun2(void){//静态函数 只能在本文件中使用
    }
    ```
 
-## 头文件￥
+<h2 id="头文件">头文件</h2>
 
-![image-20211027105238939](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105238939.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-kOJyoyTX-1638798816885)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105238939.png)]
 
-![image-20211027105536140](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105536140.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-iyFIceh9-1638798816885)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105536140.png)]
 
-![image-20211027105615099](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105615099.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-KycrHmta-1638798816885)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105615099.png)]
 
-![image-20211027105806083](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105806083.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-mat01Ya6-1638798816886)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105806083.png)]
 
-![image-20211027110012424](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110012424.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wbX3wDEx-1638798816886)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110012424.png)]
 
-![image-20211027110138408](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110138408.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-b7fTaGhb-1638798816886)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110138408.png)]
 
-![image-20211027111109598](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111109598.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-A8bb0bR1-1638798816887)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111109598.png)]
 
-![image-20211027110545572](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110545572.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-gqkftFgH-1638798816887)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110545572.png)]
 
-![image-20211027110744150](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110744150.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-elQPZ3oE-1638798816887)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110744150.png)]
 
-![image-20211027111311039](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111311039.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Z4afdIZv-1638798816888)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111311039.png)]
 
-![image-20211027111956865](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111956865.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ENibVC9T-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111956865.png)]
 
-![image-20211028163532408](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028163532408.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ZFc3lhXB-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028163532408.png)]
 
 ## 注意￥
 
-![image-20211031002559300](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031002559300.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wwNKu6QU-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031002559300.png)]
 
-![image-20211101122846181](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101122846181.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-uF0HuQCO-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101122846181.png)]
 
 因为函数放在了主函数的下面所以要声明函数
 
-![image-20211101123148062](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101123148062.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EPJ6sr8d-1638798816890)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101123148062.png)]
 
-![image-20211101154000404](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154000404.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-C7TMiIjE-1638798816890)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154000404.png)]
 
-![image-20211101154011955](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154011955.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-b3ulDJbm-1638798816890)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154011955.png)]
 
-![image-20211101154024256](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154024256.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-w4WHyUEL-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154024256.png)]
 
-![image-20211101154145342](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154145342.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ANaVOYox-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154145342.png)]
 
-![image-20211101154202555](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154202555.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CwuR6aIo-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154202555.png)]
 
-![image-20211101154225770](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154225770.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-feobTbI0-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154225770.png)]
 
-![image-20211101154333424](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154333424.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-OI18Yu8K-1638798816892)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154333424.png)]
 
-![image-20211101154456012](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154456012.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-dFMtDV1Y-1638798816892)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154456012.png)]
 
-![image-20211101154616823](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154616823.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WTFccyXO-1638798816892)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154616823.png)]
 
-![image-20211101154636946](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154636946.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-phIoROK6-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154636946.png)]
 
-不可以重载 ![image-20211101154747311](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154747311.png)
+不可以重载 [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-gJiDhSRj-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154747311.png)]
 
-![image-20211101154836065](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154836065.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-6PD8GHs6-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154836065.png)]
 
-![image-20211101154847653](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154847653.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-KMvu0itU-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154847653.png)]
 
-![image-20211101155121316](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155121316.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vaC59QNR-1638798816894)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155121316.png)]
 
-![image-20211101155137853](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155137853.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-8mYBdalE-1638798816894)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155137853.png)]
 
-![image-20211101155231111](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155231111.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-4Wo4ZOrv-1638798816894)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155231111.png)]
 
-![image-20211101155508103](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155508103.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-hQ2XOUJF-1638798816895)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155508103.png)]
 
-![image-20211101155839558](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155839558.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-cx2si1g0-1638798816895)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155839558.png)]
 
-![image-20211101160017479](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160017479.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2Vmkd37s-1638798816895)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160017479.png)]
 
-![image-20211101160102814](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160102814.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-3GgUjUn2-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160102814.png)]
 
-![image-20211101160222556](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160222556.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-tzGjIPiT-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160222556.png)]
 
-![image-20211101160441825](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160441825.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-eOqlAavI-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160441825.png)]
 
-![image-20211101160612919](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160612919.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-8nr04qsN-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160612919.png)]
 
-![image-20211101160631044](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160631044.png)
-
-
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-OBDbVoAl-1638798816897)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160631044.png)]
 
 
 
-# 宏定义
+
+
+<h1 id="宏定义">宏定义 </h2>
 
 **宏定义**：用一个**标识符**来表示一个字符串，如果在后面的代码出现了该标识符，那么就**全部替换**成指定的字符串。
 
@@ -3829,9 +3799,9 @@ int main(){
 
 4. 宏定义不是说明或语句，**在行末不必加分号**，如加上分号则来分号也被一起替换。
 
-4. 宏定义中包含"`##`"，宏替换时自动将`##`去掉，将其前后的字符串串合在一起。
+5. 宏定义中包含"`##`"，宏替换时自动将`##`去掉，将其前后的字符串串合在一起。
 
-5. 宏定义必须写在函数之外，其作用域为宏定义命令起**到源程序结束**。如要终止其作用可以使用`#undef`命令。
+6. 宏定义必须写在函数之外，其作用域为宏定义命令起**到源程序结束**。如要终止其作用可以使用`#undef`命令。
 
    ```c
    #define PI 3.14159
@@ -3845,7 +3815,7 @@ int main(){
    }
    ```
 
-6. 代码中宏名如果被**引号**包围，那么预处理程序**不对其做宏替代**。
+7. 代码中宏名如果被**引号**包围，那么预处理程序**不对其做宏替代**。
 
    ```c
    #define OK 100
@@ -3854,7 +3824,7 @@ int main(){
    }
    ```
 
-7. 宏定义**允许嵌套**，在宏定义的字符串中可以使用已经定义的宏名，在宏展开时由预处理程序层层代换。
+8. 宏定义**允许嵌套**，在宏定义的字符串中可以使用已经定义的宏名，在宏展开时由预处理程序层层代换。
 
    ```c
    #define PI 3.14159
@@ -3862,17 +3832,17 @@ int main(){
    printf("%f",S)//3.14159*y*y
    ```
 
-8. 习惯上宏名用**大写字符**表示，以便与变量区别。但也允许用小写。
+9. 习惯上宏名用**大写字符**表示，以便与变量区别。但也允许用小写。
 
 10. 可用宏定义表示数据类型，以便方便书写。
 
    符号常量 ---> [Here](#常量\符号常量)
 
    ```c
-   #define UINT unsigned int
-   void main(){
-       UINT a,b;//宏替换 unsigned int a,b;
-   }
+#define UINT unsigned int
+void main(){
+    UINT a,b;//宏替换 unsigned int a,b;
+}
    ```
 
 10. 宏定义表示数据类型和用[typedef](#自定义类型)定义数据说明符的区别：宏定义只是**简单的字符串替换**，由**预处理器**来处理；而`typedef`是在编译阶段由**编译器**处理的，它**并不是简单的字符串替换**，而给原有的数据类型起一个新的名字，将它作为一种新的数据类型。
@@ -3924,9 +3894,9 @@ int main(){
 
 2. 在带参宏定义中，不会为形式参数分配内存，因此不必指明数据类型。而在宏调用中，实参包含了具体的数据，要用它们去替换形参，因此**实参必须要指明数据类型**。
 
-2. 宏定义中包含"`##`"，宏替换时自动将`##`去掉，将其前后的字符串串合在一起。
+3. 宏定义中包含"`##`"，宏替换时自动将`##`去掉，将其前后的字符串串合在一起。
 
-3. 在宏定义中，字符串内的形参通常要用括号括起来以避免出错。
+4. 在宏定义中，字符串内的形参通常要用括号括起来以避免出错。
 
    ```c
    #include <stdio.h>
@@ -4066,13 +4036,13 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 # 进度
 
-![image-20211109235103673](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109235103673.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-3OA2UtrK-1638798816897)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109235103673.png)]
 
-3![image-20211104165813163](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165813163.png)
+3[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-6nheBspl-1638798816898)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165813163.png)]
 
-4![image-20211104165552597](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165552597.png)
+4[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-G1Yk1zT1-1638798816898)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165552597.png)]
 
-# 进制
+<h1 id=“进制”>进制</h1>
 
 **采用不同的进制的原因**是不同的领域用到的技术形式不相同　
 
@@ -4348,11 +4318,12 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 # 附录
 
-## C语言关键字
 
+<h2 id="C语言关键字">C语言关键字</h2>
 <img src="img/附录/C语言关键字.png"  >
 
-## C语言占位符
+
+<h2 id="C语言占位符">C语言占位符</h2>
 
 <img src="img/附录/数据类型和占位符对应关系.png" style="zoom:67%;" >
 
@@ -4382,7 +4353,8 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 **据大小自动选f格式或e格式，且去掉无意义的零**:`%g`/`%lg`
 
-## C语言标准库
+
+<h2 id="C语言标准库">C语言标准库</h2>
 
 ​	C标准库是一组C内置**函数、常量、头文件**。
 
@@ -4416,15 +4388,16 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 - --->[time.h](/C语言标准库/time.h)
 
-## C语言常见预处理指令
+<h2 id="C语言常见预处理指令">C语言常见预处理指令</h2>
 
 <img src="img/附录/常用预处理命令.png" style="zoom:67%;"   >
 
-## 进制之间的转换
+<h2 id="进制之间的转换">进制之间的转换</h2>
 
 <img src="img/附录/进制转换.png"  >
 
-## ASCII码
+
+<h2 id="ASCII码">ASCII码</h2>
 
 **介绍：**
 
@@ -4440,13 +4413,14 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 ​	<img src="" >
 
-## 常用转义字符
+
+<h2 id="常用转义字符">常用转义字符</h2>
 
 <img src="img/附录/转义字符.png" style="zoom:67%;" >  
 
   
 
-## 运算符的优先级和结合性
+<h2 id="运算符的优先级和结合性">运算符的优先级和结合性</h2>
 
 <img src="img/附录/运算符优先级.png" >
 
@@ -4457,7 +4431,7 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 **注意**：
 
 1.  `vc`  `gcc`编辑器，在**计算参数**的时候，无论是**系统函数**还是**自定义函数**都是 **从右向左**的顺序计算的。
-2. C语言的`printf`函数是先**从右往左**计算各表达式的值（**入栈**），再**从左往右**输出各表达式的值（**出栈**）。
+2.  C语言的`printf`函数是先**从右往左**计算各表达式的值（**入栈**），再**从左往右**输出各表达式的值（**出栈**）。
 
 **小结** ：
 
@@ -4467,13 +4441,13 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 4. 逗号的运算符优先级最低。
 5. 大致优先级顺序：算术运算符 > 关系运算符 ＞ 逻辑运算符(逻辑非! 除外) > 赋值运算符 > 逗号运算符。
 
-## 双目运算符中两边运算量 类型转换规律
+<h2 id="双目运算符中两边运算量 类型转换规律">双目运算符中两边运算量 类型转换规律</h2>
 
 运算所需变量为**两个**的运算符叫做双目运算符，或者要求运算对象的**个数是2**的运算符称为双目运算符。
 
 <img src="img\附录\双目运算符中.png" >
 
-## int补充知识
+<h2 id="int补充知识">int补充知识</h2>
 
 在`C99`标准中定义了这些数据类型，具体定义在：`/usr/include/stdint.h   ISO C99: 7.18 Integer types`
 
@@ -4556,7 +4530,7 @@ uint8是无符号 就是 0-255，uint8_t 实际是一个 char
 uint8_t a = 1;
 ```
 
-## 常见问题及解决方法
+<h2 id="常见问题及解决方法">常见问题及解决方法</h2>
 
 ```c
 LINK : fatal error LNK1104
@@ -4566,7 +4540,7 @@ LINK : fatal error LNK1104
 
 **解决办法**：修改源文件后，需要关闭控制台，才能正确运行
 
-```
+```c
 error C2143 语法错误 缺少;
 ```
 
@@ -4574,11 +4548,11 @@ error C2143 语法错误 缺少;
 
 **解决办法**：编译失败，注意错误出现的行数，再到源代码中指定位置改错。
 
-## 循环语句常见错误
+<h2 id="循环语句常见错误">循环语句常见错误</h2>
 
 
 
-## 作者
-
+<h2 id="作者">作者</h2>
 - Github --> [Here]()
+
 
