@@ -215,7 +215,7 @@
 3. **先进后出**
    栈是一种一端受限的线性表，它只接受从同一端插入或删除，并且严格遵守先进后出的准则。
 
-   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C语言简介/%E6%A0%88.png" alt="栈" style="zoom:67%;" />
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C语言简介/1133.png" alt="栈" style="zoom:67%;" />
 
 4. **函数内部的变量在栈区申请**。
 
@@ -733,7 +733,7 @@ void main() {
 
 ## 变量作用域
 
-​	**变量作用域(Scope)**，就是指变量的**有效范围**。
+​	**变量作用域(`Scope`)**，就是指变量的**有效范围**。
 
 **注意**：
 
@@ -780,7 +780,7 @@ void main() {
 
 1. 全局变量未初始化，系统会自动对其初始化(正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值)。
 
-  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/变量/%E5%88%9D%E5%A7%8B%E5%8C%96%E9%BB%98%E8%AE%A4%E5%80%BC.png" alt="初始化默认值" style="zoom:67%;" />
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/变量/1234.png" alt="初始化默认值" style="zoom:67%;" />
 
 **例**：
 
@@ -839,7 +839,7 @@ void main() {
 
 ​	每一种数据都定义了明确的数据类型，在内存中分配了不同大小的内存空间(字节来表示)。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E6%A6%82%E8%BF%B0.png" alt="概述" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/1.png" alt="概述" style="zoom:67%;" />
 
 ## 基本数据类型
 
@@ -849,7 +849,7 @@ void main() {
 
 ​	分为基本型、短整型、长整型、无符号四种。**整数可以精确存放**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E6%95%B4%E5%9E%8B%E5%8F%98%E9%87%8F.png" alt="整型变量" style="zoom:67%;" />	
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/2.png" alt="整型变量" style="zoom:67%;" />	
 
 在不同系统上，数据类型的长度不一样 int 2字节或4字节。
 
@@ -868,7 +868,7 @@ void main() {
 ​	**int补充知识**： -->  [Here](#int补充知识)
 
 ### 实型数据
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%AE%9E%E5%9E%8B%E5%8F%98%E9%87%8F.png" alt="实型变量" style="zoom:67%;" />	
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/3.png" alt="实型变量" style="zoom:67%;" />	
 
 在内存中，实数一律以**指数形式**存放。**浮点数是近似值，存在误差**。
 
@@ -891,7 +891,7 @@ void main() {
 ​	**占位符**： -->  [Here](#C语言占位符)
 
 ### 字符型数据
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%8F%98%E9%87%8F.png" alt="字符型变量" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/4.png" alt="字符型变量" style="zoom:67%;" />
 	字符类型可以表示**单个字符**，允许使用单个字符、转义字符、ASCII、Unicode。
 
 ​	把字符的相对应的ASCII放到存储单元中，而这些ASCII代码值在计算机中以**二进制**的形式存放的。所以存储到计算机中，需要将字符对应的**码值**(整数)找出来。
@@ -959,7 +959,7 @@ char name[] = "你好";
 2. 字符串占用内存是连续的，一个字符挨着一个字符，包括字符串结束符，一旦碰到`\0`则表示字符串的结束。
 
 3. 字符串简单**内存示意**：
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%85%E5%AD%98.png" alt="字符串内存" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/5.png" alt="字符串内存" style="zoom:67%;" />
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
@@ -1217,7 +1217,7 @@ struct Student{
    ```
 
    **图示**：
-   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B.png" alt="结构体类型" style="zoom:67%;" />
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/6.png" alt="结构体类型" style="zoom:67%;" />
    
    **构造方式**：
    
@@ -1470,7 +1470,7 @@ void main(){
 
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%85%B1%E5%90%8C%E4%BD%93%E8%A7%A3%E6%9E%90.png" alt="共同体解析" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/7.png" alt="共同体解析" style="zoom:67%;" />
 
 > 成员n、ch、m在内存中"对齐"到一头，对ch赋值修改的是前一个字节，对m赋值修改的是前两个字节，对n赋值修改的是全部字节。也就是说，ch、m会影响到n的一部分数据，而n会影响ch、m的全部数据。
 
@@ -1549,9 +1549,9 @@ void main(){
 
   - 转换的基本规则是“**按数据长度增加的方向进行转换**”，以保证精度不降低。
 
-    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E7%B2%BE%E5%BA%A6%E5%A4%A7%E5%B0%8F.png" alt="精度大小" style="zoom:67%;" />
+    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/8.png" alt="精度大小" style="zoom:67%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2%E8%A1%A8.png" alt="数据类型自动转换表" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/9.png" alt="数据类型自动转换表" style="zoom:67%;" />
 
 ​	 比如 `int` 型数据和 `long` 型数据进行相加或相减运算时，系统会先将 `int` 型数据转换成 `long` 型，然后再进行运算。这样的话运算结果的精度就不会降低。`long` 是“大水桶”，`int` 是“小水桶”。`int` 能存放的，`long` 肯定能存放；而 `long` 能存放的，`int` 不一定能存放。
 
@@ -1655,7 +1655,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	**值传递**：将变量指向的存储内容，在传递/赋值时，拷贝一份给接受变量。
 
-​	<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/%E5%80%BC%E4%BC%A0%E9%80%92.png" alt="值传递" style="zoom:67%;" />
+​	<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/1.png" alt="值传递" style="zoom:67%;" />
 
 ## 地址传递
 
@@ -1663,7 +1663,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	**地址传递** 也叫 **指针传递**：如果指针，就将指针变量存储的地址，传递给接收变量，如果是**数组，就将数组的首地址传递给接收变量**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92.png" alt="地址传递" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/2.png" alt="地址传递" style="zoom:67%;" />
 
 # 运算符
 
