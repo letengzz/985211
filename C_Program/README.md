@@ -2676,7 +2676,7 @@ while(循环条件){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/while%E8%AF%AD%E5%8F%A5.png" alt="while语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/while.png" alt="while语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2727,7 +2727,7 @@ for(循环变量初始化;循环条件;循环变量迭代){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/for%E8%AF%AD%E5%8F%A5.png" alt="for语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/for.png" alt="for语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2787,7 +2787,7 @@ do{
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/dowhile%E8%AF%AD%E5%8F%A5.png" alt="dowhile语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/dowhile.png" alt="dowhile语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2871,7 +2871,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/break%E8%AF%AD%E5%8F%A5.png" alt="break语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/break.png" alt="break语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2905,7 +2905,7 @@ for(i = 0;i < 10;i++){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/continue%E8%AF%AD%E5%8F%A5.png" alt="continue语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/continue.png" alt="continue语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2970,7 +2970,7 @@ label:statment
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/goto%E8%AF%AD%E5%8F%A5.png" alt="goto语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/goto.png" alt="goto语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -3572,7 +3572,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%AE%9E%E4%BE%8B.png" alt="函数调用实例" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/1.png" alt="函数调用实例" style="zoom:67%;" />
 
 ```c
 #include <stdio.h>
@@ -3587,7 +3587,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%AE%9E%E4%BE%8B2.png" alt="函数调用实例2" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/2.png" alt="函数调用实例2" style="zoom:67%;" />
 
 **函数调用规则**：
 
@@ -3616,7 +3616,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A81.png" alt="递归调用1" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/3.png" alt="递归调用1" style="zoom:67%;" />
 
 **示例二**：
 
@@ -3634,7 +3634,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A82.png" alt="递归调用2" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/4.png" alt="递归调用2" style="zoom:67%;" />
 
 **注意**：
 
