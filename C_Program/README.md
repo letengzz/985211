@@ -198,7 +198,7 @@
 <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译和执行过程" style="zoom:67%;" />
 
 ## C语言内存布局
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/CProgram/C语言简介/%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA%25E5%2586%2585%25E5%25AD%2598.png" alt="计算机内存" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C语言简介/1122.png" alt="计算机内存" style="zoom:67%;" />
 
 ### 栈区
 
