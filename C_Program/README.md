@@ -2519,7 +2519,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/%E5%8D%95%E5%88%86%E6%94%AF.png" alt="单分支" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/1.png" alt="单分支" style="zoom:67%;" />
 
 ### 双分支
 
@@ -2539,7 +2539,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/%E5%8F%8C%E5%88%86%E6%94%AF.png" alt="双分支" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/2.png" alt="双分支" style="zoom:67%;" />
 
 **基本语法2**：
 
@@ -2566,7 +2566,7 @@ else{
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/%E5%8F%8C%E5%88%86%E6%94%AF2.png" alt="双分支2" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/3.png" alt="双分支2" style="zoom:67%;" />
 
 ### 嵌套分支
 
@@ -2614,7 +2614,7 @@ switch(表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/switch%E8%AF%AD%E5%8F%A5.png" alt="switch语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/switch.png" alt="switch语句" style="zoom:67%;" />
 
 **说明**：
 
