@@ -689,7 +689,7 @@ void main() {
 
 **变量使用基本步骤**：
 
-   1. 声明 (declare) 变量：
+   1. 声明 (`declare`) 变量：
 
       ```c
       int num;
@@ -1679,7 +1679,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	算术运算符是对**数值类型的变量**进行运算的。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="算术运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/1.png" alt="算术运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1759,7 +1759,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	关系运算符的作用：用于条件判断的表达常用在**if结构的条件中**或**循环结构的条件中**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="关系运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/2.png" alt="关系运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1771,7 +1771,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	逻辑运算符的**作用**：用于判断条件中的逻辑关系。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="逻辑运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/3.png" alt="逻辑运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1797,7 +1797,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	赋值运算符就是将某个运算后的值，赋给指定的变量
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="赋值运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/4.png" alt="赋值运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1886,7 +1886,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ## 指针运算符
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="指针运算符" style="zoom: 80%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/5.png" alt="指针运算符" style="zoom: 80%;" />
 
 **取地址运算符**：
 **格式**：
@@ -1951,7 +1951,7 @@ printf("d = %d",d);         //打印d
 
 ​	位运算符作用于位，并逐位执行操作。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="位运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/6.png" alt="位运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
