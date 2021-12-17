@@ -1,4 +1,4 @@
-﻿﻿# 程序设计基本概念
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿# 程序设计基本概念
 
 计算机不过是一种具有**内部存储能力**、由**程序自动控制**的电子设备。
 
@@ -71,7 +71,7 @@
 ## 流程图
 
 ​	流程图是算法的一种**图像化**表示方式。能直观、清晰，更有利于人们设计与理解算法。
-![流程图基本图形](https://img-blog.csdnimg.cn/326a084355b44ac290d0282f405734a7.png)
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%9F%BA%E6%9C%AC%E5%9B%BE%E5%BD%A2.png" alt="流程图基本图形" style="zoom:67%;" />
 ​	由这些基本图形中的框和流程线组成的流程图来表示算法形象直观,简单方便。但是,这种流程图对于流程线的走向没有任何限制,可以任意转向,在描述复杂的算法时所占篇幅较多，费时费力且不易阅读。
 
 ​	随着结构化程序设计方法的出现,**1973年**美国学者`I.Nassi`和`B.Shneiderman`提出了一种新的流程图形式,这种流程图完全去掉了流程线,算法的每一步都用一个矩形框来描述,把一个个矩形框按执行的次序连接起来就是一个完整的算法描述。这种流程图用两位学者名字的第一个英文字母命名,称为**N-S流程图**。
@@ -83,19 +83,23 @@
 - **顺序结构**
 
   如赋值语句、输入、输出语句都可构成顺序结构。当执行这些语句构成的程序时，将按照这些语句的先后顺序**逐条执行**，**没有分支**，**没有转移**。
-![顺序结构流程图](https://img-blog.csdnimg.cn/a53f8a7ef3e04e8e9a183a1b77690e0c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="顺序结构流程图" style="zoom:67%;" />
+
 - **选择结构**
 
-  如if语句、switch语句都可以构成选择结构。当执行到这些语句时，将根据不同的条件去执行不同分支中的语句
-![选择结构流程图](https://img-blog.csdnimg.cn/57e52eb9e0234e6ea563f6565bf6cdbe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+  如if语句、switch语句都可以构成选择结构。当执行到这些语句时，将根据不同的条件去执行不同分支中的语句。
+
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="选择结构流程图" style="zoom:67%;" />
+
 - **循环结构**
 
   如for循环、while循环、do-while循环。将根据各自的条件，使同一组语句重复执行多次或一次也不执行。
 
 	- 当型循环的特点是：当指定的条件满足(成立)时，就执行循环体，否则就不执行。
-	![当型循环流程图](https://img-blog.csdnimg.cn/bf2cdfb046834814a2640facafcc6a0d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+	  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E5%BD%93%E5%9E%8B%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="当型循环流程图" style="zoom:67%;" />
 	- 直到型循环的特点是：执行循环体直到指定的条件满足(成立)时就不再执行循环体。
-	![直到型循环流程图](https://img-blog.csdnimg.cn/d72e57734ec84b3c9049b3628755c5c1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+	  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E7%9B%B4%E5%88%B0%E5%9E%8B%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="直到型循环流程图" style="zoom:67%;" />
 
 已经证明，由三种基本结构组成的算法可以解决任何复杂的问题。由三种基本结构所构成的算法称为**结构化算法**；由三种基本结构所构成的程序称作**结构化程序**。
 
@@ -103,7 +107,7 @@
 
 解题的思路是:先输人一个数,在没有其他数参加比较之前,它显然是当前最大的数，把它放到变量max中。让max始终存放当前已比较过的数中的最大值。然后输入第二个数,并与max比较,如果第二个数大于max，则用第二个数取代max中原来的值。如此先后输人和比较,每次比较后都将值大者放在max中,直到输入人的数小于0时结束。最后max中的值就是所有输入数中的最大值。
 
-![例题](https://img-blog.csdnimg.cn/369e3426de00484a830b3ea426370b23.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E4%BE%8B%E9%A2%98.png" alt="例题" style="zoom:67%;" />
 
 ## 模块化结构
 
@@ -117,9 +121,13 @@
 
 # C语言简介
 
-​	C语言是结构化程序设计语言的代表作
-![C语言编译程序功能](https://img-blog.csdnimg.cn/57a88fe950be4c2c8ed2ef95f62bac9c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
-​	C语言**最小的程序单元**是**语句**。
+- ​	C语言是结构化程序设计语言的代表作。
+- ​	C语言**最小的程序单元**是**语句**。
+- 一个C源程序是由一个`main`函数和若干个其他函数组成的。函数是C程序的**基本单位**，被调用的函数可以是系统提供的库函数，也可以是用户根据需要自己定义的函数。
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B/57a88fe950be4c2c8ed2ef95f62bac9c.png" alt="C语言编译程序功能" style="zoom: 67%;" />
+
+
 
 ## C语言工具使用
 
@@ -186,28 +194,62 @@
 ## C语言运行过程
 
 ​	**编辑**C源程序后经过 C编译程序**编译**之后生成一个后缀`.OBJ`的二进制文件(被称为**目标文件**，在计算机底层执行)，然后由称为**连接程序(Link)**  的软件，把此`.OBJ`文件与C语言提供的各种库函数**连接**起来**生成**一个后缀为`.EXE`的**可执行文件**。(在计算机底层执行) 在操作系统环境下，只需**点击或输入**此文件的名字(而不必输入后缀`.EXE`)，该可执行文件就可以**运行**。
-![编译和执行过程](https://img-blog.csdnimg.cn/81508466f43b46309d53b13abc621c5b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译和执行过程" style="zoom:67%;" />
+
 ## C语言内存布局
-![C程序内存](https://img-blog.csdnimg.cn/01aaad7b6948421fbe6898f4745bdc28.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/CProgram/C语言简介/%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA%25E5%2586%2585%25E5%25AD%2598.png" alt="计算机内存" style="zoom:67%;" />
+
 ### 栈区
 
-​	在需要的时候由系统分配，在不需要的时候自动清除的变量存储区。
+​	栈（`stack`）又名堆栈，堆栈是一个特定的存储区或寄存器，它的一端是固定的，另一端是浮动的 。对这个存储区存入的数据，是一种特殊的数据结构。所有的数据存入或取出，只能在浮动的一端（称**栈顶**）进行，严格按照"**先进后出**"的原则存取，位于其中间的元素，必须在其栈上部（后进栈者）诸元素逐个移出后才能取出。在内存储器（随机存储器）中开辟一个区域作为堆栈，叫**软件堆栈**；用寄存器构成的堆栈，叫**硬件堆栈**。
 
-​	存储的变量通常是局部变量、函数参数等。
+栈（操作系统）：由操作系统自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。
 
-**注意**：
+**特点**：	
 
-1. 栈：**先进后出**原则。
+1. 在需要的时候由系统分配，**在不需要的时候自动清除的变量存储区**。
+
+2. 存储的变量通常是**局部变量、函数参数**等。
+
+3. **先进后出**
+   栈是一种一端受限的线性表，它只接受从同一端插入或删除，并且严格遵守先进后出的准则。
+
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C语言简介/%E6%A0%88.png" alt="栈" style="zoom:67%;" />
+
+4. **函数内部的变量在栈区申请**。
+
+   函数的入口地址、全局变量、静态变量的虚拟地址在编译时就可确定，而在函数中使用的变量在运行时确定，函数形参在函数调用时确定。
+
+5. 字符串、变量、数组等在栈中是**连续申请**的。
+
+6. 使用**递归函数**会增加栈的开销。
+
+7. 数组在栈区申请的空间，在最后一个元素的末尾空出一个内存单元。
+
+8. 字符串在栈中输出时如果没有结束字符会一直输出。C语言中字符串主要为字符数组。
+
+9. 栈区的空间大小约为 `8M`
 
 ### 堆区
 
-由程序员调用系统内存分配函数分配的内存块。编译器不会自行释放。
+​	堆区（`heap`）通过`new`、`malloc`、`realloc`分配的内存块，编译器不会负责它们的释放工作，需要用程序区释放。分配方式类似于数据结构中的链表。“内存泄漏”通常说的就是堆区。
+
+堆（操作系统）： 一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS（操作系统）回收。
+
+**特点**：	
+
+1. 堆区是向高地址扩展的，是不连续的内存区域（这是由于系统是用链表来存储的空闲内存地址的，自然是不连续的是动态分配的），因为会手动进行分配，会大一些，大小不固定。
+
+2. 是由new分配的内存，一般速度比较慢，而且容易产生内存碎片,不过用起来最方便。（首先应该知道操作系统有一个记录空闲内存地址的链表，当系统收到程序的申请时，会遍历该链表，寻找第一个空间大于所申请空间的堆结点，然后将该结点从空闲结点链表中删除，并将该结点的空间分配给程序，另外，对于大多数系统，会在这块内存空间中的首地址处记录本次分配的大小，这样，代码中的 `delete`语句才能正确的释放本内存空间。另外，由于找到的堆结点的大小不一定正好等于申请的大小，系统会自动的将多余的那部分重新放入空闲链表中）
 
 ### 静态存储区/全局区
 
-
+​	全局变量和静态变量的存储是放在一块的，初始化的全局变量和静态变量在一块区域，未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。程序结束后，由系统释放。
 
 ### 代码区
+
+​	存放程序的二进制代码，内存由系统管理。
 
   ## C语言构成和格式
 
@@ -235,7 +277,7 @@ C语言5种类型语句：
 
 <h3 id="预处理">预处理</h3>
 
-​	以#开始的语句称为**预处理器命令**。
+​	以`#`开始的语句称为**预处理器命令**。
 
 ​	在编译之前对源文件进行简单加工的过程，称为**预处理**(即预先处理、提前处理)。
 
@@ -441,8 +483,8 @@ int max(int a,int b)
 
 **命名规则**：
 
-1. 只能由字母、数字和_(下划线)**组成**。
-2. 必须以字母或_(下划线)**开头**。
+1. 只能由字母、数字和`_`(下划线)**组成**。
+2. 必须以字母或`_`(下划线)**开头**。
 3. 不能包含空白字符(**换行符、空格和制表符称为空白字符**)。
 4. C语言中的关键字、保留字不能用作标识符名。
 5. 区分大小写。
@@ -543,7 +585,7 @@ main(){
 
 ## 	字符型常量
 
-​	用英文单引号括起来，只保存一个字符'a'、'b' 、'*' ，还有转义字符 '\n' 、'\t'。
+​	用英文单引号括起来，只保存一个字符'`a`'、'`b`' 、'`*`' ，还有转义字符 '`\n`' 、'`\t`'。
 
 ​	**说明**：区分大小写、空格符也是字符常量、只能包含一个字符、必须用单引号，双引号也是字符串常量，可以和整型互换。
 
@@ -707,7 +749,7 @@ void main() {
 
 1. 局部变量，系统不会对其**初始化**，必须**对局部变量初始化才能使用**，否则，程序运行后可能会**异常退出**。
 
-2. 正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值。
+2. **正确地初始化**变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值。
 
 3. **函数的参数**，**形式参数**，被当作该函数的局部变量，如果与全局变量同名会**优先使用局部变量**。(编译器使用**就近原则**)。
 
@@ -727,7 +769,7 @@ void main() {
        //printf("%d",k);//这里不能使用for中定义的k变量
    }
    ```
-6. 局部变量的**缺省存储类别**是auto(自动变量)。
+6. 局部变量的**缺省存储类别**是**auto**(自动变量)。
 ## 全局变量
 
 ​	在所有函数**外部定义的变量**叫**全局变量**，**作用域在整个程序中有效**。
@@ -737,49 +779,53 @@ void main() {
 **说明**：
 
 1. 全局变量未初始化，系统会自动对其初始化(正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值)。
-![初始化默认值](https://img-blog.csdnimg.cn/4d3ab8ed59424ebd99e80e25c05a1e6f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/变量/%E5%88%9D%E5%A7%8B%E5%8C%96%E9%BB%98%E8%AE%A4%E5%80%BC.png" alt="初始化默认值" style="zoom:67%;" />
 
 **例**：
 
-```c
-myFun.h
-double money = 1.1;//定义了全局变量
-hello.c
-#include <stdio.h>
-#include "myFun.h"
-void test(){
-    printf("%.2f\n",money);
-}
-void main(){
-    printf("%.2f\n",money);
-    test();
-    if(1){
-        printf("%.2f\n",money);
-    }
-}
-```
+1. ```c
+   myFun.h
+   double money = 1.1;//定义了全局变量
+   ```
 
-```c
-#include <stdio.h>
+   ```c
+   hello.c
+   #include <stdio.h>
+   #include "myFun.h"
+   void test(){
+       printf("%.2f\n",money);
+   }
+   void main(){
+       printf("%.2f\n",money);
+       test();
+       if(1){
+           printf("%.2f\n",money);
+       }
+   }
+   ```
 
-int n = 20;//函数外部定义的变量，就是全局变量
-void sayHello(){
-    char name[] = "tom";
-    printf("hello %s\n",name);//name就是局部变量，作用域在sayHello函数中
-}
-//函数形参，会被视为f10的局部变量
-//当局部变量和全局变量同名时，以局部变量为准(就近原则)
-void f10(){
-    int n = 10;
-    printf("n=%d",n);
-}
-void main(){
-    sayHello();
-    //不能使用到sayHello的name变量
-    //printf("name = %s",name);//提示：没有定义name
-    f10(10);
-}
-```
+2. ```c
+   #include <stdio.h>
+   
+   int n = 20;//函数外部定义的变量，就是全局变量
+   void sayHello(){
+       char name[] = "tom";
+       printf("hello %s\n",name);//name就是局部变量，作用域在sayHello函数中
+   }
+   //函数形参，会被视为f10的局部变量
+   //当局部变量和全局变量同名时，以局部变量为准(就近原则)
+   void f10(){
+       int n = 10;
+       printf("n=%d",n);
+   }
+   void main(){
+       sayHello();
+       //不能使用到sayHello的name变量
+       //printf("name = %s",name);//提示：没有定义name
+       f10(10);
+   }
+   ```
 
 ## 变量声明的意义
 
@@ -792,7 +838,9 @@ void main(){
 # 数据类型
 
 ​	每一种数据都定义了明确的数据类型，在内存中分配了不同大小的内存空间(字节来表示)。
-![数据类型概述](https://img-blog.csdnimg.cn/46e2425727cc4532b0e0704c87cc3fb4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E6%A6%82%E8%BF%B0.png" alt="概述" style="zoom:67%;" />
+
 ## 基本数据类型
 
 ​	基本类型是最基础的简单数据类型，**其值无法再分解为其他类型**，基本数据类型都是**自我说明**的。
@@ -800,8 +848,12 @@ void main(){
 ### 整型数据
 
 ​	分为基本型、短整型、长整型、无符号四种。**整数可以精确存放**。
-![整型变量](https://img-blog.csdnimg.cn/0b7d237c9e4e4631a1e21e5f92cf524d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_20,color_FFFFFF,t_70,g_se,x_16)
-​	在不同系统上，数据类型的长度不一样 int 2字节或4字节。
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E6%95%B4%E5%9E%8B%E5%8F%98%E9%87%8F.png" alt="整型变量" style="zoom:67%;" />	
+
+在不同系统上，数据类型的长度不一样 int 2字节或4字节。
+
+整形数据在内存中是以**补码**(二进制)的形式存在。
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
@@ -816,8 +868,11 @@ void main(){
 ​	**int补充知识**： -->  [Here](#int补充知识)
 
 ### 实型数据
-![实型变量](https://img-blog.csdnimg.cn/4dd07b503ddd4140aea707442a3ef8dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
-​	在内存中，实数一律以**指数形式**存放。**浮点数是近似值，存在误差**。
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%AE%9E%E5%9E%8B%E5%8F%98%E9%87%8F.png" alt="实型变量" style="zoom:67%;" />	
+
+在内存中，实数一律以**指数形式**存放。**浮点数是近似值，存在误差**。
+
+实型数据在计算机中也是以**二进制**的方式存储
 
 **确定小数点位置**：
 
@@ -836,10 +891,10 @@ void main(){
 ​	**占位符**： -->  [Here](#C语言占位符)
 
 ### 字符型数据
-![字符型变量](https://img-blog.csdnimg.cn/1a779a7908f943b9bfb72f7bff1ab186.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
-​	字符类型可以表示**单个字符**，允许使用单个字符、转义字符、ASCII、Unicode。
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%8F%98%E9%87%8F.png" alt="字符型变量" style="zoom:67%;" />
+	字符类型可以表示**单个字符**，允许使用单个字符、转义字符、ASCII、Unicode。
 
-​	字符类型 存储到计算机中，需要将字符对应的**码值**(整数)找出来。
+​	把字符的相对应的ASCII放到存储单元中，而这些ASCII代码值在计算机中以**二进制**的形式存放的。所以存储到计算机中，需要将字符对应的**码值**(整数)找出来。
 
 ​	**存储**：字符'a' ---> 码值(97) ---> 二进制(1100001) ---> 存储 
 
@@ -871,7 +926,9 @@ void main(){
 
 ### 字符串数据
 
-​	**没有字符串类型**，使用**字符数组**来表示**字符串**。
+​	**没有字符串类型(`String`)**，使用**字符数组**来表示**字符串**。
+
+​	**字符数组**：--> [Here](#字符数组)
 
 ```c
 char name[20] = "你好";
@@ -902,13 +959,13 @@ char name[] = "你好";
 2. 字符串占用内存是连续的，一个字符挨着一个字符，包括字符串结束符，一旦碰到`\0`则表示字符串的结束。
 
 3. 字符串简单**内存示意**：
-![字符串内存](https://img-blog.csdnimg.cn/383c39b7504e4124aaa3a805d553e2a5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%85%E5%AD%98.png" alt="字符串内存" style="zoom:67%;" />
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
   ### 布尔型数据
 
-1. C语言标准(C89)没有定义布尔类型，所以c语言判断真假时**以0为假，非0为真**。
+1. C语言标准(`C89`)没有定义布尔类型，所以c语言判断真假时**以0为假，非0为真**。
 
 2. 但这种做法不直观，所以我们可以借助c语言的宏定义。
 
@@ -1160,11 +1217,12 @@ struct Student{
    ```
 
    **图示**：
-   ![结构体类型](https://img-blog.csdnimg.cn/a755757bb57e4ba3b4741b6ee46185a8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5LiA5Y-q5Lya54is55qE5bCP5ZGG55Oc,size_1,color_FFFFFF,t_70,g_se,x_16)
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B.png" alt="结构体类型" style="zoom:67%;" />
+   
    **构造方式**：
-
+   
    1. 先定义结构体，再创建结构体变量。
-
+   
       ```c
       struct Stu{
           char *name;//姓名
@@ -1175,9 +1233,9 @@ struct Student{
       //定义了两个变量stu1和stu2 都是Stu类型
       //关键字struct不能少
       ```
-
+   
    2. 在定义结构体的同时定义结构体变量。
-
+   
       ```c
       struct Stu{
           char *name;//姓名
@@ -1186,13 +1244,13 @@ struct Student{
       }stu1,stu2;
       //在定义结构体Stu的同时，创建了两个结构体变量stu1,stu2
       ```
-
+   
    3. 不使用结构体名定义其他变量，在定义时也可以不给出结构体名。也叫**匿名结构体**。
-
+   
       **注意**：
-
+   
       ​	后面不能再使用结构体数据类型定义其他变量。
-
+   
       ```c
       struct {//没有写结构体名
           char *name;//姓名
@@ -1385,376 +1443,99 @@ void main(){
 }
 ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-71PvB3TD-1638798816847)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183230529.png)][外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-XgeSm356-1638798816849)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183235802.png)]
 
-是字符'9'
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-VVpExqaE-1638798816850)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183410987.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-cypSpCGk-1638798816850)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183806623.png)]
-
-
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Zjiu8Y9f-1638798816851)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183900655.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ql8bmiSn-1638798816852)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211108183951156.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-pCq9AvFx-1638798816852)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002229027.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-a8bYEBj5-1638798816853)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002442993.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-dslvltNc-1638798816853)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002633203.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-HxBc9oPu-1638798816854)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002817045.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-cqZlDdWT-1638798816855)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002852204.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-luNbyS7V-1638798816856)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002925044.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-K3mWbKAI-1638798816856)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109002949905.png)]
-
-
-
-
-
-## 指针类型￥
-
-​	指针表示一个**地址**(存放的是地址)。
-
-### 基本数据类型￥
-
-- 基本类型，都有对应的指针类型，形式为 `数据类型 *`
-
-
-- 如果输出一个变量的地址，使用的格式是`%p`
-
-
-  - 取出num这个变量对应地址：`&num`
-
-
-  - 定义一个指针变量，指针：
-
-    ```c
-    int *ptr = &num;
-    ```
-
-**注意**： **指针的类型和该指针指向的变量是对应关系**
-
-  - 指针变量 本身也有地址：
-
-    ```c
-    printf("ptr的地址%p",&ptr);
-    ```
-
-  - 获取指针指向的值`*ptr`：
-
-    ```c
-    printf("ptr的存放数据%d",*ptr);
-    ```
-
-  ### 	数组￥
-
-![image-20211106082115247](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082115247.png
-
-指针是C语言的精华，也是C语言的难点。
-指针，也就是内存的地址:所谓指针变量，也就是保存了内存地址的变量。关于
-指针的基本使用，在讲变量的时候做了入门级的介绍
-获取变量的地址，用&，比如: int num = 10,获取num的地址: &num
-指针类型，指针变量存的是- -个地址，这个地址指向的空间存的才是值
-比如:int°ptr=&num;ptr就是指向int类型的指针变量，即ptr是int*类型。
-获取指针类型所指向的值，使用: *,比如: var ptr *int, 使用*ptr获取ptr指向的
-值
-
-![image-20211106082406042](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082406042.png
-
-![image-20211106082544692](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106082544692.png
-
-指针是一个变量，其值为另一个变量的地址(前示意图已经说明)，即，内存位置的
-直接地址。就像其他变量或常量- -样，在使用指针存储其他变量地址之前，对其进
-行声明。指针变量声明的一般形式为:
-int *ip; /*一个整型的指针 */
-double *dp; /* -个double型的指针*/
-float *fp; /* 一个浮点型的指针*/
-char *ch; /* 一个字符型的指针*/
-
-![image-20211106083448500]![image-20211106083532589](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083532589.png
-
-![image-20211106083510289](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083510289.png
-
-![image-20211106083624032](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083624032.png
-
-![image-20211106083710525](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106083710525.png
-
-![image-20211106084045318](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084045318.png
-
-![image-20211106084109371](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084109371.png
-
-![image-20211106084128654](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084128654.png
-
-![image-20211106084321719](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084321719.png
-
-![image-20211106084501857](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084501857.png
-
-![image-20211106084805615](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084805615.png
-
-![image-20211106084956392](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106084956392.png
-
-![image-20211106085117159](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085117159.png
-
-
-
-![image-20211106085319191](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085319191.png
-
-![image-20211106085347567](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085347567.png
-
-指针可以用关系运算符进行比较，如==、<<=和>>=。如果p1和p2指向两个变量，
-比如同一个数组中的不同元素，则可对p1和p2进行大小比较,看下面代码，说明输
-
-![image-20211106085604464](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085604464.png
-
-![image-20211106085924158](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106085924158.png
-
-![image-20211106090020662](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090020662.png
-
-基本介绍
-要让数组的元素指向int或其他数据类型的指针。可以使用指针数组。
-指针数组定义
-数据类型*指针数组名[大小;
-比如: int *ptr[3];
-
-1) ptr 声明为一个指针数组
-   2)由3个整数指针组成。因此，ptr 中的每个元素，都是一个指向int 值的指针。
-
-![image-20211106090108958](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090108958.png
-
-![image-20211106090202906](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090202906.png
-
-![image-20211106090355040](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090355040.png
-
-![image-20211106090420483](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090420483.png
-
-![image-20211106090602459](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090602459.png
-
-![image-20211106090623130](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090623130.png
-
-![image-20211106090825876](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106090825876.png
-
-![image-20211106091021200](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-2021110609102120
-
-![image-20211106091103767](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091103767.png
-
-![image-20211106091145009](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091145009.png
-
-![image-20211106091308192](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091308192.png
-
-指针数组应用实例
-请编写程序，定义一个指向字符的指针数组来存储字符串列表(四大名著书名)，并
-通过遍历该指针数组，显示字符串信息
-
-请编写程序，定义一个指向字符的指针数组来存储字符串列表(四大名著书名)，并
-通过遍历该指针数组，显示字符串信息，(即: 定义一个指针数组，该数组的每个
-元素，指向的是一一个字符串)
-
-sizeof（*books）/sizeof（char）？
-
-![image-20211106091707510](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106091707510.png
-
-数组名从来都不是指针,之所以数组名可以像指针那样用，是因为数组名会被自动转换为指针。
-
-这个是值传给指针
-
-.但是要让*book[i]成立将%s改为%c即可.此时输出该字符串的第一个字符
-
-对字符指针变量初始化，实际上是把字符串第1个元素的地址（即存放字符串的字符数组的首元素地址）赋给字符指针变量。
-
-%s本身就是从指针位置输出字符，直到'\0'，所以传的就是指针
-![image-20211106094156491](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094156491.png
-
-定义并且初始化字符指针变量的形式:
-p保存着字符串"abcd"的首地址,等于其中字符'a’的首地址
-元素，指向的是一一个字符串)c)如果让一个字符指针变量指向一个字符串，其中字符串的\0可以怀用写
-gcc编译器自动帮你添加\0'
-d)不能通过字符指针变量修改字符串中每个字符的值
-只能通过其进行查看字符的值
-如若放在一个指针中, 会被放在一个常量区, 只可以看不可以修改
-如果是一个指针字符串，只能看不能修改
-
-![image-20211106094237678](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094237678.png
-
-![image-20211106094257717](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094257717.png
-
-https://blog.csdn.net/qq_45905355/article/details/106113980
-
-字符串%s的特性，后面直接跟地址即可输出值
-
-  ### 	多级指针￥
-
-![image-20211106094818490](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094818490.png
-
-指向指针的指针是一-种多级间接寻址的形式，或者说是一个指针链。通常，一个指
-针包含一个变量的地址。当我们定义一个指向指针的指针时，第一个指针包含了第
-二个指针的地址，第二个指针指向包含实际值的位置(如下图)
-
-![image-20211106094924561](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106094924561.png
-
-![image-20211106095004046](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095004046.png
-
-多重指针(二级)快速入门案例
-1)一个指向指针的指针变量必须如下声明，
-即在变量名前放置两个星号，例如，下面
-声明了一个指向int类型指针的指针:
-int
-**ptr;
-Q2)|
-2)当一个目标值被一个指针间接指向到另一
-个指针时，访问这个值需要使用两个星号
-运算符,比如**ptr
-↓3)案例演示+内存布局图
-
-![image-20211106095428205](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095428205.png
-
-![image-20211106095441578](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095441578.png
-
-![image-20211106095515635](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095515635.png
-
-![image-20211106095526971](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095526971.png
-
-![image-20211106095701286](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095701286.png
-
-三级指针
-
-![image-20211106095945778](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106095945778.png
-
-
-
-![image-20211106100037500](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100037500.png
-
-当函数的形参类型是指针类型时，是使用该函数时，需要传递指针，或者地址，或
-
-![image-20211106100322523](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100322523.png
-
-![image-20211106100604699](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100604699.png
-
-![image-20211106100610890](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100610890.png
-
-![image-20211106100655797](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100655797.png
-
-![image-20211106100712936](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106100712936.png
-
-因为函数放在了主函数的下面所以要声明函数
-
-![image-20211106101209443](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101209443.png
-
-![image-20211106101441612](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101441612.png
-
-![image-20211106101813801](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101813801.png
-
-![image-20211106101841170](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106101841170.png
-
-![image-20211106102142672](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102142672.png
-
-![image-20211106102157423](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102157423.png
-
-![image-20211106102340091](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102340091.png
-
-![image-20211106102554210](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102554210.png
-
-![image-20211106102822050](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102822050.png
-
-![image-20211106102915088](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106102915088.png
-
-用指针作为函数返回值时需要注意，函数运行
-结束后会销毁在它内部定义的所有局部数据，
-包括局部变量、局部数组和形式参数，函数返
-回的指针不能指向这些数据[案例演示]
-函数运行结束后会销毁该函数所有的局部数据，
-这里所谓的销毁并不是将局部数据所占用的内
-存全部清零，而是程序放弃对它的使用权限，
-后面的代码可以使用这块内存[ 案例演示]
-C语言不支持在调用函数时返回局部变量的地
-址，如果确实有这样的需求，需要定义局部变
-量为static变量[案例演示]
-
-![image-20211106103116752](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103116752.png
-
-![image-20211106103158720](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103158720.png
-
-![image-20211106103345535](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103345535.png
-
-![image-20211106103434532](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103434532.png
-
-![image-20211106103519516](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103519516.png
-
-![image-20211106103533519](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103533519.png
-
-![image-20211106103826403](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103826403.png
-
-![image-20211106103946953](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106103946953.png
-
-![image-20211106104149990](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104149990.png
-
-一个函数总是占用一段连续的内存区域，函数名在表达式中有时也会被转换为该
-函1数所在内存区域的首地址，这和数组名非常类似。
-把函数的这个首地址(或称入口地址)赋予一一个指针变量，使指针变量指向函数
-所在的内存区域，然后通过指针变量就可以找到并调用该函数。这种指针就是
-函数指针。
-
-![image-20211106104431189](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104431189.png
-
-returnType为函数返回值类型
-pointerName为指针名称
-param list为函数参数列表
-参数列表中可以同时给出参数的类型和名称，也可以只给出参数的类型，省略参
-数的名称
-注意()的优先级高于*，第-一个括号不能省略，如果写作returnType
-*pointerName(param list);就成了函数原型，它表明函数的返回值类型为
-returnType 
-
-![image-20211106104551291](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106104551291.png
-
-![image-20211106160748797](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106160748797.png
-
-![image-20211106163336204](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163336204.png
-
-简单理解
-
-![image-20211106163513902](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163513902.png
-
-![image-20211106163623239](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163623239.png
-
-![image-20211106163910841](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106163910841.png
-
-![image-20211106164022869](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164022869.png
-
-![image-20211106164053346](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164053346.png
-
-
-
-![image-20211106164118936](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164118936.png
-
-函数指针变量可以作为某个函数的
-参数来使用的，回调函数就是一个
-通过函数指针调用的函数。
-简单的讲:回调函数是由别人的函
-数执行时调用你传入的函数
-
-![image-20211106164717778](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106164717778.png
-
-![image-20211106165043018](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165043018.png
-
-指针变量存放的是地址，从这个角度看指针的本质就是地址。
-变量声明的时候，如果没有确切的地址赋值，为指针变量赋-一个NULL 值是好的
-编程习惯。
-赋为NULL值的指针被称为空指针，NULL指针是一个定义在标准库<stdio.h>中 的
-值为零的常量#define NULL 0 [案例]
-
-![image-20211106165249198](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165249198.png
-
-
+```c
+#include <stdio.h>
+
+union data{//data就是一个共同体，包括三个成员，共享数据空间，该空间的大小以占用最大的成员为准
+    int n;
+    char ch;
+    short m;
+};
+void main(){
+    union data a;
+    printf("%d,%d\n",sizeof(a),sizeof(union data));//4,4
+    a.n = 0x40;//16进制 ==> 0100 0000
+    printf("%d,%c,%d\n",a.n,a.ch,a.m);//64 @ 64
+    a.ch = '9';// ==> 0011 1001
+    printf("%d,%c,%d\n",a.n,a.ch,a.m);//57 9 57
+    a.m = 0x2059;// ==> 0010 0000 0101 1001
+    printf("%d,%c,%d\n",a.n,a.ch,a.m);//8281,Y,8281
+    //Y 二进制0101 1001 因为char为1个字节
+    a.n = 0x3E25AD54;
+    printf("%d,%c,%d\n",a.n,a.ch,a.m);//1042656596,T,-21164
+  //getchar();
+}
+
+```
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E5%85%B1%E5%90%8C%E4%BD%93%E8%A7%A3%E6%9E%90.png" alt="共同体解析" style="zoom:67%;" />
+
+> 成员n、ch、m在内存中"对齐"到一头，对ch赋值修改的是前一个字节，对m赋值修改的是前两个字节，对n赋值修改的是全部字节。也就是说，ch、m会影响到n的一部分数据，而n会影响ch、m的全部数据。
+
+**上图是在大多数PC机上的内存分布情况，如果是51单片机，情况会有所不同。**
+
+**最佳实践**：
+
+```c
+/* 
+学生信息包括姓名、编号、性别、职业、分数
+教师的信息包括姓名、编号、性别、职业、教学科目
+*/
+#include <stdio.h>
+#define TOTAL 2 //人员总数
+
+//定义一个结构体
+struct Person{
+    char name[20];
+    int num;//编号
+    char sex;//性别 f 女 m男
+    char profession;//职员 s 学生 t老师
+    union{
+        float score;
+        char course[20];
+    }sc;//共同体变量
+};
+void main(){
+    int i;
+    struct Person persons[TOTAL];
+    //输入人员信息
+    for (i = 0; i < TOTAL; ++i) {
+        printf("input info:");
+        scanf("%s %d %c %c",persons[i].name,&persons[i].num,&persons[i].sex,&persons[i].profession);
+        if(persons[i].profession == 's'){
+            printf("学生成绩：");
+            scanf("%f",&persons[i].sc.score);
+        } else if(persons[i].profession == 't'){
+            printf("老师课程：");
+            scanf("%s",persons[i].sc.course);
+        }
+    }
+    //输出信息
+    for (i = 0; i < TOTAL; ++i) {
+        if(persons[i].profession == 's'){
+            printf("%s %d %c %c %.2f",persons[i].name,persons[i].num,persons[i].sex,persons[i].profession,persons[i].sc.score);
+        }else if(persons[i].profession == 't'){
+            printf("%s %d %c %c %s",persons[i].name,persons[i].num,persons[i].sex,persons[i].profession,persons[i].sc.course);
+        }
+    }
+}
+```
+
+## 指针类型
+
+- **指针类型** --> [Here](#指针)
 
 ## 空类型
 
-​	空类型表示**没有类型**。 即`void`。
+​	函数，调用后并不需要向调用者返回函数值， 这种函数可以定义为"**空类型**"。其类型说明符为`void`，不需要向调用者返回函数值 。
+
+**void作用**：
+
+1. 作为参数表示无参数。
+2. 作为返回值代表无返回值。
+3. 修饰指针变量代表未知类型的指针。
 
   ## 数据类型的转换
 
@@ -1762,14 +1543,15 @@ returnType
 
  C语言允许表达式中混合有不同类型的常量和变量。
 
-    1. **系统自动转换**：容易出现意外结果
+1. **系统自动转换**：容易出现意外结果
 
 ​      当参与运算的数据的**类型不同**时，编译系统会自动先将它们转换成**同一类型**，然后再进行运算。
 
   - 转换的基本规则是“**按数据长度增加的方向进行转换**”，以保证精度不降低。
-    <img src="img/类型转换/精度大小.png" >
 
-  <img src="img/类型转换/数据类型自动转换表.png" style="zoom:67%;"   >
+    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E7%B2%BE%E5%BA%A6%E5%A4%A7%E5%B0%8F.png" alt="精度大小" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2%E8%A1%A8.png" alt="数据类型自动转换表" style="zoom:67%;" />
 
 ​	 比如 `int` 型数据和 `long` 型数据进行相加或相减运算时，系统会先将 `int` 型数据转换成 `long` 型，然后再进行运算。这样的话运算结果的精度就不会降低。`long` 是“大水桶”，`int` 是“小水桶”。`int` 能存放的，`long` 肯定能存放；而 `long` 能存放的，`int` 不一定能存放。
 
@@ -1777,13 +1559,14 @@ returnType
 
 ​     在运算时，程序中所有的 `float` 型数据全部都会先转换成 `double` 型。即使只有一个 `float` 型数据，也会先转换成 `double` 型，然后再进行运算。因为 CPU 在运算的时候有“字节对齐”的要求，这样运算的速度是最快的。
 
-  - `char` 型和 `short` 型数据参与运算时，必须先转换成 `int` 型。涉及 CPU 的运行原理。
+- `char` 型和 `short` 型数据参与运算时，必须先转换成 `int` 型。涉及 CPU 的运行原理。
 
-  - 有符号整型和无符号整型混合运算时，有符号型要转换成无符号型，运算的结果是无符号的。
+- 有符号整型和无符号整型混合运算时，有符号型要转换成无符号型，运算的结果是无符号的。
 
-  - 在赋值运算中，赋值号两边量的数据类型不同时，**赋值号右边量的类型将转换为左边量的类型**，如果右边变量的数据类型长度比左边长时，将丢失一部分数据。**会降低精度**，丢失的部分按**四舍五入向前舍入**。
+- 在赋值运算中，赋值号两边量的数据类型不同时，**赋值号右边量的类型将转换为左边量的类型**，如果右边变量的数据类型长度比左边长时，将丢失一部分数据。**会降低精度**，丢失的部分按**四舍五入向前舍入**。
 
-    2. **强制转换**
+
+2. **强制转换**
 
 ​     将精度高的数据类型转换为精度小的数据类型，使用时要加上强制转换符()，但可能造成精度降低或溢出，格外注意。强制类型转换操作**并不改变**操作数本身。
 
@@ -1804,7 +1587,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ### 基本数据类型和字符串类型的转换
 
-- 基本数据类型转成字符串类型
+- **基本数据类型转成字符串类型**
 
   **sprintf函数打印到字符串中。包含在stdio.h的头文件中**。
 
@@ -1829,7 +1612,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 1. `sprintf`是一个系统函数，可以将结果存放到字符串中。
 2. 格式化的结果，会存放到`str`中。
 
-- 字符串类型转成基本数据类型
+- **字符串类型转成基本数据类型**
 
   通过`<stdlib.h>`的函数调用`atoi` `atof`即可。
 
@@ -1864,7 +1647,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 # 传递参数
 
-​	C语言传递参数(或者赋值)可以是**值传递(pass by value)**，也可以**传递指针(a pointer passed by value)**，传递指针也叫**地址传递**。
+​	C语言传递参数(或者赋值)可以是**值传递(`pass by value`)**，也可以**传递指针(`a pointer passed by value`)**，传递指针也叫**地址传递**。
 
 ## 值传递
 
@@ -1872,7 +1655,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	**值传递**：将变量指向的存储内容，在传递/赋值时，拷贝一份给接受变量。
 
-​	<img src="img\地址传递\值传递.png" >
+​	<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/%E5%80%BC%E4%BC%A0%E9%80%92.png" alt="值传递" style="zoom:67%;" />
 
 ## 地址传递
 
@@ -1880,7 +1663,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	**地址传递** 也叫 **指针传递**：如果指针，就将指针变量存储的地址，传递给接收变量，如果是**数组，就将数组的首地址传递给接收变量**。
 
-<img src="img\地址传递\地址传递.png" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92.png" alt="地址传递" style="zoom:67%;" />
 
 # 运算符
 
@@ -1896,7 +1679,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	算术运算符是对**数值类型的变量**进行运算的。
 
-<img src="img/运算符/算术运算符.png" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="算术运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1919,17 +1702,17 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
   ```c
   int i = 10;
-  int j = ++i;	//运算规则等价于 int j = i;i = i + 1;
+  int j = ++i;	//运算规则等价于 i = i + 1;int j = i;
   ```
 
   - **(后)++/(后)--运算规则**：
 
   ```c
   int i = 10;
-  int j = i++;	//运算规则等价于 i = i + 1;int j = i;
+  int j = i++;	//运算规则等价于 int j = i;i = i + 1;
   ```
 
-  - ++ 或者 -- 可以独立使用，就相当于自增，如果独立使用两者**完全等价**
+  - `++` 或者 `--` 可以独立使用，就相当于自增，如果独立使用两者**完全等价**
 
   ```c
   k++;
@@ -1940,7 +1723,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 **注意**：	
 
-- 对于除号"/" ，它的整数除和小数除是有区别的；整数之间做除法，只会保留整数部分而舍弃小数部分。
+- 对于除号"`/`" ，它的整数除和小数除是有区别的；整数之间做除法，只会保留整数部分而舍弃小数部分。
 
   ```c
   //处理流程:10/4 = 2.5 --> 截取整数 --> 2 --> 2.000000
@@ -1950,17 +1733,17 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 - 如果双目运算符两边运算数的类型不一致，系统将自动进行类型转换，使运算符两边类型达到一致后，再进行计算。
 
-- 单目运算符"+"和 "-"、"++"和 "- -"的结合性是**从右到左**的，其余运算符的结合性都是**从左到右**。
+- 单目运算符"`+`"和 "-"、"`++`"和 "`- -`"的结合性是**从右到左**的，其余运算符的结合性都是**从左到右**。
 
-- "++" 和 "--" 的结合方向是**从右到左**，- i++相当于- (i++)。
+- "`++`" 和 "`--`" 的结合方向是**从右到左**，`- i++`相当于`- (i++)`。
 
-  例：-3++等于i = 3 、(i++) = 3 、-(i++)=-3 然后 i自增 最后i = 4。 
+  例：`-3++`等于`i = 3` 、`(i++) = 3` 、`-(i++)=-3` 然后 i自增 最后`i = 4`。 
 
 **算术表达式**
 
 ​	用算术表达符和一对圆括号将运算数(或称操作数)连接起来的、符合C语言语法的表达式称为**算术表达式**。
 
-​	算术表达式中,运算对象可以是**常量﹑变量和函数等**。**例**:2+sqrt( c) * b。
+​	算术表达式中,运算对象可以是**常量﹑变量和函数等**。**例**:`2+sqrt( c) * b`。
 
 在计算机语言中,算术表达式的求值规律与数学中四则运算的规律类似,其**运算规则**和要求如下:
 
@@ -1968,7 +1751,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 2. 在算术表达式中,若包含不同优先级的运算符,则按运算符的优先级由高到低进行;若表达式中运算符的级别相同,则按运算符的结合方向进行。
 
-   **例**：表达式a+b-c,因为+号和-号的优先级相同,它们的结合性为从左到右,因此先计算a+b,然后把所得结果减去c的值。
+   **例**：表达式`a+b-c`,因为`+`号和`-`号的优先级相同,它们的结合性为从左到右,因此先计算`a+b`,然后把所得结果减去`c`的值。
 
 ## 关系运算符
 
@@ -1976,7 +1759,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	关系运算符的作用：用于条件判断的表达常用在**if结构的条件中**或**循环结构的条件中**。
 
-<img src="img/运算符/关系运算符.png" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="关系运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1988,7 +1771,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	逻辑运算符的**作用**：用于判断条件中的逻辑关系。
 
-<img src="img/运算符/逻辑运算符.png" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="逻辑运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -2008,13 +1791,13 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 **说明**：短路现象
 
-​	在进行&&(||)，如果第一个条件为假(真)，则**不再执行**后面的条件，整个结果为假(真)所以，也称为短路逻辑与(或)。
+​	在进行`&&`(`||`)，如果第一个条件为假(真)，则**不再执行**后面的条件，整个结果为假(真)所以，也称为短路逻辑与(或)。
 
 ## 赋值运算符及表达式
 
 ​	赋值运算符就是将某个运算后的值，赋给指定的变量
 
-<img src="img/运算符/赋值运算符.png">
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="赋值运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -2032,7 +1815,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	在赋值运算符之前加上其他运算符可以构成**复合赋值运算符**。
 
-​	C语言规定可以使用**10种**复合赋值运算符，其中与算术运算有关的：+=、-=、*=、/=、%=(**注意：两个符号之间不能有空格**)。
+​	C语言规定可以使用**10种**复合赋值运算符，其中与算术运算有关的：`+=`、`-=`、`*=`、`/=`、`%=`(**注意：两个符号之间不能有空格**)。
 
 **赋值运算中的类型转换**：
 
@@ -2057,7 +1840,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
    printf("%d",a);
    ```
 
-   a的值为-32768。因为98304(二进制11000000000000000)已经超出短整型的数值范围(-32768-32768)，a截取b中低16位中的值(二进制100000000000000)，由于高位为1，所以a的值为-32768
+   a的值为-32768。因为98304(二进制`11000000000000000`)已经超出短整型的数值范围(-32768-32768)，a截取b中低16位中的值(二进制`100000000000000`)，由于高位为1，所以a的值为-32768
 
 2. 当赋值号左边的变量为**无符号整型**，右边为**有符号整型**时，则把内存中的内容**原样复制**。右边数值的范围**不应超出**左边变量可以接受的数值范围。同时需要**注意**，这时负数将转换为正数。**例**：变量a被说明为unsigned类型，在进行了a=-1；的赋值操作后，将使a中的值为65535
 
@@ -2073,35 +1856,9 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ## 条件运算符
 
-<img src="img/运算符/条件运算符.png" >
-
-​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
-
-## 自反赋值运算符
-
-<img src="img/运算符/自反赋值运算符.png" >
-
-​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
-
-## 逗号运算符
-
-<img src="img/运算符/逗号运算符.png" >
-
-​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
-
-## 指针运算符
-
-<img src="img/运算符/指针运算符.png" >
-
-​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
-
-## 三元运算符
-
 **基本语法**：
 
 ​	**条件表达式 ? 表达式1 ：表达式2;**
-
-​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
 **说明**：
 
@@ -2121,7 +1878,52 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
    int n = a > b ? 1.1 : 1.2;//警告 double --> int
    ```
 
-4. 三元运算符可以转换成if-else语句。
+4. 条件运算符可以转换成if-else语句。
+
+5. 条件运算符是C语言中**唯一**的一个三目运算符。
+
+​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
+
+## 指针运算符
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="指针运算符" style="zoom: 80%;" />
+
+**取地址运算符**：
+**格式**：
+
+​	**&变量名**
+
+**含义**：取出存放变量的地址。
+
+**用途**：跨函数传递变量值。
+
+**例**：
+
+```c
+&a   //表示变量a的存放地址
+b = &a    //表示把变量a的地址赋值给变量b
+```
+
+------
+
+**间接运算符**：
+**格式**：
+
+​	***指针名/地址名**
+**含义**：取出存储在地址中的对应值。
+**例**：
+
+```c
+a = 3;      //将a复制为3    
+c = &a;     //把a的地址赋值给c
+d = *c;     //取出c存放a地址中的值，并赋值给d
+printf("d = %d",d);         //打印d
+```
+
+> 输出为：
+>     d = 3
+
+​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
 ## 单目运算符
 
@@ -2141,11 +1943,15 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
+## 三目运算符 
+
+条件运算符是C语言中唯一的一个三目运算符 --> [Here](#条件运算符)
+
 ## 位运算符
 
 ​	位运算符作用于位，并逐位执行操作。
 
-<img src="img/运算符/位运算符.png" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="位运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -2278,7 +2084,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ## 逗号运算符
 
-​	" , " 是C语言提供的一种特殊运算符,用逗号将表达式连接起来的式子称为**逗号表达式**。
+​	" `,` " 是C语言提供的一种特殊运算符,用逗号将表达式连接起来的式子称为**逗号表达式**。
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -2286,13 +2092,13 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 						**表达式1,表达式2,…,表达式n**
 **说明**
 
-1. 逗号运算符的结合性为从左到右,因此逗号表达式将从左到右进行运算。即先计算表达式1,然后计算表达式2,依次进行,最后计算表达式n。最后一个表达式的值就是此逗号表达式的值。
+1. 逗号运算符的结合性为从左到右,因此逗号表达式将从左到右进行运算。即先计算表达式1,然后计算表达式2,依次进行,最后计算表达式n。**最后一个表达式的值就是此逗号表达式的值**。
 
-   **例**: (i = 3,i++,++i,i + 5)这个逗号表达式的值是10,i的**值为5**。
+   **例**: (`i = 3,i++,++i,i + 5`)这个逗号表达式的值是10,`i`的**值为5**。
 
 2. 在所有运算符中,逗号运算符的**优先级最低**。
 
-3. int a,b;不是逗号表达式。
+3. `int a,b;`不是逗号表达式。
 
 4. 不建议经常使用。
 
@@ -2302,6 +2108,8 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ### 运算符表达式语句
 
+运算符及表达式 -->[Here](#运算符)
+
 ### 赋值语句
 
 ​	在赋值表达式的尾部加上一个" ; "，就构成了**赋值语句**，也叫**表达式语句**。赋值语句是一种可执行语句，应当出现在函数的**可执行部分**。应当注意，不要把变量定义时的赋初值和赋值语句**混为一谈**。
@@ -2310,11 +2118,23 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ## 函数调用语句
 
+函数 --> [Here](#函数)
+
 ## 空语句
+
+空语句 -->  [Here](#复合语句和空语句)
 
 ## 复合类型(块语句)
 
+复合类型 -->  [Here](#复合语句和空语句)	
+
 ## 流程控制语句
+
+选择控制语句  -->  [Here](#选择控制结构)	
+
+循环控制语句  -->  [Here](#循环控制结构)	
+
+跳转控制语句  -->  [Here](#跳转控制语句)	
 
 # 顺序控制结构
 
@@ -2334,7 +2154,7 @@ void main(){
 }
 ```
 
-## 数据输入￥Input
+## 数据输入Input
 
 ​	在编程中，需要接受用户输入的数据，可以使用键盘输入语句获取。
 
@@ -2343,10 +2163,6 @@ void main(){
 ```c
 scanf(格式控制,输入项1,输入项2,...)
 ```
-
-
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WMghLexB-1638798816857)(:\Users\LetengZzz\Desktop\IMG_0800.JPG)]
 
 **步骤**：
 
@@ -2376,21 +2192,135 @@ void main(){
 
 **说明**：
 
- 	1. 在scanf函数调用之后加上"`;`"，构成**输入语句**。
+1. 在`scanf`函数调用之后加上"`;`"，构成**输入语句**。
+1. 格式控制的主要作用是指定输入时的数据转换格式，即**格式转换说明**。`scanf`的格式转换说明与`printf`的类似，也是由`%`开始，其后是格式字符。
+1. 输入项之间用逗号隔开。对于`int` 、`float`、 `double`型变量，在变量之前必须加上`&`符号作为输入项(`&`是C语言中的求地址运算符，输入项必须是地址表达式)。
 
+**注意**：
 
+1. 在格式串中，必须含有与输入项一一对应的格式转换说明符。若格式说明与输入项的类型不一一对应匹配，则不能正确输入，而且编译时不会报错。若格式说明个数少于输入项个数， `scanf`函数结束输入，则多余的输入项将无法得到正确的输入值；若格式转换说明个数多于输入项个数，`scanf`函数也结束输入，多余的数据作废，不会作为下一个输入语句的数据。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EyqpBVRP-1638798816858)(:\Users\LetengZzz\Desktop\IMG_0801.JPG)]
+2. 在`VC 6.0`环境下,输入`short`型整数,格式控制要求用`%hd`。要输入`double`型数据，格式控制必须用`%lf`(或`%le`),否则,数据不能正确输入。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-KyjRDIhK-1638798816858)(:\Users\LetengZzz\Desktop\IMG_0802.JPG)]
+3. 在`scanf`函数的格式字符前可以加入一个正整数指定输入数据所占的宽度,但不可以对实数指定小数位的宽度。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-HfeuRGg5-1638798816859)(:\Users\LetengZzz\Desktop\IMG_0803.JPG)]
+4. 由于输入是一个字符流，`scanf`从这个流中按照格式控制指定的格式解析出相应数据,送到指定地址的变量中。因此当输入的数据少于输入项时，运行程序将等待输入，且到满足要求为止。当输入的数据多于输入项时，多余的数据在输人流中没有作废，而是等待下一个输入操作语句继续从此输入流读取数据。
 
+5. `scanf` 函数有返回值,其值就是本次`scanf`调用正确输入的数据项的个数。
 
+6.  输入参数是已经定义好的"字符数组名", 不用加`&`, 因为在C语言中数组名就代表该数组的起始地址
+
+   ```c
+   scanf("%s",str);
+   ```
+
+**通过scanf函数从键盘输入数据**：
+
+​	当用`scanf`函数从键盘输入数据时，每行数据在未按下回车键(Enter键)之前，可以任意修改，但按下回车键(Enter键)后，scanf函数即接受了这一行数据，不能再回去修改。
+
+1. **输入数值数据**：
+
+   在输入整数或实数这类数值型数据时,输入的数据之间必须用空格、回车符、制表符(Tab键)等间隔符隔开，间隔符个数不限。即使在格式说明中人为指定了输入宽度，也可以用此方式输入。
+
+   **例如**：
+
+   ​	若k为int型变量，a为float型变量，y为double型变量，有以下输人语句:
+
+   ```c
+   scanf ("%d%f%le",&k,&a,&y );
+   ```
+
+   若要给k赋值10，a赋值12.3，y赋值1234567.89，输入格式可以是(输入的第一个数据之前可有任意空格)：
+
+   > 10 12.3 1234567.89<CR>
+
+   此处`<CR>`表示回车键。也可以是:
+
+   > 10<CR>
+   > 12.3<CR>
+   > 1234567.89<CR>
+
+   只要能把3个数据正确输入，就可以按任何形式添加间隔符。
+
+2. **指定数据输入所占的宽度**：
+
+   可以在格式字符前加入一个正整数指定输入数据所占的宽度。
+
+   **例如**上例可改为:
+
+   ```c
+   scanf("%3d %5f %5le"，&k，&a,&y);
+   ```
+
+   若从键盘上从第1列开始输人:`123456.789.123`
+   用
+
+   ```c
+   printf( "%d %f %f\n",k,a, y);
+   ```
+
+   打印的结果是:
+
+   `123 456.700000 89.120000`
+
+   可以看到，由于格式控制是`%3d`，因此把输入数字串的前三位`123`赋值给了`k`；由于对应于变量`a`的格式控制是`%5f`，因此把输入数字串中随后的5位数(包括小数点)`456.7`赋值给了`a`；由于格式控制是`%5e`，因此把数字串中的随后的5位(包括小数点)`89.12`赋值给了`y`。
+
+   由以上示例可知，数字之间不需要间隔符，若插入了间隔符，系统也将按指定的宽度来读取数据，从而会引起输入混乱。除非数字是"粘连"在一起，否则不提倡指定输入数据所占的宽度。
+
+3. **跳过某个输入数据**：
+
+   可以在`%`和格式字符之间加入"`*`"号，作用是跳过对应的输入数据。
+
+   **例如**
+
+   ```c
+   int x,y,z;
+   scanf( "%d %*d %d %d",&x,&y,&z);
+   printf("%d %d %d\n",x,y,z);
+   ```
+
+   若是输入：
+   `12 34 56 78`
+   则输出是:
+   `12 56 78`
+   系统将12赋给`x`，跳过34，把56赋给`y`，把78赋给`z`。
+
+4. **在格式控制字符串中插入其他字符**：
+   `scanf` 函数中的格式控制字符串是为了输入数据用的，无论其中有什么字符，也不会输出到屏幕上，因此若想在屏幕上输出提示信息，应该首先使用`printf`函数输出。例如:
+
+   ```c
+   int x,y,z;
+   scanf("Please input x,y,z:%d %d %d" ,&x,&y,&z);
+   ```
+
+   屏幕上不会输出“`Please input x,y,z:`”，而是要求输入数据时按照――对应的位置原样输入这些字符，必须从第一列起以下面的形式进行输入:
+   `"Please input x,y,z:12 34 56`
+   包括“`Please input x,y ,z:`”中字符的大小写、字符间的间格等必须与`scanf`中的完全一致。这些字符又被称为**通配符**。
+   但如果使用以下的形式：
+
+   ```c
+   int x, y, z ;
+   printf("Please input x,y,z:");
+   scanf("%d %d %d",&x,&y,&z);
+   ```
+
+   运行时,由于`printf`语句的输出.屏幕上将出现提示“`Please input x, y,z:`”,只需按常规输入下面的数据即可:
+   `12 34 56`
+   如果在上面的`scanf`函数中,在每个格式说明之间加一个逗号作为通配符:
+
+   ```c
+   scanf("%d,%d,%d",&x,&y,&z);
+   ```
+
+   则输人数据时必须在前两个数据后面紧跟一个逗号，以便与格式控制中的逗号一一匹配，否则就不能正确读入数据。
+
+   例如,输入:`12,34,56`能正常读入。输入 `12,    34,    56`也能正确读入。因为空格是间隔符，将全部被忽略掉。但输入`12     ,34      ,56` 将不能正确读入，因为逗号没有紧跟在输入数据后面。
+
+   **需要提醒的是**，为了减少不必要的麻烦，尽量不要使用通配符。
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
-## 数据输出￥ Output
+## 数据输出Output
 
 ​	把数据从计算机内部送到计算机外部设备上的操作称为"**输出**"。
 
@@ -2404,44 +2334,55 @@ print(格式输入,输出项1，输出项2,...);
 
 1. **include <stdio.h>**。
 
-2. 使用**printf**函数。
+2. 使用`printf`函数。
 
 3. 使用适当的**格式参数**输出。
 
 **说明**：
 
- 1. 在printf函数调用之后加上"`;`"，构成**输出语句**。
+ 1. 在`printf`函数调用之后加上"`;`"，构成**输出语句**。
 
- 2. 用双引号括起来的字符串部分是**输出格式控制**，决定了输出数据的**内容和格式**。后面的输出项是printf函数的**实参**。
+ 2. 用双引号括起来的字符串部分是**输出格式控制**，决定了输出数据的**内容和格式**。后面的输出项是`printf`函数的**实参**。
 
  3. 输出格式说明的作用是将要输出的数据按照约定的格式输出。**格式说明**有**"%"符号**和紧跟在其后的**格式描述符**组成。
 
  4. 除了格式转换说明外，字符串中的其他字符(包括空格)将按原样输出。
 
- 5. printf的各输出项之间要用逗号隔开(函数的各个参数之间必须用逗号隔开)。输出项可以是任意合法的**常量、变量或表达式**。
+ 5. `printf`的各输出项之间要用逗号隔开(函数的各个参数之间必须用逗号隔开)。输出项可以是任意合法的**常量、变量或表达式**。
 
-    printf可以没有输出项,函数的调用形式将为printf(格式控制），输出结果就是格式控制中的**固定字符串**。
+    `printf`可以没有输出项,函数的调用形式将为`printf(格式控制)`，输出结果就是格式控制中的**固定字符串**。
 
     ```c
     printf("OK");
     ```
 
- 6. 通常输出的数据如果是负数，前面有符号"`-`"，但正数前面的"`+`"一般都省略了。如果要每一个数前面都带正负号，可以在"%"和格式字符间加一个"+"号来实现。
+**使输出总是带符号**：
 
-    ```c
-    int n = 4;
-    printf("%+d",n);
-    ```
+​	通常输出的数据如果是负数，前面有符号"`-`"，但正数前面的"`+`"一般都省略了。如果要每一个数前面都带正负号，可以在"`%`"和格式字符间加一个"`+`"号来实现。
 
-7. 
+```c
+int n = 4;
+int m = -10;
+printf("%+d %+d",n,m);
+```
+
+**长度修饰符**：
+
+​	在`%`和格式字符之间，可以加入**长度修饰符**，以保证数据输出格式的正确和对齐。对于长整型数(`long`)应该加`l`，即`%ld`；对于短整型(`short`)可以加`h`，即`%hd`。
+
+```c
+long a = 4555;
+short b = 45;
+printf("%ld %hd",a,b);
+```
 
 **输出数据所占宽度说明**：
 
-​	当使用%d、%c、%f...的格式说明时，输出数据所占的宽度(域宽)由系统决定，通常按照数据本身的**实际宽度输出**，前后不加空格，并采用**右对齐**的形式。
+​	当使用`%d`、`%c`、`%f`...的格式说明时，输出数据所占的宽度(域宽)由系统决定，通常按照数据本身的**实际宽度输出**，前后不加空格，并采用**右对齐**的形式。
 
 ​	**可以用以下方法控制输出数据所占的宽度(域宽)**：
 
-1. 在%和格式字符之间**插入**一个整数常数来指定输出的宽度n。
+1. 在`%`和格式字符之间**插入**一个整数常数来指定输出的宽度n。
 
    ```c
    int n = 1234;
@@ -2460,21 +2401,54 @@ print(格式输入,输出项1，输出项2,...);
    printf("%6d",n);//空空1234
    ```
 
-2. 对于float和double类型的实数，可以用"`n1.n2`"的形式来指定输出宽度(n1，n2分别代表一个整常数)，
+2. 对于`float`和`double`类型的实数，可以用"`n1.n2`"的形式来指定输出宽度(`n1`，`n2`分别代表一个整常数)，其中`n1`指定输出数据的宽度(包括小数点)，`n2`指定小数点后小数位的位数，`n2` 也称为精度
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2NO2tVlm-1638798816860)(:\Users\LetengZzz\Desktop\IMG_0797.JPG)]
+   ```c
+   float f = 1.22222f;
+   printf(".2%f",f);
+   ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-10oSteN6-1638798816861)(:\Users\LetengZzz\Desktop\IMG_0798.JPG)]
+   对于`f`、`e`或`E`，当输出数据的小数位多余`n2`时，截去右边多余的小数，并对截去部分的第一位小数做四舍五入处理；当输出数据的小数位小于`n2`时，在小说的最右边补0，使得输出数据的小数部分宽度为`n2`，若给出的总宽度`n1`小于`n2`加上整数位数和小数点(`e`或`E`格式还要加上指数的5位)，则自动突破`n1`的限制；反之，数字右对齐，左边补空格。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wMz3tKWN-1638798816861)(:\Users\LetengZzz\Desktop\IMG_0799.JPG)]
+   也可以用"`.n2`"格式(例如`%.6f`)，不指定总宽度，仅指定小数部分的输出位数由系统自动突破，按照实际宽度输出。如果指定"`n1.0`"或"`.0`"格式(例如`%12.0f`或`%.0f`)，则不输出小数点和小数部分。
+   对于`g`或`G`，宽度用来指定输出的有效数字位数。若宽度超过数字的有效数字位数，则左边自动补0；若宽度不足，则自动突破。不指定宽度，将自动按照6位有效数字输出，截去右边多余的小数，并对截去部分的第一位小数做四舍五入处理。
 
-printf语句是从右到左计算，从左到右输出
+3. 对于整型数，若输出格式是"`0n1`"或"`.n2`"格式(例如`%05d`或`%.5d`)，则如果指定的宽度超过输出数据的实际宽度，输出时将会右对齐，左边补0。
+   对于`float`和`double`类型的实数，若用"`0n1.n2`"格式输出(例如`%012.4f`)，如果给出的总宽度`n1`大于`n2`加上整数位数和小数点(`e`或`E`格式还要加上指数的5位)，则数字右对齐，左边补0。
+
+4. 对于字符串，格式"`n1`"指定字符串的输出宽度，若`n1`小于字符串的实际长度，则自动突破，输出整个字符串；若`n1`大于字符串的实际长度，则右对齐，左边补空格。若用"`.n2`"格式指定字符串的输出宽度，则若`n2`小于字符串的实际长度，将只输出字符串的前n2个字符。
+
+**注意**：输出数据的实际精度并不完全取决于格式控制中的域宽和小数的域宽，而是取决于数据在计算机内的存储精度。通常系统只能保证**float类型有7位有效数字，double类型有15位有效数字**。若你指定的域宽和小数的域宽超过相应类型数据的有效数字，输出的多余数字是没有意义的，只是系统用来填充域宽而已。
+**输出数据左对齐**
+	由于输出数据都隐含右对齐,如果想左对齐,可以在格式控制中的“%”和宽度之间加一个"`-`"号 来实现。
+
+**例**：
+
+`k`为`int`型，值为`1234`。`f`为`float`，值为`123.456`。`j`代表一个空格。
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6/image-20211212085552585.png" alt="printf" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6/image-20211212085617184.png" alt="image-20211212085617184" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6/image-20211212085655161.png" style="zoom:67%;" />
+
+**注意**：
+
+1. `printf` 的输出格式为自由格式，是否在两个数之间留逗号、空格或回车，完全取决于格式控制，如果不注意，很容易造成数字连在一起，使得输出结果没有意义。例如：若`k= 1234`，`f=123.456`，则 `printf(" %d%d%f\n", k, k,f);`语句的输出结果是:`12341234123.456`,无法分辨其中的数字含义。而如果改为`printf ( "%d %d % f \n",k, k,f);`其输出结果是:`1234 1234 123.456`，看起来就一目了然了。
+2. 格式控制中必须含有与输出项一一对应的输出格式说明，类型必须匹配。若格式说明与输出项的类型不一一对应匹配，则不能正确输出，而且编译时不会报错。若格式说明个数少于输出项个数，则多余的输出项不予输出；若格式说明个数多于输出项个数，则将输出一些毫无意义的数字乱码。
+3. 在格式控制中，除了前面要求的输出格式，还可以包含任意的合法字符(包括汉字和转义符)，这些字符输出时将“原样照印”。此外，还可利用`\n`(回车)、`\r`(回行但不回车)、`\t`(制表)、`\a`(响铃)等控制输出格式。
+4. 如果要输出`%`符号,可以在格式控制中用`%%`表示，将输出一个`%`符号。
+5.  `printf`函数有返回值，返回值是本次调用输出字符的个数，包括回车等控制符。
+6. 尽量不要在输出语句中改变输出变量的值，因为可能会造成输出结果的不确定性。例如：`int k= 8;printf(" %d,%d \n " ,k,++k);`输出结果不是8,9，而是9,9。这是因为调用函数`printf`时，其参数是从右至左进行处理的，将先进行++k运算。
+7. 输出数据时的域宽可以改变。若变量m,n,i和f都已正确定义并赋值,则语句`printf("%* d" , m, i);`将按照m指定的域宽输出i的值,并不输出m的值。而语句 `printf(" %*.*f",m,n,f);`将按照m和n指定的域宽输出浮点型变量f的值,并不输出m、n的值。
+
+8. **`printf`语句是从右到左计算，从左到右输出**。
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
 ## 复合语句和空语句
 
-**复合语句**：
+**复合语句**(`compound statement`)：
 
 ​	在C语言中，一对花括号"`{}`"不仅可以用作函数体的开头和结尾的标志，也可以用作复合语句的开头和结尾的标志。复合语句也可称为 "**语句块**"。
 
@@ -2488,15 +2462,23 @@ printf语句是从右到左计算，从左到右输出
 
 1. 用一对花括号把若干语句括起来构成一个语句组。一个复合语句在语法上视为**一条语句**，在一对花括号内的语句**数量不限**。
 
+1. 当出现语法上某处需要一条语句，但程序却需要执行多条语句时，就可以用到语句块。例如，可以在 if 语句中使用语句块，或者当循环体需要执行多条语句时，也可以使用语句块。
+
+1. 语句块不用**分号**当作结尾。
+
 2. 在复合语句中，不仅可以有**执行语句**，也可以有**定义部分**，定义本复合语句中的**局部变量**。
 
    ```c
    {a++; b *= a; printf("b = %d\n",b);}
    ```
 
+5. 如果语句块内需要有声明，通常会把声明放在语句块的头部，在其他语句之前。然而，C99 并不强制这么做，允许将声明放在语句块内的任何地方。
+6. 在语句块内声明的名称将具有语句块作用域。这些名称只有自声明点开始，一直到语句块结尾之前有效。在这个作用域内，这种声明会把在语句块以外声明的同名称对象隐藏起来。
+7. 动态变量的存储周期也被限制在语句块中它们生成的地方。如果一个变量没有被声明为 static 或 extern，那么该变量的存储空间会在语句块结束之后自动被释放。
+
 **空语句**：
 
-​	C语言中的所有语句都必须由一个分号";"作为结束。如果**只有一个分号**，称为**空语句**。
+​	C语言中的所有语句都必须由一个分号"`;`"作为结束。如果**只有一个分号**，称为**空语句**。
 
 **注意**：
 
@@ -2509,6 +2491,11 @@ printf语句是从右到左计算，从左到右输出
         ;
     }
     ```
+
+**作用**：
+
+1. 消耗CPU时间，起到延时的作用。
+2. 为了程序的结构清楚，可读性好，以后扩充新功能方便。
 
 # 选择控制结构
 
@@ -2532,7 +2519,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="img/控制结构/单分支.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/%E5%8D%95%E5%88%86%E6%94%AF.png" alt="单分支" style="zoom:67%;" />
 
 ### 双分支
 
@@ -2552,7 +2539,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="img/控制结构/双分支.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/%E5%8F%8C%E5%88%86%E6%94%AF.png" alt="双分支" style="zoom:67%;" />
 
 **基本语法2**：
 
@@ -2579,7 +2566,7 @@ else{
 
 **流程图**：
 
-<img src="img/控制结构/双分支2.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/%E5%8F%8C%E5%88%86%E6%94%AF2.png" alt="双分支2" style="zoom:67%;" />
 
 ### 嵌套分支
 
@@ -2627,7 +2614,7 @@ switch(表达式){
 
 **流程图**：
 
-<img src="img/控制结构/switch语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/switch%E8%AF%AD%E5%8F%A5.png" alt="switch语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2689,7 +2676,7 @@ while(循环条件){
 
 **流程图**：
 
-<img src="img/控制结构/while语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/while%E8%AF%AD%E5%8F%A5.png" alt="while语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2740,7 +2727,7 @@ for(循环变量初始化;循环条件;循环变量迭代){
 
 **流程图**：
 
-<img src="img/控制结构/for语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/for%E8%AF%AD%E5%8F%A5.png" alt="for语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2800,7 +2787,7 @@ do{
 
 **流程图**：
 
-<img src="img/控制结构/dowhile语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/dowhile%E8%AF%AD%E5%8F%A5.png" alt="dowhile语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2868,9 +2855,9 @@ if(条件表达式){
 
 ## break语句
 
-​	break语句用于**终止某个语句块的执行**，一般使用在switch或者循环(三大循环)中。
+​	`break`语句用于**终止某个语句块的执行**，一般使用在`switch`或者循环(三大循环)中。
 
-​	在执行循环的过程中，当满足某个条件时，用break可以**提前退出**该循环。
+​	在执行循环的过程中，当满足某个条件时，用`break`可以**提前退出**该循环。
 
 **基本语法**：
 
@@ -2884,11 +2871,11 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="img/控制结构/break语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/break%E8%AF%AD%E5%8F%A5.png" alt="break语句" style="zoom:67%;" />
 
 **说明**：
 
-1. if里**不能**有break。
+1. `if`单独存在不可以使用`break`。
 
 **例**：
 
@@ -2904,7 +2891,7 @@ for(i = 0;i < 10;i++){
 
 ## continue语句
 
-​	continue语句用于**结束本次循环**，继续执行下一次循环。
+​	`continue`语句用于**结束本次循环**，继续执行下一次循环。
 
 **基本语法**：
 
@@ -2918,7 +2905,7 @@ for(i = 0;i < 10;i++){
 
 **流程图**：
 
-<img src="img/控制结构/continue语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/continue%E8%AF%AD%E5%8F%A5.png" alt="continue语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2983,7 +2970,7 @@ label:statment
 
 **流程图**：
 
-<img src="img/控制结构/goto语句.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/goto%E8%AF%AD%E5%8F%A5.png" alt="goto语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -3021,124 +3008,466 @@ void main(){
 }
 ```
 
-# 数组￥
+# 数组
 
-数组：所有元素都是同一类型，即数组类型是多个同一数据类型元素的集合
+​	数组：所有元素都是同一类型，即数组类型是多个同一数据类型元素的集合。
 
-![image-20211107100704366](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107100704366.png
+**数组的定义**：
 
-![image-20211107101238863](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101238863.png
+```c
+数据类型 数组名 [数组大小];
+```
 
-![image-20211107101258478](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101258478.png
+**数组内存图**：
 
-![image-20211107101415809](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101415809.png
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211213164502806.png" alt="image-20211213164502806" style="zoom:67%;" />
 
-![image-20211107101442470](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101442470.png
+**说明**：
 
-![image-20211107101540837](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101540837.png
+1. 数组名就代表该数组的首地址，即`a[0]`地址。
 
-![image-20211107101715792](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101715792.png
+2. 数组的各个元素是连续分布的。
 
-![image-20211107101816212](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107101816212.png
+   假如`a[0]`地址`0x1122` `a[1]`地址=`a[0]`的地址 + `int`字节数(4) = `0x1122` + `4` =`0x1126`，后面以此类推。
 
-![image-20211107140540240](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140540240.png
+3. 引用数组元素时，其**数组下标**的数据类型允许是**整型常量**或**整型表达式**。
 
-![image-20211107140731371](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140731371.png
+**访问数组元素**：
 
-![image-20211107142958975](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107142958975.png
+```c
+数组名[下标]
+```
 
-![image-20211107140833105](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107140833105.png
+**初始化数组的方式**：
 
-![image-20211107143012177](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143012177.png
+1. 先定义数组再初始化数组。
 
-![image-20211107143417375](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143417375.png
+   ```c
+   int arr[2];
+   arr[0] = 232;
+   arr[1] = 54;
+   ```
 
-![image-20211107143513660](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143513660.png
+2. 定义数组的同时初始化数组。
 
-![image-20211107143625416](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143625416.png
+   ```c
+   int arr[2] = {12,34};
+   ```
 
-![image-20211107143649887](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143649887.png
+3. 如果在定义时，直接就指定值，可以忽略数组大小。
 
-![image-20211107143753640](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143753640.png
+   ```c
+   int arr[] = {12,34,45,56};
+   ```
 
-![image-20211107143904642](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107143904642.png
+**遍历数组**：
 
-![image-20211107144034263](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144034263.png
+```c
+int arrlen = sizeof(arr) / sizeof(double);//获取数组长度
+for (i = 0; i < arrlen; i++) {
+	printf("arr[%d] = %d\n",i,arr[i]);
+}
+```
 
-![image-20211107144121085](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144121085.png
+**注意**：
 
-![image-20211107144312489](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144312489.png
+1. 数组是多个**相同类型**的组合，一个数组一旦声明/定义了，其**长度是固定的，不能动态变化**。
 
-![image-20211107144334590](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144334590.png
+2. 数组创建后，如果没有赋值，则遵守以下规则：
 
-![image-20211107144415166](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107144415166.png
+   - 全局数组默认值是0。
 
-## 字符数组￥
+   - 非全局数组初始值是机器垃圾值(即：原来系统分配给这块空间的值)。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-IzqEJFto-1638798816863)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107145529152.png)]
+3. 使用数组的步骤：1.定义数组2.给数组各个元素赋值3.使用数组。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-dSYYGzOp-1638798816864)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153855334.png)]
+4. 数组的下标是从0开始的。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-f9hnbg02-1638798816865)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153900440.png)]
+5. 数组下标必须在指定范围内使用，**编译通过**，否则，**在运行时会因数组越界而异常中断**。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-v9E5r60H-1638798816865)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107153945765.png)]
+6. 数组属于**构造类型**，传递是以引用的方式传递(即传递的是**地址**)。因此，当把一个数组传递给一个函数时，函数操作数组会影响到原数组。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-h55bl8qq-1638798816866)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154107307.png)]
+   ```c
+   #include <stdio.h>
+   void f1(int arr[]){
+       printf("\nf1中的arr的地址%p",arr);
+       arr[0] = arr[0] + 1;
+   }
+   void main(){
+       int arr[3] = {3,4,5};
+       int i = 0;
+       printf("\nmain中的arr的地址%p",arr);
+       //数组默认是以地址传递
+       f1(arr);
+       //遍历arr
+       for (i = 0;i < 3; i++) {
+           printf("arr[%d] =%d",i,arr[i]);//4 4 5
+       }
+       printf("\narr[0]的地址%p\narr[1]的地址%p",&arr[0],&arr[1]);
+   }
+   ```
 
-这里确实讲错了，未定义完全的字符数组后面默认都是\0(int 型是0)
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211213191204335.png" alt="image-20211213191204335" style="zoom:67%;" />
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Axqvvioh-1638798816867)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154213753.png)]
+**例**：
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-P7R0kxLJ-1638798816867)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154526500.png)]
+1. ```c
+   #include <stdio.h>
+   #define M 6
+   void main(){
+       //1.定义数组
+       double hens[M];//类型为double，M为数组hens的大小，为6，最多可存放6个double数据
+       //sizeof(hens)数组的总大小 6*8
+       //sizeof(double)返回一个double占用的字节数
+       int arrlen;
+       arrlen = sizeof(hens) / sizeof(double);
+       //2.初始化数组的每个元素 赋初值
+       //[下标]
+       hens[0] = 3;//第一个元素
+       hens[1] = 5;
+       hens[2] = 1;
+       hens[3] = 3.4;
+       hens[4] = 2;
+       hens[5] = 50;
+       double totalWeight = 0.0;
+       double avgWeight = 0.0;
+       //3.遍历数组
+       int i = 0;
+       for(i = 0;i < M;i++){
+           totalWeight += hens[i];//累计每个的重量
+       }
+       avgWeight = totalWeight / M;
+       printf("总体重totalWeight = %.2f 平均体重 %.2f\n",totalWeight,avgWeight);
+       printf("sizeof(hens)=%d 共%d个元素 ",sizeof(hens),arrlen);
+       //getchar();
+   }
+   ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-tJHMEIRa-1638798816868)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154711047.png)]
+2. ```c
+   /* 从终端输入5个成绩，保存到double数组，并输出*/
+   #include <stdio.h>
+   void main(){
+       //定义了一个数组
+       double arr[5];
+       int i;
+       int arrlen = sizeof(arr) / sizeof(double);
+       for (i = 1; i <= arrlen; i++) {
+           printf("请输入第%d个数",i);
+           scanf("%lf",&arr[i-1]);
+       }
+       //输出整个数组
+       for (i = 0; i < arrlen; i++) {
+           printf("arr[%d] = %.2f\n",i,arr[i]);
+       }
+   }
+   ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-uNp4wJ5V-1638798816868)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107154831049.png)]
+3. ```c
+   /* 创建一个char类型的26个元素的数组，分别放置'A'-'Z' 并打印出来*/
+   #include <stdio.h>
+   void main(){
+       char arr[26];
+       int i;
+       for(i = 0;i < 26;i++){
+           arr[i] = 'A' + i;
+       }
+       //输出 
+   
+   	for (i = 0; i < 26; i++) {
+   		printf("arr[%d] = %c\n",i,arr[i]);
+   	}
+   }
+   ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-kw6jXLKz-1638798816873)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155736702.png)]
+## 字符数组
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-24rdEi9z-1638798816874)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155748959.png)]
+​	用来存放字符的数组称为**字符数组**。
 
- [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oelLARES-1638798816874)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107155936283.png)]
+​	字符数组实际上是一系列字符的集合，也就是字符串(`String`)。没有字符串类型，通常用 一个字符数组来存放一个字符串。
 
-最后的表达方式默认加入\0
+​		**字符串数据**：--> [Here](#字符串数据)
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-PmP8Xks4-1638798816881)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155657656.png)]
+- 一维字符数组：
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-9lYvMe0A-1638798816882)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109155851841.png)]
+  ```c
+  char a[10];
+  ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-3KM1UakP-1638798816882)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160005796.png)]
+- 二维字符数组：
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Smz2Nskn-1638798816882)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160035800.png)]
+  ```c
+  char b[5][10];
+  ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WEVBQr1Q-1638798816883)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109160113050.png)]
+- 直接赋值：
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EtrvOgCm-1638798816883)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110135792.png)]
+  ```c
+  char c[20] = {'c',' ','P','r','o','g','r','a','m'}
+  ```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-eLlyoNTM-1638798816884)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110159306.png)]
+**说明**：
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-5BbK0Ng6-1638798816884)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211110110218249.png)]
+1. 在C语言中，字符串实际上是使用`null`字符('`\0`')终止的一维字符数组。因此，一个以`null`结尾的字符串，包含了组成字符串的字符。
+2. '`\0`'是ASCII码表中的第0个字符，用`NUL`表示，称为空字符。该字符既不能显示，也不是控制字符，输出该字符不会有任何效果，它在C语言中仅作为字符串的结束标志。
+3. 输出字符串时，从第一个字符开始输出，直到遇到'`\0`'，表示该字符串结束。
+
+**字符数组(字符串)在内存中的布局**：
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211215213956878.png" alt="image-20211215213956878" style="zoom:67%;" />
+
+**字符串的表示形式**：
+
+- **用字符数组存放一个字符串**
+
+  ```c
+  char str[] = "hello"	//最后的表达方式默认加入\0
+  char str[6] = "hello"
+  ```
+
+  ```c
+  char str[6] = {'H','e','l','l','o'}
+  char str[4] = {'a','b','c','\0'};	
+  char str1[7] = {'t','o','m'};	//从第一个字符开始输出，直到遇到'\0'表示该字符串结束。
+  //char str2[] = {'j','a','c','k'};	//不会自动添加'\0' 会当作字符数组而不是字符串 %s输出会产生"jack(乱码)(乱码)"
+  ```
+
+- **用字符指针指向一个字符串**
+
+  C语言对字符串常量"hello  tom"是按字符数组处理的，在内存中开辟了一个字符数组用来存放字符串常量，程序在定义字符串指针变量`str`时只是把字符串地址(即存放在字符串的字符数组的首地址)赋给`str`。
+
+  ```c
+  char* str ="hello  tom";
+  printf("\n str指向的字符串%s",str);
+  ```
+
+**字符串的访问和遍历**：
+
+​	因为字符串的本质就是字符数组，因此可以按照数组的方式遍历和访问某个元素。
+
+```c
+void main(){
+    char greeting[] = "Hello";
+  //char greeting[6] = {'H','e','l','l','o'};
+    int i;
+    int len = strlen(greeting);	//len=5
+    int lens = sizeof(greeting) /sizeof(char);
+    printf("数组大小%d",lens);	//6
+    printf("\nlen=%d",len);	//5
+    printf("%s",greeting);	//hello
+    printf("\n字符串第二个元素是%c\n",greeting[1]);	//e
+    for(i = 0 ; i < len ; i++){
+        printf("%c",greeting[i]);	//hello
+    }
+}
+```
+
+**字符指针变量和字符数组赋值问题**：
+
+1. 字符数组由若干个元素组成，每个元素放一个字符；而字符指针变量中存放的是地址（字符串/字符数组的首地址），绝不是将字符串放到字符指针变量中（是字符串首地址)。
+
+2. 对字符数组只能对各个元素赋值，不能用以下方法对字符数组赋值
+
+   ```c
+   char str[14];
+   str = "hello tom";	//错误 str是一个常量，不能更改
+   str[0] = 'i';	//OK
+   ```
+
+3. 对字符指针变量，采用下面方法赋值，是可以的。
+
+   指针是变量，可以改变它的指向，a只不过是指向了另一个内存空间，原来的"`hello`"仍然存在，**a的本身地址没有变化**。
+
+   ```c
+   char* a = "hello";
+   a = "nihao";
+   ```
+
+4. 如果定义了一个字符数组，那么它有确定的内存地址(即字符数组名是一个常量)；而定义一个字符指针变量时，它并未指向某个确定的字符数据，并且可以多次赋值。
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211216104413880.png" alt="字符串" style="zoom: 67%;" />
+
+**字符数组定义和初始化的方式**：
+
+1. **正确定义**：
+
+   ```c
+   char str1[] = {"你好"};	//默认后面加'\0'
+   char str2[] = "你好";	//省略{}号，默认后面加'\0'
+   char* pstr = "hello";	//用字符指针指向一个字符串
+   char* a = "hello";
+   a = "nihao";
+   ```
+
+2. **错误定义**：
+
+   ```c
+   char str1[] = {'a','m','h','a','p','p','y'};	//字符数组后面不会加'\0'，可能会乱码
+   char str2[5] = {'C','h','i','n','a'};	//字符数组后面不会加'\0'，可能会乱码
+   char str[14];
+   str = "hello tom";	//错误 str是一个常量，不能更改
+   ```
+
+**注意**：
+
+1. 程序中往往依靠检测“`\0`'的位置来判定字符串是否结束，而不是根据数组的长度来决定字符串长度。因此，字符串长度**不会统计**‘`\0`'，字符数组长度**会统计**。
+
+2. 在定义字符数组时应估计实际字符串长度，保证数组长度始终大于字符串实际长度，否则，在输出字符数组时可能出现未知字符。
+
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211216092124057.png" alt="数组" style="zoom:67%;" />
+
+3. 系统对字符串常量也自动加一个'`\0`'作为结束符。例如"℃Program"共有9个字符，但在内存中占10个字节，最后一个字节'`\0`'是系统自动加上的。(通过`sizeof()`函数可验证)。
+
+4. 定义字符数组时，如果给的字符个数比数组的长度小，则系统会默认将剩余的元素空间，全部设置为'`\0`'，
+
+   比如`char str[6]= "ab"` , `str`内存布局就是`[a][b][\0][\0][\0][\0]`
+
+**常用字符串函数** --> [Here](#常用字符串函数)
+
+**例**：
+
+1. 字符串函数：
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+   void main(){
+       char str1[12] = "hello";
+       char str2[12] = "World";
+       char str3[12];
+       int len;
+       //str1复制到str3
+       strcpy(str3,sttr1);
+       //连接str1和sttr2
+       strcat(str1,str2);
+       //连接后str1的总长度
+       len = strlen(str1);
+       printf("strlen = %d",len);
+   }
+   ```
+
+##  排序和查找
+
+​	排序也称排序算法(`Sort Algorithm`)，排序是将一组数据，依指定的顺序进行排列的过程。
+
+​	常用的查找有两种：1）顺序查找	2）二分查找
+
+**排序的分类**:
+
+1. **内部排序**:指将需要处理的所有教据都加载到内部存储器中进行排序。
+2. **外部排序法**:数据量过大，无法全部加载到内存中，需要借助外部存储进行排序。
+
+### 冒泡排序
+
+​	冒泡排序(`Bubble Sorting`）的基本思想是：通过对待排序序列从前向后(从下标较小的元素开始)，依次比较相邻元素的值，若发现逆序则交换，使值较大的元素逐渐从前移向后部。
+​	因为排序的过程中，各元素不断接近自己的位置，**如果一趟比较下来没有进行过交换，就说明序列有序**，因此要在排序过程中设置一个标志`flag`判断元素是否进行过交换。从而减少不必要的比较。
+
+**例**：
+
+ <img src="C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211216210547860.png" alt="image-20211216210547860" style="zoom:67%;" />
+
+```c
+/*五个无序的数 {3,9,-1,10,-2}使用冒泡排序将其排成一个从小到大的有序数列*/
+#include <stdio.h>
+
+void main(){
+    int s[] = {3,9,-1,10,-2};
+    int sLen = sizeof(s) / sizeof(int);	//5
+    int i,j;
+    int temp;	//临时变量
+    for (i = 0; i < sLen - 1; i++) {
+        for (j = 0; j < sLen - 1 - i; ++j) {
+            if(s[j] >s[j+1]){	//如果前面的数大于后面的数，就交换
+                temp = s[j+1];
+                s[j+1] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+    for (i = 0; i <  sLen; i++) {
+        printf("%d ",s[i]);
+    }
+}
+```
+
+**封装成函数**：
+
+```c
+#include <stdio.h>
+void bubbleSort(int s[],int sLen){
+    int i,j;
+    int temp;
+    for (i = 0; i < sLen - 1; i++) {
+        for (j = 0; j < sLen - 1 - i; ++j) {
+            if(s[j] >s[j+1]){
+                temp = s[j+1];
+                s[j+1] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+}
+void printSort(int s[],int sLen){
+    int i;
+    for (i = 0; i <  sLen; i++) {
+        printf("%d ",s[i]);
+    }
+}
+void main(){
+    int s[] = {3,9,-1,10,-2};
+    int sLen = sizeof(s) / sizeof(int);
+    bubbleSort(s,sLen);	//数组默认是地址传递(指针)
+    printSort(s,sLen);
+}
+```
+
+### 顺序查找
 
 
 
-## 冒泡排序￥
+# 字符串
+
+在C语言没有专门的类型是字符串类型，所以使用字符数组 --> [Here](#字符数组)
+
+# 指针
+
+​	指针表示一个**地址**(存放的是地址)。
+
+## 基本数据类型
+
+- 基本类型，都有对应的指针类型，形式为 `数据类型 *`
+
+
+- 如果输出一个变量的地址，使用的格式是`%p`
+
+
+  - 取出num这个变量对应地址：`&num`
+
+
+  - 定义一个指针变量，指针：
+
+    ```c
+    int *ptr = &num;
+    ```
+
+**注意**： **指针的类型和该指针指向的变量是对应关系**
+
+  - 指针变量 本身也有地址：
+
+    ```c
+    printf("ptr的地址%p",&ptr);
+    ```
+
+  - 获取指针指向的值`*ptr`：
+
+    ```c
+    printf("ptr的存放数据%d",*ptr);
+    ```
 
 
 
-## 顺序查找和二分查找￥
 
-
-
-## 二维数组￥
-
-
-
-# 字符串￥
-
-# 指针￥
 
 # 函数
-函数的存储类型就是函数定义时函数名前面的数据类型前面的存储类型，缺省时应该是：extern ，表示该函数属外部函数（即可以被本C文件外的其他C源程序文件中的函数调用
 ​	为完成某一功能的程序指令(语句)的集合，称为**函数**。也可称为**方法**等叫法。
 
 ​	**函数的目的**：为了解决传统方式的代码冗余(即有过多重复的代码)、不利于代码的维护的弊病。
@@ -3243,7 +3572,7 @@ void main(){
 }
 ```
 
-<img src="img/函数/函数调用实例.png">
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%AE%9E%E4%BE%8B.png" alt="函数调用实例" style="zoom:67%;" />
 
 ```c
 #include <stdio.h>
@@ -3258,7 +3587,7 @@ void main(){
 }
 ```
 
-<img src="img/函数/函数调用实例2.png">
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%AE%9E%E4%BE%8B2.png" alt="函数调用实例2" style="zoom:67%;" />
 
 **函数调用规则**：
 
@@ -3287,7 +3616,7 @@ void main(){
 }
 ```
 
-<img src = "img/函数/递归调用1.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A81.png" alt="递归调用1" style="zoom:67%;" />
 
 **示例二**：
 
@@ -3305,7 +3634,7 @@ void main(){
 }
 ```
 
-<img src = "img/函数/递归调用2.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A82.png" alt="递归调用2" style="zoom:67%;" />
 
 **注意**：
 
@@ -3317,16 +3646,18 @@ void main(){
 1. 执行一个函数时，就创建一个新的受保护的独立空间(新函数栈)。
 2. 函数的局部变量是独立的，不会相互影响。
 3. 递归必须向退出递归的条件逼近，否则就是无限递归，死龟了
-4. 当一个函数执行完毕，或者遇到return,就会返回，遵守谁调用，就将结果返回给谁
+4. 当一个函数执行完毕，或者遇到`return`,就会返回，遵守谁调用，就将结果返回给谁
 
-## 实参、形参未完成
-形参 或者说所有的变量，缺省的存储类别都是auto的。c语言中四种存储类别 auto static extern register 除非标了，否则都是auto。
+## 实参、形参
+
+暂无
+
 ## 回调函数
 
 函数指针变量可以作为某个函数的参数来使用的，回调函数就是一个通过函数指针调用的函数。
 简单的讲:回调函数是由别人的函数执行时调用你传入的函数（通过函数指针完成〉
 
-**例**：用回调函数的方式，给一个整型数组int arr[10]赋10个随机数。
+**例**：用回调函数的方式，给一个整型数组`int arr[10]`赋10个随机数。
 
 ```c
 #include <stdio.h>
@@ -3364,7 +3695,7 @@ int main(){
 
 **头文件**`<string.h>`
 
-1. 得到字符串的长度：
+1. 得到字符串的长度(`<string.h>`) ：
 
    ```c
    size_t strlen(const char *str)
@@ -3373,7 +3704,7 @@ int main(){
    计算字符串`str`的长度，直到空结束字符，但不包括空结束字符(`\0`)。
 
 
-2. 拷贝字符串：
+2. 拷贝字符串(`<string.h>`)：
 
    ```c
    char* strcpy(char* dest,const char *src)
@@ -3383,7 +3714,7 @@ int main(){
 
    **注意**：拷贝字符串会将原来的内容覆盖。
 
-3. 连接字符串：
+3. 连接字符串(`<string.h>`)：
 
    ```c
    char* strcat(char* dest,const char *src)
@@ -3391,19 +3722,31 @@ int main(){
 
    把`src`所指向的字符串追加到`dest`所指向的字符串的结尾。
 
-4. 从控制台读取字符并立即回显，用于从标准输入控制台读取字符：
+4. 从控制台读取字符并立即回显，用于从标准输入控制台读取字符(`<stdio.h>`) ：
 
    ```c
-   getchar();
+   int getchar(void) //从标准输入 stdin 获取一个字符（一个无符号字符）。
    ```
 
-5. 字符串比较：
+5. 字符串比较(`<string.h>`)：
 
    ```c
    int strcmp(const char *str1,const char *str2)
    ```
 
    把`str1`所指向的字符串和`str2`所指向的字符串进行比较。**返回0表示相等**，**非0表示不相等**。
+
+6. 返回一个指针，指向字符串`str`中字符`c`(一个无符号字符)的第一次出现的位置(`<string.h>`)：
+
+   ```c
+   char *strchr(const char *str, int c) //要搜索的字符。以 int 形式传递，但是最终会转换回 char 形式。
+   ```
+
+7. 返回一个指针，指向字符串`haystack`中字符串`needle`的第一次出现的位置，不包含终止符 '`\0`'(`<string.h>`)：
+
+   ```c
+   char *strstr(const char *haystack, const char *needle)
+   ```
 
 **例**：
 
@@ -3422,12 +3765,6 @@ void main(){
   //getchar();
 }
 ```
-
-
-
-
-
-
 
 ### 常用日期时间函数
 
@@ -3494,7 +3831,7 @@ void main(){
 
 ### 常用数学函数
 
-math.h头文件定义了各种数学函数和一个宏。在这个库中所有可用的功能都带有一个double类型的参数，且都返回double 类型的结果。
+`math.h`头文件定义了各种数学函数和一个宏。在这个库中所有可用的功能都带有一个`double`类型的参数，且都返回`double` 类型的结果。
 
 1. 返回e的x次幂的值：
 
@@ -3634,7 +3971,7 @@ static void fun2(void){//静态函数 只能在本文件中使用
 
 **说明**：
 
-1. 非静态函数可以在另一个文件中通过extern引用。
+1. 非静态函数可以在另一个文件中通过`extern`引用。
 
 2. 静态函数只能在声明它的文件中可见,其他文件不能引用该函数。
 
@@ -3655,95 +3992,7 @@ static void fun2(void){//静态函数 只能在本文件中使用
    }
    ```
 
-<h2 id="头文件">头文件</h2>
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-kOJyoyTX-1638798816885)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105238939.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-iyFIceh9-1638798816885)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105536140.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-KycrHmta-1638798816885)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105615099.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-mat01Ya6-1638798816886)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027105806083.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wbX3wDEx-1638798816886)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110012424.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-b7fTaGhb-1638798816886)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110138408.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-A8bb0bR1-1638798816887)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111109598.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-gqkftFgH-1638798816887)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110545572.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-elQPZ3oE-1638798816887)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027110744150.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Z4afdIZv-1638798816888)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111311039.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ENibVC9T-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211027111956865.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ZFc3lhXB-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211028163532408.png)]
-
-## 注意￥
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wwNKu6QU-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211031002559300.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-uF0HuQCO-1638798816889)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101122846181.png)]
-
-因为函数放在了主函数的下面所以要声明函数
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EPJ6sr8d-1638798816890)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101123148062.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-C7TMiIjE-1638798816890)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154000404.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-b3ulDJbm-1638798816890)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154011955.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-w4WHyUEL-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154024256.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ANaVOYox-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154145342.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-CwuR6aIo-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154202555.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-feobTbI0-1638798816891)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154225770.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-OI18Yu8K-1638798816892)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154333424.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-dFMtDV1Y-1638798816892)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154456012.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WTFccyXO-1638798816892)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154616823.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-phIoROK6-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154636946.png)]
-
-不可以重载 [外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-gJiDhSRj-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154747311.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-6PD8GHs6-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154836065.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-KMvu0itU-1638798816893)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101154847653.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vaC59QNR-1638798816894)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155121316.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-8mYBdalE-1638798816894)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155137853.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-4Wo4ZOrv-1638798816894)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155231111.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-hQ2XOUJF-1638798816895)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155508103.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-cx2si1g0-1638798816895)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101155839558.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2Vmkd37s-1638798816895)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160017479.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-3GgUjUn2-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160102814.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-tzGjIPiT-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160222556.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-eOqlAavI-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160441825.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-8nr04qsN-1638798816896)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160612919.png)]
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-OBDbVoAl-1638798816897)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211101160631044.png)]
-
-
-
-
-
-<h1 id="宏定义">宏定义 </h2>
+# 宏定义
 
 **宏定义**：用一个**标识符**来表示一个字符串，如果在后面的代码出现了该标识符，那么就**全部替换**成指定的字符串。
 
@@ -3841,12 +4090,12 @@ int main(){
 
    符号常量 ---> [Here](#常量\符号常量)
 
-   ```c
+```c
 #define UINT unsigned int
 void main(){
     UINT a,b;//宏替换 unsigned int a,b;
 }
-   ```
+```
 
 10. 宏定义表示数据类型和用[typedef](#自定义类型)定义数据说明符的区别：宏定义只是**简单的字符串替换**，由**预处理器**来处理；而`typedef`是在编译阶段由**编译器**处理的，它**并不是简单的字符串替换**，而给原有的数据类型起一个新的名字，将它作为一种新的数据类型。
 
@@ -3961,55 +4210,9 @@ int main(){
 
 ​	C语言常见预处理指令 --> [Here](#C语言常见预处理指令)
 
-# 动态内存分布￥
+# 动态内存分布
 
-![image-20211106165431967](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211106165431967.png
-
-全局变量--内存中的静态存储区
-非静态的局部变量- --内存中的动态存储区- -
-stack栈
-临时使用的数据--建立动态内存分配区域，需要
-时随时开辟，不需要时及时释放- . - -heap堆
-根据需要向系统申请所需大小的空间，由于未在
-声明部分定义其为变量或者数组，不能通过变量
-名或者数组名来引用这些数据，只能通过指针来
-引用)
-
-![image-20211107160830406](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107160830406.png
-
-![image-20211107160925463](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107160925463.png
-
-realloc![image-20211107161007407](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161007407.png
-
-![image-20211107161045643](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161045643.png
-
-![image-20211107161137363](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161137363.png
-
-C99支持 如果不是要强制转换![image-20211107161313259](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161313259.png
-
-![image-20211107161449210](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161449210.png
-
-![image-20211107161952452](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107161952452.png
-
-类似数组,p[i]取得第一个元素
-
-![image-20211107163139873](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163139873.png
-
-![image-20211107163150716](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163150716.png
-
-堆区里分配的连续区域的首个地址传过去就和数组的首地址一样了
-
-![image-20211107163429174](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163429174.png
-
-![image-20211107163538385](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163538385.png
-
-![image-20211107163826343](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163826343.png
-
-![image-20211107163832547](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211107163832547.png
-
-p带括号的就是指针，不带的就是后面的类型/数组/函数
-
-
+暂无
 
 # 断点调试
 
@@ -4027,25 +4230,11 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 - Clion --> [Here](https://blog.csdn.net/lblmlms/article/details/107846759?ops_request_misc=&request_id=&biz_id=102&utm_term=CLion%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107846759.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
 - Eclipse --> [Here](https://blog.csdn.net/u011781521/article/details/55000066/?ops_request_misc=&request_id=&biz_id=102&utm_term=Eclipse%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-55000066.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
 
-# 文件操作
-
 # 编译流程
 
-<img src="img/概述/编译和执行过程.png" style="zoom: 67%;" >
+暂无
 
-
-
-
-
-# 进度
-
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-3OA2UtrK-1638798816897)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211109235103673.png)]
-
-3[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-6nheBspl-1638798816898)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165813163.png)]
-
-4[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-G1Yk1zT1-1638798816898)(C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211104165552597.png)]
-
-<h1 id=“进制”>进制</h1>
+# 进制 
 
 **采用不同的进制的原因**是不同的领域用到的技术形式不相同　
 
@@ -4311,44 +4500,30 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
     //1111 1111 1111 1111 1111 1111 1111 1101
     ```
 
-# 项目
-
-## 家庭收支记账软件
-
-## 客户信息管理系统
-
-
-
 # 附录
 
+## C语言关键字
 
-<h2 id="C语言关键字">C语言关键字</h2>
-<img src="img/附录/C语言关键字.png"  >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/C%E8%AF%AD%E8%A8%80%E5%85%B3%E9%94%AE%E5%AD%97.png" alt="C语言关键字" style="zoom:67%;" />
 
+## C语言占位符
 
-<h2 id="C语言占位符">C语言占位符</h2>
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png" alt="数据类型和占位符对应关系" style="zoom:67%;" />
 
-<img src="img/附录/数据类型和占位符对应关系.png" style="zoom:67%;" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E6%A0%BC%E5%BC%8F%E5%8D%A0%E4%BD%8D%E7%AC%A6.png" alt="格式占位符" style="zoom:67%;" />
 
-<img src="img/附录/格式占位符.png" style="zoom:67%;" >
+- **对于float类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%f`**。
 
-- **对于float类型的变量，printf()中的说明符可以用%f或%lf，而scanf()中的说明符则只能**
+- **对于double类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%lf`**。
 
-**用%f**。
-
-- **对于double类型的变量，printf()中的说明符可以用%f或%lf，而scanf()中的说明符则只**
-
-**能用%lf**。
-
-- **对于long double类型的变量，printf()中的说明符可以用%f或%lf，而scanf()中的说明符**
-
-**则只能用%lf**。
+- **对于long double类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%lf`**。
 
 - `%s`输入一个字符串，直到遇到"`\0`"，若字符串长度超过指定的精度则自动突破，**不会截断字符串**。
+- 需要注意的是, **占位符**需要和**使用参数**匹配, 否则会出现**越界或截断**的情况。
 
 **长度修饰符**：
 
-​	在%和格式字符之间，可以加入长度修饰符，以保证数据输出格式的正确和对齐。对于长整型(long)应该加`l`，即**%ld**。对于短整型数(short)可以加`h`，即`%hd`。
+​	在`%`和格式字符之间，可以加入长度修饰符，以保证数据输出格式的正确和对齐。对于长整型(`long`)应该加`l`，即**%ld**。对于短整型数(`short`)可以加`h`，即`%hd`。
 
 
 
@@ -4356,8 +4531,7 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 **据大小自动选f格式或e格式，且去掉无意义的零**:`%g`/`%lg`
 
-
-<h2 id="C语言标准库">C语言标准库</h2>
+## C语言标准库
 
 ​	C标准库是一组C内置**函数、常量、头文件**。
 
@@ -4391,16 +4565,15 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 - --->[time.h](/C语言标准库/time.h)
 
-<h2 id="C语言常见预处理指令">C语言常见预处理指令</h2>
+## C语言常见预处理指令
 
-<img src="img/附录/常用预处理命令.png" style="zoom:67%;"   >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E5%B8%B8%E7%94%A8%E9%A2%84%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4.png" alt="常用预处理命令" style="zoom:67%;" />
 
-<h2 id="进制之间的转换">进制之间的转换</h2>
+## 进制之间的转换 
 
-<img src="img/附录/进制转换.png"  >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.png"    >
 
-
-<h2 id="ASCII码">ASCII码</h2>
+## ASCII码
 
 **介绍：**
 
@@ -4414,20 +4587,27 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 
 ​	相同的编码表示的字符不一样,比如, 130在法语编码中代表了ё,在希伯来语编码中却代表了字母Gimel (ξ)
 
-​	<img src="" >
+<p align="center"  color = "#DC143C">ASCII控制字符</p>
 
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII01.png" alt="ASCII"  />
 
-<h2 id="常用转义字符">常用转义字符</h2>
+<p align="center"  color = "#DC143C">ASCII可显示字符</p>
 
-<img src="img/附录/转义字符.png" style="zoom:67%;" >  
+![ASCII](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII02.png)
 
-  
+![ASCII](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII03.png)
 
-<h2 id="运算符的优先级和结合性">运算符的优先级和结合性</h2>
+![ASCII](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII04.png)
 
-<img src="img/附录/运算符优先级.png" >
+## 常用转义字符
 
-<img src="img/附录/运算符优先级2.png" >
+​                                                                    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6.png" style="zoom:67%;" >  
+
+## 运算符的优先级和结合性
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7.png" style="zoom:67%;"  >
+
+​                                <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A72.png" style="zoom:67%;"  >
 
 **说明** ：同一优先级的运算次序由结合方向决定。例如，*号和/号有相同的优先级，其结合方向为自左至右，因此，`3*5/4`的运算次序是先乘后除。单目运算符--和++具有同一优先级，结合方向为自右至左，因此，表达式:--i++ 相当于 --(i++)。
 
@@ -4444,13 +4624,22 @@ p带括号的就是指针，不带的就是后面的类型/数组/函数
 4. 逗号的运算符优先级最低。
 5. 大致优先级顺序：算术运算符 > 关系运算符 ＞ 逻辑运算符(逻辑非! 除外) > 赋值运算符 > 逗号运算符。
 
-<h2 id="双目运算符中两边运算量 类型转换规律">双目运算符中两边运算量 类型转换规律</h2>
+## 双目运算符中两边运算量 类型转换规律
 
 运算所需变量为**两个**的运算符叫做双目运算符，或者要求运算对象的**个数是2**的运算符称为双目运算符。
 
-<img src="img\附录\双目运算符中.png" >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E5%8F%8C%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%AD.png" style="zoom:67%;"  >
 
-<h2 id="int补充知识">int补充知识</h2>
+## 存储类型关键字定义变量与函数作用域与生命周期
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/作用域和生命周期.png" alt="img" style="zoom:67%;" />
+
+- `auto`变量：函数的局部变量，如果没有声明为`static`,函数中定义的局部变量全部为`auto`类型，`auto`变量包括未加`static`声明的局部变量和函数的形参。在函数调用时系统会给他们分配存储空间，在函数调用结束后会自动释放这些空间。属于动态存储方式。
+- `static`变量：用`static`声明的局部变量在调用结束后不会消失而保存原来的值。`static`局部变量定义使用后值会存储下来。所以使用`static`局部变量定义只需要一次赋值。静态局部变量的作用域仅限于所定义的函数。但函数结束后变量的值会保留。直到整个程序运行结束。全局变量从定义开始作用于整个文件直至程序运行结束。
+- `register`寄存器变量：寄存器变量可以提高c语言的执行效率，即将局部变量的值存入CPU的寄存器中。需要注意的是：1.只有动态存储的变量（自动局部变量和形参）才可以作为寄存器变量来存储，局部静态变量不可以定义为寄存器变量。2.计算机的寄存器数目是有限的，所以不能定义任意多个寄存器变量。
+- `extern`外部变量：即全局变量的外部表现形式，是在函数外部定义的变量。全局变量的作用域为从定义开始到源文件结束。`extern`对该变量作外部变量声明，扩展变量作用域。
+
+## int补充知识
 
 在`C99`标准中定义了这些数据类型，具体定义在：`/usr/include/stdint.h   ISO C99: 7.18 Integer types`
 
@@ -4491,23 +4680,23 @@ typedef unsigned long long int  uint64_t;
 
 **有符号类型**
 
-- ​	int8_t
+- ​	`int8_t`
 
 意思是8位整数(`8bit integer`)，八位等于一个字节 一个字节等于 -128-127所以`int8` 不超过-128-127
 
-```
+```c
 int8_t a = 1;
 ```
 
-- ​	int16_t
+- ​	`int16_t`
 
 意思是16位整数(`16bit integer`)，相当于short 占2个字节  -32768 ~ 32767
 
-```
+```c
 int16_t a = 1;
 ```
 
-- ​	int32_t
+- ​	`int32_t`
 
 意思是32位整数(`32bit integer`), 相当于 int   占4个字节  -2147483648 ~ 2147483647
 
@@ -4517,7 +4706,7 @@ int16_t a = 1;
 int32_t a = 1;
 ```
 
-- ​	int64_t
+- ​	`int64_t`
 
 意思是64位整数(`64bit interger`), 相当于 long long  占8个字节  -9223372036854775808 ~ 9223372036854775807
 
@@ -4527,13 +4716,13 @@ int64_t a = 1;
 
 **无符号类型**
 
-uint8是无符号 就是 0-255，uint8_t 实际是一个 char
+`uint8`是无符号 就是 0-255，`uint8_t` 实际是一个 char
 
 ```c
 uint8_t a = 1;
 ```
 
-<h2 id="常见问题及解决方法">常见问题及解决方法</h2>
+## 常见问题及解决办法
 
 ```c
 LINK : fatal error LNK1104
@@ -4551,10 +4740,12 @@ error C2143 语法错误 缺少;
 
 **解决办法**：编译失败，注意错误出现的行数，再到源代码中指定位置改错。
 
-<h2 id="循环语句常见错误">循环语句常见错误</h2>
+## 循环语句常见错误
 
+暂无
 
+## 作者
 
-<h2 id="作者">作者</h2>
-- Github --> [Here]()
+- Github --> [Here](https://github.com/letengzz/985211)
+- CSDN --> [Here]()
 
