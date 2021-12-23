@@ -1858,7 +1858,9 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 **基本语法**：
 
-​	**条件表达式 ? 表达式1 ：表达式2;**
+```c
+	*条件表达式 ? 表达式1 ：表达式2;
+```
 
 **说明**：
 
@@ -1891,7 +1893,9 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 **取地址运算符**：
 **格式**：
 
-​	**&变量名**
+```c
+&变量名
+```
 
 **含义**：取出存放变量的地址。
 
@@ -1909,14 +1913,17 @@ b = &a    //表示把变量a的地址赋值给变量b
 **间接运算符**：
 **格式**：
 
-​	***指针名/地址名**
+```c
+*指针名/地址名
+```
+
 **含义**：取出存储在地址中的对应值。
 **例**：
 
 ```c
-a = 3;      //将a复制为3    
-c = &a;     //把a的地址赋值给c
-d = *c;     //取出c存放a地址中的值，并赋值给d
+int a = 3;      //将a赋值为3    
+int* c = &a;     //把a的地址赋值给c
+int d = *c;     //取出c存放a地址中的值，并赋值给d
 printf("d = %d",d);         //打印d
 ```
 
@@ -3263,6 +3270,8 @@ void main(){
 
 **字符指针变量和字符数组赋值问题**：
 
+1. 数组名从来都不是指针，之所以数组名可以像指针那样用，是因为数组名会被自动转换为指针。
+
 1. 字符数组由若干个元素组成，每个元素放一个字符；而字符指针变量中存放的是地址（字符串/字符数组的首地址），绝不是将字符串放到字符指针变量中（是字符串首地址)。
 
 2. 对字符数组只能对各个元素赋值，不能用以下方法对字符数组赋值
@@ -3363,7 +3372,7 @@ void main(){
 
 **例**：
 
- <img src="C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20211216210547860.png" alt="image-20211216210547860" style="zoom:67%;" />
+ <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211216210547860.png" alt="image-20211216210547860" style="zoom:67%;" />
 
 ```c
 /*五个无序的数 {3,9,-1,10,-2}使用冒泡排序将其排成一个从小到大的有序数列*/
@@ -3422,48 +3431,345 @@ void main(){
 
 ### 顺序查找
 
+**例**：
 
+有一个数列:{23，1，34,89，101}
+从键盘中任意输入一个数，判断数列中是否包含该数【顺序查找】要求:如果找到了，就提示找到，并给出下标值，找不到提示没有。
+
+1. 没有使用函数：
+
+```c
+#include <stdio.h>
+void main(){
+    int arr[] =  {23,1,34,89,101};
+    int arrLen = sizeof(arr) / sizeof(int);
+    int pF;
+    printf("请输入一个整数:");
+    scanf("%d",&pF);
+    int index = -1;
+    int i;
+    for (i = 0; i < arrLen; ++i) {//按照数组进行遍历，一个一个比较，如果相等，则找到
+        if(arr[i] == pF){
+            index = i;
+        }
+    }
+    if(index != -1){//找到
+        printf("%d在数组中的下标是%d",pF,index);
+    }else{
+        printf("没有找到%d",pF);
+    }
+}
+```
+
+2. 使用函数：
+
+```c
+#include <stdio.h>
+int seqSearch(int arr[],int arrLen,int pF){
+    int i;
+    for (i = 0; i < arrLen; ++i) {//按照数组进行遍历，一个一个比较，如果相等，则找到
+        if(arr[i] == pF){
+            return i;
+        }
+    }
+    //如果在for循环中，没有执行到return，就说明没有找到
+    return -1;
+}
+void main(){
+    int arr[] =  {23,1,34,89,101};
+    int arrLen = sizeof(arr) / sizeof(int);
+    int pF;
+    printf("请输入一个整数:");
+    scanf("%d",&pF);
+    int index = seqSearch(arr,arrLen,pF);
+    if(index != -1){//找到
+        printf("%d在数组中的下标是%d",pF,index);
+    }else{
+        printf("没有找到%d",pF);
+    }
+}
+```
+
+### 二分法查找
+
+​	二分查找的前提是：**该数组是一个有序数组**。
+
+**二分查找的优势**：
+	比顺序查找速度快很多。
+
+**二分查找可以解决的问题**：
+
+1. 查找数据。
+2. 解决数学问题。
+
+3. 解决几何问题。
+
+**原理图**：
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/Trim.gif" alt="数组_Trim" style="zoom:67%;" />
+
+**未找到原理图**：
+
+<img src="D:\Flies\Down\Chrome\Trim02.gif" alt="Trim02" style="zoom:67%;" />
+
+**二分查找的基本思想**：
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211217122517942.png" alt="image-20211217122517942" style="zoom:67%;" />
+
+**例**：
+
+​	请对—个有序数组进行二分查找`{1,8,10,89,1000,1234}`，输入—个数看看该数组是否存在此数，并且求出下标，如果没有就提示"没有这个数"。
+
+**区间变化规律**:
+	mid的值==target，则找到了mid的值<target，low = mid +1;mid的值>target，high = mid - 1;
+
+1. 使用递归函数：
+
+```c
+#include <stdio.h>
+//二分查找
+int binarySearch(int arr[],int low,int high,int target){
+    int mid = (low + high) / 2;
+    //如果low > high说明该数组都比较过，但是没有找到
+    if(low > high){
+        return -1;
+    }
+    if(arr[mid] < target){	//如果arr[mid] < target 说明，应该在arr[mid]的右边查找
+        binarySearch(arr,mid + 1,high,target);
+    } else if(arr[mid] > target){	//如果arr[mid] > target 说明，应该在arr[mid]的左边查找
+        binarySearch(arr,low,mid - 1,target);
+    } else{
+        return mid;	//如果arr[mid] == target，说明找到 返回数组下标
+    }
+}
+void main(){
+    int arr[] = {1,8,10,89,1000};
+    int arrLen = sizeof(arr) / sizeof(int);
+    int target = 89;
+    int index = binarySearch(arr,0,arrLen-1,target);
+    if(index != -1){
+        printf("Found！Target index %d\n",index);
+    } else{
+        printf("Not Found");
+    }
+
+}
+```
+
+2.不使用递归函数：
+
+```c
+#include <stdio.h>
+
+void main(){
+    int arr[] = {1,8,10,89,1000};
+    int arrLen = sizeof(arr) / sizeof(int);
+    int low = 0,mid,high = arrLen-1;
+    int index = -1;
+    int target = 1000;	//要查找的数
+    while(low <= high){
+        mid = (low + high) / 2;
+        if(arr[mid] == target){//查找成功提前退出循环
+            index = mid;
+            break;
+        }else if(arr[mid] < target){
+            low = mid + 1;	//继续在R[mid+1..high]中查找
+        } else if(arr[mid] > target){
+            high = mid -1;	//继续在R[low..mid-1]中查找
+        }
+    }
+    if(index == -1){
+        printf("Not Found");
+    } else{
+        printf("Found！Target index %d\n",index);
+    }
+}
+```
+
+## 二维数组
+
+​	二维数组可以看作是由一维数组嵌套而成的；如果一个数组的每个元素又是一个数组，那么它就是二维数组。
+
+**二维数组的定义**：
+
+```c
+数据类型 数组名[大小][大小];
+```
+
+**数组内存图**：
+
+![image-20211218165715201](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211218165715201.png)
+
+**说明**：
+
+1. 二维数组未初始化，则分配的是内存垃圾值，**应先初始化**。
+2. 二维数组各个元素的地址是**连续分布**的。
+
+**访问数组元素**：
+
+```c
+数组名[大小][大小]
+```
+
+**初始化数组的方式**：
+
+1. 先定义再初始化数组。
+
+   ```c
+   int a[2][3];
+   a[0][0] = 50;
+   a[0][1] = 30;
+   ```
+
+2. 直接初始化1
+
+   ```c
+   int a[4][3] ={{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+   ```
+
+3. 直接初始化2
+
+   ```c
+   int a[4][3] ={1,2,3,4,5,6,7,8,9,10,11,12}
+   //会自动匹配到各行各列
+   ```
+
+4. 忽略行
+
+   ```c
+   int a[3][3]={1,2,3,4,5,6,7,8,9};
+   //可以写为:
+   int a[][3]={1,2,3,4,5,6,7,8,9};
+   ```
+
+**二维数组的遍历**：
+
+```c
+#include <stdio.h>
+
+void main(){
+    int map[3][3] = {{0,0,1},{1,1,1},{1,1,3}};
+    //遍历
+    //先得到行
+    //sizeof(map) 得到这个map数组的大小 9*4 = 36
+    //sizeof(map[0]) 得到map中，第一行有多大 3*4 = 12
+    int rows = sizeof(map) / sizeof(map[0]);
+    printf("rows = %d",rows);
+    int cols = sizeof(map[0]) / sizeof(int);
+    printf("cols = %d\n",cols);
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            printf(" %d",map[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
+
+**注意**：
+
+1. 可以只对部分元素赋值，未赋值的元素自动取“`0`”值。
+2. 如果对全部元紊赋值，那么第一维的长度可以不给出。比如:
+   `int a[3][3]={1,2,3,4,5,6,7,8,9};`
+   可以写为:
+   `int a[][3]={1,2,3,4,5,6,7,8,9};`
+3. 二维数组`a[3][4]`可看成三个一维数组，它们的数组名分别为`a[0]`、`a[1]`、`a[2]`。
+   这三个一维数组都有4个元素，如，一维数组`a[0]`的元素为`a[0][0]`、`a[0][1]`、`a[0][2]`、`a[0][3]`
+
+**例**: `int a[4][5];`
+
+```c
+int main(){
+    int a[4][5] = {{1},{2},{3},{2}};
+    int i,j;
+    for(i = 0;i<4;i++){
+        for(j = 0;j<5;j++){
+            printf("%d",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
+
+​	各值的地址：
+
+```c
+#include <stdio.h>
+
+void main(){
+    int a[3][4] ={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+    printf("a的首地址是 %p\n",a);
+    printf("a[0]的地址是 %p\n",a[0]);
+    printf("a[0][0]的首地址是 %p\n",&a[0][0]);
+    printf("\n");
+    for (int i = 0; i < 3; ++i) {
+        printf("a[%d]的地址是%p\n",i,a[i]);
+        for (int j = 0; j < 4; ++j) {
+            printf("a[%d][%d]的地址是 %p\n",i,j,&a[i][j]);
+        }
+    }
+}
+```
+
+​	各值的初始化：
+
+```c
+#include <stdio.h>
+void main(){
+    //a[4][6]表示一个4行6列的二维数组
+    int a[4][6];	//二维数组未初始化，则分配的是内存垃圾值，应先初始化。
+    int i,j;
+    for(i =  0;i < 4;i++){
+        for(j = 0;j <  6;j++){
+            a[i][j] = 0;	//全部初始化
+        }
+    }
+    a[1][2] = 1;
+    a[2][3] = 2;
+    a[2][1] = 3;
+    for(i =  0;i<4;i++){
+        for(j = 0;j<6;j++){
+           printf("%d",a[i][j]);	//输出
+        }
+        printf("\n");
+    }
+}
+```
+
+​	定义二维数组，用于保存三个班，每个班五名同学成绩，并求出每个班级的平均分。
+
+```c
+#include <stdio.h>
+
+void main(){
+    double arr[3][5];
+    int rows = sizeof(arr) / sizeof(arr[0]);
+    int cols = sizeof(arr[0]) / sizeof(double);
+    double classTotalScore,totalScore;//classTotalScore各个班级总成绩 totalScore所有学生成绩
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("请输入%d个班的%d个学生成绩",i+1,j+1);
+            scanf("%lf",&arr[i][j]);//遍历 给每个学生输入成绩
+        }
+    }
+    for (int i = 0; i < rows; ++i) {
+        classTotalScore = 0.0;
+        for (int j = 0; j < cols; ++j) {
+            classTotalScore += arr[i][j];
+            printf("%.2lf ",arr[i][j]);
+        }
+        printf("\n第%d个班的平均成绩是%.2f\n",i+1,classTotalScore/cols);
+        totalScore += classTotalScore;
+    }
+    printf("所有学生总成绩%.2f 平均成绩%.2f",totalScore,totalScore/(rows *  cols));
+}
+```
 
 # 字符串
 
 在C语言没有专门的类型是字符串类型，所以使用字符数组 --> [Here](#字符数组)
 
 # 指针
-
-​	指针表示一个**地址**(存放的是地址)。
-
-## 基本数据类型
-
-- 基本类型，都有对应的指针类型，形式为 `数据类型 *`
-
-
-- 如果输出一个变量的地址，使用的格式是`%p`
-
-
-  - 取出num这个变量对应地址：`&num`
-
-
-  - 定义一个指针变量，指针：
-
-    ```c
-    int *ptr = &num;
-    ```
-
-**注意**： **指针的类型和该指针指向的变量是对应关系**
-
-  - 指针变量 本身也有地址：
-
-    ```c
-    printf("ptr的地址%p",&ptr);
-    ```
-
-  - 获取指针指向的值`*ptr`：
-
-    ```c
-    printf("ptr的存放数据%d",*ptr);
-    ```
-
-
 
 
 
@@ -3648,7 +3954,7 @@ void main(){
 3. 递归必须向退出递归的条件逼近，否则就是无限递归，死龟了
 4. 当一个函数执行完毕，或者遇到`return`,就会返回，遵守谁调用，就将结果返回给谁
 
-## 实参、形参
+## 实参、形参$
 
 暂无
 
@@ -4230,10 +4536,6 @@ int main(){
 - Clion --> [Here](https://blog.csdn.net/lblmlms/article/details/107846759?ops_request_misc=&request_id=&biz_id=102&utm_term=CLion%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-107846759.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
 - Eclipse --> [Here](https://blog.csdn.net/u011781521/article/details/55000066/?ops_request_misc=&request_id=&biz_id=102&utm_term=Eclipse%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-55000066.pc_search_result_hbase_insert&spm=1018.2226.3001.4187)
 
-# 编译流程
-
-暂无
-
 # 进制 
 
 **采用不同的进制的原因**是不同的领域用到的技术形式不相同　
@@ -4513,12 +4815,10 @@ int main(){
 <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E6%A0%BC%E5%BC%8F%E5%8D%A0%E4%BD%8D%E7%AC%A6.png" alt="格式占位符" style="zoom:67%;" />
 
 - **对于float类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%f`**。
-
 - **对于double类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%lf`**。
-
 - **对于long double类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%lf`**。
-
 - `%s`输入一个字符串，直到遇到"`\0`"，若字符串长度超过指定的精度则自动突破，**不会截断字符串**。
+- `%s`输出字符串时，指针类型**直接填写**指针名即可。
 - 需要注意的是, **占位符**需要和**使用参数**匹配, 否则会出现**越界或截断**的情况。
 
 **长度修饰符**：
