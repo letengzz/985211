@@ -2,7 +2,7 @@
 
 计算机不过是一种具有**内部存储能力**、由**程序自动控制**的电子设备。
 
-**"程序"(program)**：连续执行的一条条能被计算机识别和执行的**有序指令**的集合。
+**"程序"(`program`)**：连续执行的一条条能被计算机识别和执行的**有序指令**的集合。
 
 **"程序设计语言"**：人与机器"对话"的一类媒介和工具，由 语句(`statement `)组成。
 
@@ -28,11 +28,11 @@
 
 **编译**: 有了C源文件，通过编译器将其编译成`.obj`文件(目标文件)。
 
-**连接(linker)**：将目标模块和其他一些必要的功能模块装配在一起，生成可执行文件，**执行文件后缀为"`.exe`"**
+**连接(`linker`)**：将目标模块和其他一些必要的功能模块装配在一起，生成可执行文件，**执行文件后缀为"`.exe`"**
 
 **bit(位)**：计算机中最小的存储单位。`1byte = 8bit`
 
-**byte(字节)**：计算机中基本存储单元。`1byte = 8bit`
+**`byte`(字节)**：计算机中基本存储单元。`1byte = 8bit`
 
 **表达式**：由数字、算符、数字分组符号（括号）、自由变量和约束变量等以能求得数值的有意义排列方法所得的**组合**。约束变量在表达式中已被指定数值，而自由变量则可以在表达式之外另行指定数值。
 
@@ -71,7 +71,7 @@
 ## 流程图
 
 ​	流程图是算法的一种**图像化**表示方式。能直观、清晰，更有利于人们设计与理解算法。
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%9F%BA%E6%9C%AC%E5%9B%BE%E5%BD%A2.png" alt="流程图基本图形" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%9F%BA%E6%9C%AC%E5%9B%BE%E5%BD%A2.png" alt="流程图基本图形" style="zoom:67%;" />
 ​	由这些基本图形中的框和流程线组成的流程图来表示算法形象直观,简单方便。但是,这种流程图对于流程线的走向没有任何限制,可以任意转向,在描述复杂的算法时所占篇幅较多，费时费力且不易阅读。
 
 ​	随着结构化程序设计方法的出现,**1973年**美国学者`I.Nassi`和`B.Shneiderman`提出了一种新的流程图形式,这种流程图完全去掉了流程线,算法的每一步都用一个矩形框来描述,把一个个矩形框按执行的次序连接起来就是一个完整的算法描述。这种流程图用两位学者名字的第一个英文字母命名,称为**N-S流程图**。
@@ -84,22 +84,22 @@
 
   如赋值语句、输入、输出语句都可构成顺序结构。当执行这些语句构成的程序时，将按照这些语句的先后顺序**逐条执行**，**没有分支**，**没有转移**。
 
-  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="顺序结构流程图" style="zoom:67%;" />
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="顺序结构流程图" style="zoom:67%;" />
 
 - **选择结构**
 
   如if语句、switch语句都可以构成选择结构。当执行到这些语句时，将根据不同的条件去执行不同分支中的语句。
 
-  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="选择结构流程图" style="zoom:67%;" />
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="选择结构流程图" style="zoom:67%;" />
 
 - **循环结构**
 
   如for循环、while循环、do-while循环。将根据各自的条件，使同一组语句重复执行多次或一次也不执行。
 
 	- 当型循环的特点是：当指定的条件满足(成立)时，就执行循环体，否则就不执行。
-	  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E5%BD%93%E5%9E%8B%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="当型循环流程图" style="zoom:67%;" />
+	  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E5%BD%93%E5%9E%8B%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="当型循环流程图" style="zoom:67%;" />
 	- 直到型循环的特点是：执行循环体直到指定的条件满足(成立)时就不再执行循环体。
-	  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E7%9B%B4%E5%88%B0%E5%9E%8B%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="直到型循环流程图" style="zoom:67%;" />
+	  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E7%9B%B4%E5%88%B0%E5%9E%8B%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="直到型循环流程图" style="zoom:67%;" />
 
 已经证明，由三种基本结构组成的算法可以解决任何复杂的问题。由三种基本结构所构成的算法称为**结构化算法**；由三种基本结构所构成的程序称作**结构化程序**。
 
@@ -107,7 +107,7 @@
 
 解题的思路是:先输人一个数,在没有其他数参加比较之前,它显然是当前最大的数，把它放到变量max中。让max始终存放当前已比较过的数中的最大值。然后输入第二个数,并与max比较,如果第二个数大于max，则用第二个数取代max中原来的值。如此先后输人和比较,每次比较后都将值大者放在max中,直到输入人的数小于0时结束。最后max中的值就是所有输入数中的最大值。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E4%BE%8B%E9%A2%98.png" alt="例题" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E6%B5%81%E7%A8%8B%E5%9B%BE%E4%BE%8B%E9%A2%98.png" alt="例题" style="zoom:67%;" />
 
 ## 模块化结构
 
@@ -125,7 +125,7 @@
 - ​	C语言**最小的程序单元**是**语句**。
 - 一个C源程序是由一个`main`函数和若干个其他函数组成的。函数是C程序的**基本单位**，被调用的函数可以是系统提供的库函数，也可以是用户根据需要自己定义的函数。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B/57a88fe950be4c2c8ed2ef95f62bac9c.png" alt="C语言编译程序功能" style="zoom: 67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E7%AE%80%E4%BB%8B/%E7%AE%80%E4%BB%8B.png" alt="C语言编译程序功能" style="zoom: 67%;" />
 
 
 
@@ -195,10 +195,10 @@
 
 ​	**编辑**C源程序后经过 C编译程序**编译**之后生成一个后缀`.OBJ`的二进制文件(被称为**目标文件**，在计算机底层执行)，然后由称为**连接程序(Link)**  的软件，把此`.OBJ`文件与C语言提供的各种库函数**连接**起来**生成**一个后缀为`.EXE`的**可执行文件**。(在计算机底层执行) 在操作系统环境下，只需**点击或输入**此文件的名字(而不必输入后缀`.EXE`)，该可执行文件就可以**运行**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="编译和执行过程" style="zoom:67%;" />
+![image-20220110144114917](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E7%AE%80%E4%BB%8B/%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png)
 
 ## C语言内存布局
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C语言简介/1122.png" alt="计算机内存" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png" alt="计算机内存" style="zoom:67%;" />
 
 ### 栈区
 
@@ -215,7 +215,7 @@
 3. **先进后出**
    栈是一种一端受限的线性表，它只接受从同一端插入或删除，并且严格遵守先进后出的准则。
 
-   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/C语言简介/1133.png" alt="栈" style="zoom:67%;" />
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/%E6%A0%88%E5%8C%BA.png" alt="栈" style="zoom:67%;" />
 
 4. **函数内部的变量在栈区申请**。
 
@@ -780,7 +780,7 @@ void main() {
 
 1. 全局变量未初始化，系统会自动对其初始化(正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果，因为未初始化的变量会导致一些在内存位置中已经可用的垃圾值)。
 
-  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/变量/1234.png" alt="初始化默认值" style="zoom:67%;" />
+  <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%8F%98%E9%87%8F/%E5%88%9D%E5%A7%8B%E5%8C%96%E9%BB%98%E8%AE%A4%E5%80%BC.png" alt="初始化默认值" style="zoom:67%;" />
 
 **例**：
 
@@ -839,7 +839,7 @@ void main() {
 
 ​	每一种数据都定义了明确的数据类型，在内存中分配了不同大小的内存空间(字节来表示)。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/1.png" alt="概述" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A6%82%E8%BF%B0.png" alt="概述" style="zoom:67%;" />
 
 ## 基本数据类型
 
@@ -849,7 +849,7 @@ void main() {
 
 ​	分为基本型、短整型、长整型、无符号四种。**整数可以精确存放**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/2.png" alt="整型变量" style="zoom:67%;" />	
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E6%95%B4%E5%9E%8B%E6%95%B0%E6%8D%AE.png" alt="整型变量" style="zoom:67%;" />	
 
 在不同系统上，数据类型的长度不一样 int 2字节或4字节。
 
@@ -868,7 +868,7 @@ void main() {
 ​	**int补充知识**： -->  [Here](#int补充知识)
 
 ### 实型数据
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/3.png" alt="实型变量" style="zoom:67%;" />	
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%AE%9E%E5%9E%8B%E6%95%B0%E6%8D%AE.png" alt="实型变量" style="zoom:67%;" />	
 
 在内存中，实数一律以**指数形式**存放。**浮点数是近似值，存在误差**。
 
@@ -891,7 +891,7 @@ void main() {
 ​	**占位符**： -->  [Here](#C语言占位符)
 
 ### 字符型数据
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/4.png" alt="字符型变量" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%95%B0%E6%8D%AE.png" alt="字符型变量" style="zoom:67%;" />
 	字符类型可以表示**单个字符**，允许使用单个字符、转义字符、ASCII、Unicode。
 
 ​	把字符的相对应的ASCII放到存储单元中，而这些ASCII代码值在计算机中以**二进制**的形式存放的。所以存储到计算机中，需要将字符对应的**码值**(整数)找出来。
@@ -959,7 +959,7 @@ char name[] = "你好";
 2. 字符串占用内存是连续的，一个字符挨着一个字符，包括字符串结束符，一旦碰到`\0`则表示字符串的结束。
 
 3. 字符串简单**内存示意**：
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/5.png" alt="字符串内存" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%85%E5%AD%98.png" alt="字符串内存" style="zoom:67%;" />
 
 ​	**占位符**： -->  [Here](#C语言占位符)
 
@@ -1217,7 +1217,7 @@ struct Student{
    ```
 
    **图示**：
-   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/6.png" alt="结构体类型" style="zoom:67%;" />
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E6%9E%84%E9%80%A0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B.png" alt="结构体类型" style="zoom:67%;" />
    
    **构造方式**：
    
@@ -1470,7 +1470,7 @@ void main(){
 
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/7.png" alt="共同体解析" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E6%9E%84%E9%80%A0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%85%B1%E7%94%A8%E4%BD%93%E8%A7%A3%E6%9E%90.png" alt="共同体解析" style="zoom:67%;" />
 
 > 成员n、ch、m在内存中"对齐"到一头，对ch赋值修改的是前一个字节，对m赋值修改的是前两个字节，对n赋值修改的是全部字节。也就是说，ch、m会影响到n的一部分数据，而n会影响ch、m的全部数据。
 
@@ -1549,9 +1549,9 @@ void main(){
 
   - 转换的基本规则是“**按数据长度增加的方向进行转换**”，以保证精度不降低。
 
-    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/8.png" alt="精度大小" style="zoom:67%;" />
+    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/%E7%B2%BE%E5%BA%A6%E5%A4%A7%E5%B0%8F.png" alt="精度大小" style="zoom:67%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/数据类型/9.png" alt="数据类型自动转换表" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%87%AA%E5%8A%A8%E8%BD%AC%E6%8D%A2%E8%A1%A8.png" alt="数据类型自动转换表" style="zoom:67%;" />
 
 ​	 比如 `int` 型数据和 `long` 型数据进行相加或相减运算时，系统会先将 `int` 型数据转换成 `long` 型，然后再进行运算。这样的话运算结果的精度就不会降低。`long` 是“大水桶”，`int` 是“小水桶”。`int` 能存放的，`long` 肯定能存放；而 `long` 能存放的，`int` 不一定能存放。
 
@@ -1655,7 +1655,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	**值传递**：将变量指向的存储内容，在传递/赋值时，拷贝一份给接受变量。
 
-​	<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/1.png" alt="值传递" style="zoom:67%;" />
+​	<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/%E5%80%BC%E4%BC%A0%E9%80%92.png" alt="值传递" style="zoom:67%;" />
 
 ## 地址传递
 
@@ -1663,7 +1663,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	**地址传递** 也叫 **指针传递**：如果指针，就将指针变量存储的地址，传递给接收变量，如果是**数组，就将数组的首地址传递给接收变量**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/传递参数/2.png" alt="地址传递" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/%E5%9C%B0%E5%9D%80%E4%BC%A0%E9%80%92.png" alt="地址传递" style="zoom:67%;" />
 
 # 运算符
 
@@ -1679,7 +1679,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	算术运算符是对**数值类型的变量**进行运算的。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/1.png" alt="算术运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="算术运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1759,7 +1759,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	关系运算符的作用：用于条件判断的表达常用在**if结构的条件中**或**循环结构的条件中**。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/2.png" alt="关系运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E8%BF%90%E7%AE%97%E7%AC%A6/%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="关系运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1771,7 +1771,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	逻辑运算符的**作用**：用于判断条件中的逻辑关系。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/3.png" alt="逻辑运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="逻辑运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1797,7 +1797,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ​	赋值运算符就是将某个运算后的值，赋给指定的变量
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/4.png" alt="赋值运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="赋值运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -1859,7 +1859,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 **基本语法**：
 
 ```c
-	*条件表达式 ? 表达式1 ：表达式2;
+条件表达式 ? 表达式1 ：表达式2;
 ```
 
 **说明**：
@@ -1888,7 +1888,7 @@ int num = (int)(3.5 * 10 + 6 * 5.1);
 
 ## 指针运算符
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/5.png" alt="指针运算符" style="zoom: 80%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="指针运算符" style="zoom: 80%;" />
 
 **取地址运算符**：
 **格式**：
@@ -1958,7 +1958,7 @@ printf("d = %d",d);         //打印d
 
 ​	位运算符作用于位，并逐位执行操作。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/运算符/6.png" alt="位运算符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt="位运算符" style="zoom:67%;" />
 
 ​	运算符的优先级和结合性 --> [Here](#运算符的优先级和结合性)
 
@@ -2433,11 +2433,11 @@ printf("%ld %hd",a,b);
 
 `k`为`int`型，值为`1234`。`f`为`float`，值为`123.456`。`j`代表一个空格。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6/image-20211212085552585.png" alt="printf" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA1.png" alt="printf" style="zoom:67%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6/image-20211212085617184.png" alt="image-20211212085617184" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA2.png" alt="image-20211212085617184" style="zoom:67%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6/image-20211212085655161.png" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%A1%BA%E5%BA%8F%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA3.png" style="zoom:67%;" />
 
 **注意**：
 
@@ -2469,7 +2469,7 @@ printf("%ld %hd",a,b);
 
 1. 用一对花括号把若干语句括起来构成一个语句组。一个复合语句在语法上视为**一条语句**，在一对花括号内的语句**数量不限**。
 
-1. 当出现语法上某处需要一条语句，但程序却需要执行多条语句时，就可以用到语句块。例如，可以在 if 语句中使用语句块，或者当循环体需要执行多条语句时，也可以使用语句块。
+1. 当出现语法上某处需要一条语句，但程序却需要执行多条语句时，就可以用到语句块。例如，可以在`if`语句中使用语句块，或者当循环体需要执行多条语句时，也可以使用语句块。
 
 1. 语句块不用**分号**当作结尾。
 
@@ -2479,9 +2479,9 @@ printf("%ld %hd",a,b);
    {a++; b *= a; printf("b = %d\n",b);}
    ```
 
-5. 如果语句块内需要有声明，通常会把声明放在语句块的头部，在其他语句之前。然而，C99 并不强制这么做，允许将声明放在语句块内的任何地方。
+5. 如果语句块内需要有声明，通常会把声明放在语句块的头部，在其他语句之前。然而，`C99` 并不强制这么做，允许将声明放在语句块内的任何地方。
 6. 在语句块内声明的名称将具有语句块作用域。这些名称只有自声明点开始，一直到语句块结尾之前有效。在这个作用域内，这种声明会把在语句块以外声明的同名称对象隐藏起来。
-7. 动态变量的存储周期也被限制在语句块中它们生成的地方。如果一个变量没有被声明为 static 或 extern，那么该变量的存储空间会在语句块结束之后自动被释放。
+7. 动态变量的存储周期也被限制在语句块中它们生成的地方。如果一个变量没有被声明为 `static` 或 `extern`，那么该变量的存储空间会在语句块结束之后自动被释放。
 
 **空语句**：
 
@@ -2526,7 +2526,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/1.png" alt="单分支" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%80%89%E6%8B%A9%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/if%E5%8D%95%E5%88%86%E6%94%AF.png" alt="单分支" style="zoom:67%;" />
 
 ### 双分支
 
@@ -2546,7 +2546,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/2.png" alt="双分支" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%80%89%E6%8B%A9%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/if%E5%8F%8C%E5%88%86%E6%94%AF.png" alt="双分支" style="zoom:67%;" />
 
 **基本语法2**：
 
@@ -2573,7 +2573,7 @@ else{
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/3.png" alt="双分支2" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%80%89%E6%8B%A9%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/if%E5%8F%8C%E5%88%86%E6%94%AF2.png" alt="双分支2" style="zoom:67%;" />
 
 ### 嵌套分支
 
@@ -2621,7 +2621,7 @@ switch(表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/选择控制/switch.png" alt="switch语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%80%89%E6%8B%A9%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/switch%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="switch语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2683,7 +2683,7 @@ while(循环条件){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/while.png" alt="while语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/while%E8%AF%AD%E5%8F%A5.png" alt="1" style="zoom:67%;" />
 
 **注意**：
 
@@ -2734,7 +2734,7 @@ for(循环变量初始化;循环条件;循环变量迭代){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/for.png" alt="for语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/for%E8%AF%AD%E5%8F%A5.png" alt="2" style="zoom:67%;" />
 
 **注意**：
 
@@ -2794,7 +2794,7 @@ do{
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/循环控制/dowhile.png" alt="dowhile语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/dowhile%E8%AF%AD%E5%8F%A5.png" alt="dowhile语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -2878,7 +2878,7 @@ if(条件表达式){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/break.png" alt="break语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/跳转控制语句/break语句.png" alt="dowhile语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2912,7 +2912,7 @@ for(i = 0;i < 10;i++){
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/continue.png" alt="continue语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/跳转控制语句/continue语句.png" alt="dowhile语句" style="zoom:67%;" />
 
 **说明**：
 
@@ -2977,7 +2977,7 @@ label:statment
 
 **流程图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/跳转控制/goto.png" alt="goto语句" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/跳转控制语句/goto语句.png" alt="语句" style="zoom:67%;" />
 
 **注意**：
 
@@ -3027,7 +3027,7 @@ void main(){
 
 **数组内存图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211213164502806.png" alt="image-20211213164502806" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E6%95%B0%E7%BB%84%E5%86%85%E5%AD%98%E5%9B%BE.png" alt="image-20211213164502806" style="zoom:67%;" />
 
 **说明**：
 
@@ -3114,7 +3114,7 @@ for (i = 0; i < arrlen; i++) {
    }
    ```
 
-   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211213191204335.png" alt="image-20211213191204335" style="zoom:67%;" />
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BE%8B%E5%AD%90.png" alt="image-20211213191204335" style="zoom:67%;" />
 
 **例**：
 
@@ -3220,7 +3220,7 @@ for (i = 0; i < arrlen; i++) {
 
 **字符数组(字符串)在内存中的布局**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211215213956878.png" alt="image-20211215213956878" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84%E5%9C%A8%E5%86%85%E5%AD%98%E7%9A%84%E5%B8%83%E5%B1%80.png" alt="image-20211215213956878" style="zoom:67%;" />
 
 **字符串的表示形式**：
 
@@ -3293,7 +3293,7 @@ void main(){
 
 4. 如果定义了一个字符数组，那么它有确定的内存地址(即字符数组名是一个常量)；而定义一个字符指针变量时，它并未指向某个确定的字符数据，并且可以多次赋值。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211216104413880.png" alt="字符串" style="zoom: 67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BE%8B.png" alt="字符串" style="zoom: 67%;" />
 
 **字符数组定义和初始化的方式**：
 
@@ -3322,7 +3322,7 @@ void main(){
 
 2. 在定义字符数组时应估计实际字符串长度，保证数组长度始终大于字符串实际长度，否则，在输出字符数组时可能出现未知字符。
 
-   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211216092124057.png" alt="数组" style="zoom:67%;" />
+   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E6%B3%A8%E6%84%8F.png" alt="数组" style="zoom:67%;" />
 
 3. 系统对字符串常量也自动加一个'`\0`'作为结束符。例如"℃Program"共有9个字符，但在内存中占10个字节，最后一个字节'`\0`'是系统自动加上的。(通过`sizeof()`函数可验证)。
 
@@ -3372,7 +3372,7 @@ void main(){
 
 **例**：
 
- <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211216210547860.png" alt="image-20211216210547860" style="zoom:67%;" />
+ <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E4%BE%8B.png" alt="image-20211216210547860" style="zoom:67%;" />
 
 ```c
 /*五个无序的数 {3,9,-1,10,-2}使用冒泡排序将其排成一个从小到大的有序数列*/
@@ -3506,15 +3506,15 @@ void main(){
 
 **原理图**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/Trim.gif" alt="数组_Trim" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BA%8C%E5%88%86%E6%B3%95%E5%8E%9F%E7%90%86.gif" alt="数组_Trim" style="zoom:67%;" />
 
 **未找到原理图**：
 
-<img src="D:\Flies\Down\Chrome\Trim02.gif" alt="Trim02" style="zoom:67%;" />
+![Trim02](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BA%8C%E5%88%86%E6%B3%95%E6%9C%AA%E6%89%BE%E5%88%B0.gif)
 
 **二分查找的基本思想**：
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211217122517942.png" alt="image-20211217122517942" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BA%8C%E5%88%86%E6%B3%95%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3.png" alt="image-20211217122517942" style="zoom:67%;" />
 
 **例**：
 
@@ -3598,7 +3598,7 @@ void main(){
 
 **数组内存图**：
 
-![image-20211218165715201](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/%E6%95%B0%E7%BB%84/image-20211218165715201.png)
+![image-20211218165715201](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%86%85%E5%AD%98%E5%9B%BE.png)
 
 **说明**：
 
@@ -3878,7 +3878,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/1.png" alt="函数调用实例" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%AE%9E%E4%BE%8B.png" alt="函数调用实例" style="zoom:67%;" />
 
 ```c
 #include <stdio.h>
@@ -3893,7 +3893,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/2.png" alt="函数调用实例2" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E5%AE%9E%E4%BE%8B2.png" alt="函数调用实例2" style="zoom:67%;" />
 
 **函数调用规则**：
 
@@ -3922,7 +3922,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/3.png" alt="递归调用1" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A81.png" alt="递归调用1" style="zoom:67%;" />
 
 **示例二**：
 
@@ -3940,7 +3940,7 @@ void main(){
 }
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/函数/4.png" alt="递归调用2" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A82.png" alt="递归调用2" style="zoom:67%;" />
 
 **注意**：
 
@@ -4806,13 +4806,13 @@ int main(){
 
 ## C语言关键字
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/C%E8%AF%AD%E8%A8%80%E5%85%B3%E9%94%AE%E5%AD%97.png" alt="C语言关键字" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/C%E8%AF%AD%E8%A8%80%E5%85%B3%E9%94%AE%E5%AD%97.png" alt="C语言关键字" style="zoom:67%;" />
 
 ## C语言占位符
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png" alt="数据类型和占位符对应关系" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png" alt="数据类型和占位符对应关系" style="zoom:67%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E6%A0%BC%E5%BC%8F%E5%8D%A0%E4%BD%8D%E7%AC%A6.png" alt="格式占位符" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E6%A0%BC%E5%BC%8F%E5%8D%A0%E4%BD%8D%E7%AC%A6.png" alt="格式占位符" style="zoom:67%;" />
 
 - **对于float类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%f`**。
 - **对于double类型的变量，printf()中的说明符可以用`%f`或`%lf`，而scanf()中的说明符则只能用`%lf`**。
@@ -4867,11 +4867,11 @@ int main(){
 
 ## C语言常见预处理指令
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E5%B8%B8%E7%94%A8%E9%A2%84%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4.png" alt="常用预处理命令" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E5%B8%B8%E7%94%A8%E9%A2%84%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4.png" alt="常用预处理命令" style="zoom:67%;" />
 
 ## 进制之间的转换 
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.png"    >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.png"    >
 
 ## ASCII码
 
@@ -4889,25 +4889,19 @@ int main(){
 
 <p align="center"  color = "#DC143C">ASCII控制字符</p>
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII01.png" alt="ASCII"  />
+![image-20220110133639458](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%99%84%E5%BD%95/ASCII%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6.png)
 
 <p align="center"  color = "#DC143C">ASCII可显示字符</p>
 
-![ASCII](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII02.png)
-
-![ASCII](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII03.png)
-
-![ASCII](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/ASCII04.png)
+![image-20220110133733131](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%99%84%E5%BD%95/ASCII%E5%8F%AF%E6%98%BE%E7%A4%BA%E5%AD%97%E7%AC%A6.png)
 
 ## 常用转义字符
 
-​                                                                    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6.png" style="zoom:67%;" >  
+​                                                                    <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6.png" style="zoom:67%;" >  
 
 ## 运算符的优先级和结合性
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7.png" style="zoom:67%;"  >
-
-​                                <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A72.png" style="zoom:67%;"  >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7.png" style="zoom:67%;"  > <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A72.png" style="zoom:67%;"  >
 
 **说明** ：同一优先级的运算次序由结合方向决定。例如，*号和/号有相同的优先级，其结合方向为自左至右，因此，`3*5/4`的运算次序是先乘后除。单目运算符--和++具有同一优先级，结合方向为自右至左，因此，表达式:--i++ 相当于 --(i++)。
 
@@ -4928,11 +4922,11 @@ int main(){
 
 运算所需变量为**两个**的运算符叫做双目运算符，或者要求运算对象的**个数是2**的运算符称为双目运算符。
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/附录/%E5%8F%8C%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%AD.png" style="zoom:67%;"  >
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/附录/%E5%8F%8C%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%AD.png" style="zoom:67%;"  >
 
 ## 存储类型关键字定义变量与函数作用域与生命周期
 
-<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CProgram/作用域和生命周期.png" alt="img" style="zoom:67%;" />
+![img](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E9%99%84%E5%BD%95/%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png)
 
 - `auto`变量：函数的局部变量，如果没有声明为`static`,函数中定义的局部变量全部为`auto`类型，`auto`变量包括未加`static`声明的局部变量和函数的形参。在函数调用时系统会给他们分配存储空间，在函数调用结束后会自动释放这些空间。属于动态存储方式。
 - `static`变量：用`static`声明的局部变量在调用结束后不会消失而保存原来的值。`static`局部变量定义使用后值会存储下来。所以使用`static`局部变量定义只需要一次赋值。静态局部变量的作用域仅限于所定义的函数。但函数结束后变量的值会保留。直到整个程序运行结束。全局变量从定义开始作用于整个文件直至程序运行结束。
@@ -5036,7 +5030,7 @@ LINK : fatal error LNK1104
 error C2143 语法错误 缺少;
 ```
 
-缺少分号
+**缺少分号**
 
 **解决办法**：编译失败，注意错误出现的行数，再到源代码中指定位置改错。
 
