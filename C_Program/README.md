@@ -195,7 +195,7 @@
 
 ​	**编辑**C源程序后经过 C编译程序**编译**之后生成一个后缀`.OBJ`的二进制文件(被称为**目标文件**，在计算机底层执行)，然后由称为**连接程序(Link)**  的软件，把此`.OBJ`文件与C语言提供的各种库函数**连接**起来**生成**一个后缀为`.EXE`的**可执行文件**。(在计算机底层执行) 在操作系统环境下，只需**点击或输入**此文件的名字(而不必输入后缀`.EXE`)，该可执行文件就可以**运行**。
 
-![image-20220110144114917](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E7%AE%80%E4%BB%8B/%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png)
+![image-20220113191841940](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E7%AE%80%E4%BB%8B/C%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png)
 
 ## C语言内存布局
 <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png" alt="计算机内存" style="zoom:67%;" />
