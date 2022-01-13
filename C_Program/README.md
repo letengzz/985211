@@ -88,7 +88,7 @@
 
 - **选择结构**
 
-  如if语句、switch语句都可以构成选择结构。当执行到这些语句时，将根据不同的条件去执行不同分支中的语句。
+  如`if`语句、`switch`语句都可以构成选择结构。当执行到这些语句时，将根据不同的条件去执行不同分支中的语句。
 
   <img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%A6%82%E5%BF%B5/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="选择结构流程图" style="zoom:67%;" />
 
@@ -3769,9 +3769,401 @@ void main(){
 
 在C语言没有专门的类型是字符串类型，所以使用字符数组 --> [Here](#字符数组)
 
-# 指针
+#  指针
 
+​	指针表示一个**地址**(存放的是内存地址)。指针变量，也就是保存了内存地址的变量。
 
+**指针的定义**：
+
+```c
+数据类型 *指针名;
+```
+
+**指针的赋值**：
+
+```c
+int *ptr = &num;	//&取地址符
+```
+
+**注意**： **指针的类型和该指针指向的变量是对应关系**
+
+  - 指针变量 本身也有地址：
+
+    ```c
+    printf("ptr的地址%p",&ptr);
+    ```
+
+  - 获取指针指向的值`*ptr`：
+
+    ```c
+    printf("ptr的存放数据%d",*ptr);
+    ```
+
+## 基本数据类型
+
+**基本类型，都有对应的指针类型**：
+
+```c
+int* ip;	//一个整型的指针
+double* dp;	//一个double型的指针
+float* fp;	//一个浮点型的指针
+char* ch;	//一个字符型的指针
+```
+
+**基本类型地址赋值给指针**：
+
+```c
+int *ptr = &num;
+```
+
+**输出一个变量的地址**：`%p`
+
+​	获取`num`这个变量对应地址：`&num`
+
+```c
+printf("%p",&num);
+```
+
+**获取指针指向的值**：
+
+```c
+printf("ptr的存放数据%d",*ptr);
+```
+
+**获取指针所存放的地址**：
+
+```c
+int a = 2;
+int* p = &a;
+printf("%p %p",p,&a);	//地址相同 表示 p == &a 地址名表示所存放的地址
+```
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E8%8E%B7%E5%8F%96%E6%8C%87%E9%92%88%E6%89%80%E5%AD%98%E6%94%BE%E7%9A%84%E5%9C%B0%E5%9D%80.png" alt="image-20211219113105386" style="zoom:67%;" />
+
+### 指针的算术运算
+
+​	指针是一个用数组表示的地址，可以对指针执行算术运算(`++`、`--`、`+`、`-`)。
+
+**说明**：
+
+1. 数组在内存中是连续分布的。
+
+2. 当对指针进行`++`时，指针会按照它指向的数据类型字节数大小增加
+
+   比如`int*`指针，每`++`，就增加4个字节。
+
+   ```c
+   #include <stdio.h>
+   
+   void main(){
+       int arr[] = {45,64,11,20};
+       int arrLen = sizeof(arr) / sizeof(int);
+       int* p,i;
+       p = arr;
+       for (i = 0; i < arrLen; ++i) {
+           printf("arr[%d]的地址是 %p\n",i,p);
+           printf("储存值:arr[%d] = %d\n",i,*p);
+           p++;
+       }
+   }
+   ```
+
+   ![QQ录屏20220113160444_Trim](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E6%8C%87%E9%92%88%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%971.gif)
+
+   同理：
+
+   ```c
+   #include <stdio.h>
+   
+   void main(){
+       int arr[] = {45,64,11,20};
+       int arrLen = sizeof(arr) / sizeof(int);
+       int* p,i;
+       p = &arr[arrLen - 1];//数组的最后一个元素的地址
+       for (i = arrLen; i > 0; i--) {//反向遍历
+           printf("p存放的地址是%p arr[%d]的地址是 %p\n",p,i-1,&arr[i-1]);
+           printf("储存值:arr[%d] = %d\n",i-1,*p);
+           p--;
+       }
+   }
+   ```
+
+   ![455646546](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E6%8C%87%E9%92%88%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%972.gif)
+
+3. 当可以对指针按照指定的字节数大小进行`+`或者`-`的操作，可以快速定位你要的地址
+
+   ```c
+   #include <stdio.h>
+   
+   void main(){
+       int arr[] = {45,64,11,20};
+       int* p;
+       p = arr;//将arr的首地址赋给p
+       p += 3;//p存储的地址+3个int的字节(八个字节)
+       printf("arr[3] = %d arr[3]的地址 %p\np所指向的值%d p存储的地址%p",arr[3],&arr[3],*p,p);
+       //arr[3] = 20 arr[3]的地址 000000000061FE0C
+   	//p所指向的值20 p存储的地址000000000061FE0C
+   }
+   ```
+
+   ```c
+   #include <stdio.h>
+   
+   void main(){
+       int arr[] = {45,64,11,20};
+       int* p;
+       p = &arr[3];//将arr[3]的地址赋给p
+       p -= 2;//p存储的地址-2个int的字节(八个字节)
+       printf("arr[1] = %d arr[1]的地址 %p\np所指向的值%d p存储的地址%p",arr[1],&arr[1],*p,p);
+       //arr[1] = 64 arr[1]的地址 000000000061FE04
+       //p所指向的值64 p存储的地址000000000061FE04
+   }
+   ```
+
+### 指针的比较
+
+​	指针可以用关系运算符进行比较，如 `==`、`<`和`>`。
+
+​	如果`p1`和`p2`指向两个变量，比如同一个数组中的不同元素，则可对`p1`和`p2`进行大小比较。
+
+**例**：
+
+1. ```c
+   #include <stdio.h>
+   
+   void main(){
+       int var[] = {26,69,36,46,45,30};
+       int* ptr;
+       ptr = var;	//ptr指向var首地址  (第一个元素)
+       //if(ptr == var[0]){	错误用法 类型不一样 ptr为地址 var[0]为int数
+       //    printf("ok1");
+       //}
+       if(ptr == &var[0]){//可以输出
+           printf("ok2");
+       }
+       if(ptr == var){//可以输出
+           printf("ok3");
+       }
+       if(ptr >= &var[1]){//可以比较 但是返回false
+           printf("ok4");//没有输出
+       }
+   }
+   ```
+
+2. ```c
+   #include <stdio.h>
+   
+   void main(){
+       int var[] = {10,20,50,100};
+       int* p = var;
+       int i = 0;
+       while (p <= &var[1]){
+           printf("Address of var[%d] = %p\n",i,p);\
+           printf("Value of var[%d] = %d\n",i,*p);
+           p ++;
+           i++;
+       }
+   }
+   //Address of var[0] = 000000000061FE00
+   //Value of var[0] = 10
+   //Address of var[1] = 000000000061FE04
+   //Value of var[1] = 20
+   ```
+
+## 指针数组
+
+​	让数组的元素 指向int或其他数据类型的地址(指针)，可以使用指针数组。
+
+**指针数组的定义**：
+
+```c
+数据类型 *指针数组名[大小];
+```
+
+**说明**：`int *ptr[3];`
+
+1) `ptr` 声明为一个指针数组。
+2) 由3个整数指针组成。因此，`ptr` 中的每个元素，都是一个指向`int`值的指针。
+
+**例**：
+
+1. 
+
+   ```c
+   #include <stdio.h>
+   #define MAX 3
+   void main(){
+       int var[] = {100,220,300};
+       int i,*ptr[3];
+       for ( i = 0; i < MAX; i++) {
+           ptr[i] = &var[i];   //赋值为整数的地址
+       }
+       for (i = 0; i < ; ++i) {    //指针数组来获取各个值
+           printf("Value of var[%d] =%d\n",i,*ptr[i]);
+       }
+   }
+   ```
+
+   ![4164189](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84.gif)
+
+2. 定义一个指向字符的指针数组来存储字符串列表(四大名著书名)，并通过遍历该指针数组，显示字符串信息。
+
+   ```c
+   #include <stdio.h>
+   
+   void main(){
+       char *books[] = {"水浒","三国","红楼","西游"};
+       int booksLen = sizeof(books)/sizeof(books[0]);
+       for (int i = 0; i < booksLen; i++) {
+           printf("\nbook[%d]指向的字符串是%s",i,books[i]);
+       }
+   }
+   ```
+
+## 	多重指针
+
+​	指向指针的指针是一种**多级间接寻址**的形式，或者说是一个指针链。通常，一个指针包含一个变量的地址。当我们定义一个指向指针的指针时，第一个指针包含了第二个指针的地址，第二个指针指向包含实际值的位置。
+
+<img src="https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E5%A4%9A%E9%87%8D%E6%8C%87%E9%92%88.png" alt="image-20220110152934350" style="zoom:67%;" />
+
+**多重指针的声明**：
+
+```c
+int **ntr;
+```
+
+**注意**：
+
+1. 一个指向指针的指针变量必须如上声明，即在变量名前放置两个星号。
+
+2. 当一个目标值被一个指针间接指向到另一个指针时，访问这个值需要使用两个星号运算符
+
+   ```c
+   printf("%d",**ptr);
+   ```
+
+**例**：
+
+1. 
+
+   ```c
+   #include <stdio.h>
+   
+   void main(){
+       int var;
+       int *ptr;	//一级指针
+       int **pptr;	//二级指针
+       var = 3000;
+       
+       ptr = &var;	//var变量的地址赋给ptr
+       pptr = &ptr; //将ptr存放的地址赋给pptr
+       
+       printf("var本身的地址=%p var=%d\n",&var,var);
+       printf("ptr本身的地址=%p ptr存放的地址=%p *ptr=%d\n",&ptr,ptr,*ptr);
+       printf("pptr本身的地址=%p pptr存放的地址=%p **pptr=%d\n",&pptr,pptr,**pptr);
+   }
+   ```
+
+   ![QQ录屏20220110155345_Trim](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E5%A4%9A%E9%87%8D%E6%8C%87%E9%92%88%E4%BE%8B.gif)
+
+**三级指针**
+
+```c
+#include <stdio.h>
+
+void main(){
+    int var;
+    int *ptr;	//一级指针
+    int **pptr;	//二级指针
+    int ***ppptr; //三级指针
+    var = 3000;
+    
+    ptr = &var;	//var变量的地址赋给ptr
+    pptr = &ptr; //将ptr存放的地址赋给pptr
+    ppptr = &pptr; //将pptr存放的地址赋给ppptr
+    
+    printf("var本身的地址=%p var=%d\n",&var,var);
+    printf("ptr本身的地址=%p ptr存放的地址=%p *ptr=%d\n",&ptr,ptr,*ptr);
+    printf("pptr本身的地址=%p pptr存放的地址=%p **pptr=%d\n",&pptr,pptr,**pptr);
+    printf("pptr本身的地址=%p pptr存放的地址=%p **pptr=%d\n",&ppptr,ppptr,***ppptr);
+}
+```
+
+## 函数指针
+
+​	一个函数总是占用一段连续的内存区域，**函数名在表达式中有时也会被转换为该函数所在内存区域的首地址**，这和数组名非常类似。
+把函数的这个首地址(或称入口地址)赋予一个指针变量，使指针变量指向函数所在的内存区域，然后通过指针变量就可以找到并调用该函数。这种指针就是**函数指针**。
+
+**函数指针的定义**：
+
+```c
+returnType (*pointerName)(param list);
+```
+
+- `returnType`为函数返回值类型
+- `pointerName`为指针名称
+- `param list`为函数参数列表
+
+**注意**：
+
+1. 参数列表中可以同时给出参数的类型和名称，也可以只给出参数的类型，省略参数的名称。
+2. `()`的优先级高于`*`，第一个括号不能省略，如果写作`returnType *pointerName(param list);`就成了函数原型，它表明函数的返回值类型为`returnType *`
+
+**例**：
+
+1. 用指针来实现对函数的调用，返回两个整数中的最大值
+
+   ```c
+   #include <stdio.h>
+   //说明：
+   //max函数
+   //接收两个int，返回较大数
+   int max(int a,int b);
+   void main(){
+       int x,y,maxVal;
+   	//说明：函数指针
+       //函数指针的名字 pmax
+       //int 表示该函数指针指向的函数是返回int类型
+       //(int,int)表示 该函数指针指向的函数形参是接收两个int
+       //在定义函数指针时，也可以写上形参名 int(*pmax)(int a,int b) = max;
+       int (*pmax)(int,int) = max;
+       printf("input two number:");
+       scanf("%d %d",&x,&y);
+       //(*pmax)(x,y)通过函数指针去调用 函数max
+       //调用方式2 pmax(x,y);
+       maxVal = (*pmax)(x,y);
+       printf("Max value:%d pmax = %p pmax point is %p\n",maxVal,pmax,&pmax);
+   }
+   int max(int a,int b){
+       return a>b ? a : b;
+   }
+   ```
+
+   ![image-20220113121159320](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E6%8C%87%E9%92%88/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88.png)
+
+## 空指针
+
+​	赋为`NULL`值的指针被称为**空指针**
+
+​	`NULL`指针是一个定义在标准库`<stdio.h>`中 的值为零的常量`#define NULL 0` 
+
+```c
+#include <stdio.h>
+void main(){
+    int *p = NULL;//p是空指针
+    int num = 34;
+    p = &num;
+}
+```
+
+**注意**：
+
+1. **变量声明的时候，如果没有确切的地址赋值，为指针变量赋-一个`NULL`值是好的编程习惯。**
+
+## 注意
+
+1. 指针变量存放的是地址，从这个角度看指针的本质就是地址。
+2. 变量声明的时候，如果没有确切的地址赋值，为指针变量赋一个`NULL`值是好的编程习惯。
 
 # 函数
 ​	为完成某一功能的程序指令(语句)的集合，称为**函数**。也可称为**方法**等叫法。
@@ -3962,8 +4354,8 @@ void main(){
 
 ## 回调函数
 
-函数指针变量可以作为某个函数的参数来使用的，回调函数就是一个通过函数指针调用的函数。
-简单的讲:回调函数是由别人的函数执行时调用你传入的函数（通过函数指针完成〉
+​	函数指针变量可以作为某个函数的参数来使用的，**回调函数就是一个通过函数指针调用的函数**。
+​	简单的讲：回调函数是由别人的函数执行时调用你传入的函数（通过函数指针完成〉
 
 **例**：用回调函数的方式，给一个整型数组`int arr[10]`赋10个随机数。
 
@@ -3999,7 +4391,289 @@ int main(){
 
 ## 指针函数
 
+### 传递指针给函数
 
+​	当函数的形参类型是指针类型时，是使用该函数时，需要传递指针，**或者地址**，**或者数组**给该**形参**。
+
+```c
+#include <stdio.h>
+
+void test(int *p);//函数声明
+void main(){
+    int num = 90;
+    int *p = &num;	//将num的地址赋给p
+    test(&num);	//传地址
+    printf("\nmain()中的num=%d",num);//num=91
+    test(p);	//传值针
+    printf("\nmain()中的num=%d",num);//num=92
+}
+void test(int *p){
+    *p +=1;//*p就访问num
+}
+```
+
+![123_Trim_Trim](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E7%BB%99%E5%87%BD%E6%95%B0.gif)
+
+**传数组给指针变量**
+	**数组名本身就代表该数组首地址，因此传数组的本事就是传地址**：
+
+```c
+/*函数声明*/
+double getAverage(int *arr,int size);
+double getAverage2(int *arr,int size);
+void main(){
+    //带有5个元素的整型数值
+    int balance[5] = {1000,500,60,85,45};
+    double avg;
+    //传递一个指向数组的指针做参数
+    avg = getAverage2(balance,5);
+    //输出返回值
+    printf("Average value is:%f\n",avg);
+}
+double getAverage(int *arr,int size){
+    int i,sum = 0;
+    double avg;
+    for(i = 0;i<size;++i){
+        sum += arr[i];
+    }
+    avg = (double)sum/size;
+    return avg;
+}
+double getAverage2(int *arr,int size){
+    int i,sum = 0;
+    double avg;
+    for(i = 0;i<size;++i){
+        sum += *arr;
+        arr++;//指针的++运算，会对arr存放的地址进行修改
+    }
+    avg = (double)sum/size;
+    return avg;
+}
+```
+
+![QQ录屏20220112103335_Trim](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E4%BC%A0%E6%95%B0%E7%BB%84%E7%BB%99%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F.gif)
+
+### 返回指针的函数
+
+​	C语言允许函数的**返回值是一个指针(地址)**，这种的函数称为**指针函数**。
+
+**注意**：
+
+1. 用指针作为函数返回值时需要注意，函数运行结束后**会销毁在它内部定义的所有局部数据**，包括局部变量、局部数组和形式参数，函数返回的指针不能指向这些数据。
+
+   ```c
+   #include <stdio.h>
+   int *func(){
+       int n = 100;//局部变量，在func返回时，就会销毁
+       return &n;
+   }
+   void main(){
+       int *p = func(),n;//func返回指针
+       n = *p;
+       printf("\nvalue = %d\n",n);//不能输出 因为已经销毁
+   }
+   ```
+
+2. **函数运行结束后会销毁所有的局部数据**，这里所谓的销毁并不是将局部数据所占用的内存全部清零，而是程序放弃对它的使用权限，后面的代码可以使用这块内存。
+
+   ```c
+   #include <stdio.h>
+   int *func(){
+       int n = 100;//局部变量，在func返回时，就会销毁
+       return &n;
+   }
+   void main(){
+       int *p = func(),n;//func返回指针
+       n = *p;
+       printf("okok");//可能使用到局部变量int  n = 100占用的空间
+       printf("\nvalue = %d\n",n);//不能输出 因为已经销毁
+   }
+   ```
+
+3. c语言**不支持在调用函数时返回局部变量的地址**，如果确实有这样的需求，**需要定义局部变量为`static`变量**。
+
+   ```c
+   #include <stdio.h>
+   int *func(){
+       static int n = 100;//如果局部变量是static性质的 ，那么n存放的空间在静态数据区
+       return &n;
+   }
+   void main(){
+       int *p = func(),n;//func返回指针
+       n = *p;
+       printf("\nvalue = %d\n",n);
+   }
+   ```
+
+   ![image-20220112160112494](https://cdn.jsdelivr.net/gh/letengzz/Two-C/img/CP/%E5%87%BD%E6%95%B0/%E8%BF%94%E5%9B%9E%E6%8C%87%E9%92%88%E7%9A%84%E5%87%BD%E6%95%B0.png)
+
+**例**：
+
+1. 编写一个函数`strlong()`，返回两个字符串中较长的一个：
+
+   ```c
+   #include <stdio.h>
+   #include <string.h>
+   
+   char *strlong(char *str1,char *str2){//函数返回的char *(指针)
+       printf("\nstr1的长度%d str2的长度%d", strlen(str1), strlen(str2));
+       if(strlen(str1) >= strlen(str2)){
+           return str1;
+       } else{
+           return str2;
+       }
+   }
+   void main(){
+       char str1[30],str2[30],*str;
+       printf("请输入第一个字符串:");
+       gets(str1);
+       printf("请输入第二个字符串:");
+       gets(str2);
+       str = strlong(str1,str2);
+       printf("\nLonger string:%s\n",str);
+   
+   }
+   ```
+
+2. 编写一个函数，它会生成10个随机数，并使用表示指针的数组名(即第一个数组元素的地址)来返回它们。
+
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   
+   int *f1(){
+       static int arr[10];//必须加上static，让arr的空间在静态数据区分配
+   
+       int i = 0;
+       for(i = 0;i < 10;i++){
+           arr[i] = rand();
+       }
+       return arr;
+   }
+   void main(){
+       int *p;
+       int i;
+       p = f1();//p指向是在f1生成的数组的首地址(即第一个元素的地址)
+       for (i = 0; i < 10; ++i) {
+           printf("\n%d",*(p + i));
+       }
+   }
+   ```
+
+## static关键字
+
+### 静态变量
+
+局部变量被`static`修饰后，我们称为**静态局部变量**。
+
+```c
+#include <stdio.h>
+void main(){
+    static int n;//n就是静态局部变量，默认初始化值为0
+    printf("\n n=%d",n);
+}
+```
+
+**说明**：
+
+1. 对应静态局部变量在声明时未赋初值，编译器也会把它**初始化**为0。
+2. 静态局部变量存储于进程的静态存储区(全局性质)，只会被初始一次，即使函数返回，它的值也会**保持不变**。
+
+  C语言内存布局 --> [Here](#C语言内存布局)
+
+**例**：
+
+```c
+#include <stdio.h>
+void fn(void){
+    int n = 10;//普通局部变量，每次执行都会初始化，n在栈区
+    printf("n = %d\n",n);
+    n++;
+    printf("n++=%d\n",n);
+}
+void fn_static(void){
+    static int n = 10;//静态局部变量，放在静态存储区，全局性质空间
+    printf("static n = %d\n",n);
+    n++;
+    printf("static n++ = %d\n",n);
+}
+int main(){
+    fn();//10 11
+    printf("---\n");
+    fn_static();//10 11
+    printf("---\n");
+    fn();//10 11
+    printf("---\n");
+    fn_static();//11 12
+    return 0;
+}
+```
+
+**注意**：
+
+1. 普通全局变量对整个工程可见，其他文件可以使用`extern`外部声明后直接使用。也就是说其他文件不能再定义一个与其相同名字的变量了(否则编译器会认为它们是同一个变量)，静态全局变量**仅对当前文件可见，其他文件不可访问**，其他文件可以定义与其同名的变量，两者互不影响。
+
+   `file01.c`:
+
+   ```c
+   int num = 10;//普通全局变量
+   static int num2 = 20;//静态全局变量，只能在本文件中使用，而不能在其他文件使用
+   ```
+
+   `file02.c`:
+
+   ```c
+   #include <stdio.h>
+   
+   extern int num;
+   //extern int num2;//显示没有找到num2
+   //int num = 20; 显示已经定义
+   int num2 = 60;//不会报错
+   void main(){
+       printf("\nnum = %d",num);
+   }
+   ```
+
+2. 定义不需要与其他文件共享的全局变量时，加上`static`关键字能够有效地降低程序模块之间的耦合，避免不同文件同名变量的冲突，且不会误使用。
+
+### 静态函数
+
+​	函数的使用方式与静态变量类似，在函数的返回类型前加上`static`，就是**静态函数**。
+
+**例**：
+
+```c
+#include <stdio.h>
+void fun1(void){//普通函数(非静态函数)
+	printf("hello from fun1 \n");
+}
+static void fun2(void){//静态函数 只能在本文件中使用
+	printf("hello from fun2 \n");
+}
+```
+
+**说明**：
+
+1. 非静态函数可以在另一个文件中通过`extern`引用。
+
+2. 静态函数只能在声明它的文件中可见,其他文件不能引用该函数。
+
+3. 不同的文件可以使用相同名字的静态函数，互不影响。
+
+   ```c
+   #include <stdio.h>
+   
+   extern void fun1(void);
+   //extern void fun2(void);//不可以
+   //void fun1(){}//不可以
+   void fun2(){//可以定义
+       ...
+   }
+   void main(){
+       fun1();
+   	//fun2(); 不可以
+   }
+   ```
 
 ## 常用函数
 
@@ -4188,121 +4862,6 @@ void main(){
   //getchar();
 }
 ```
-
-## static关键字
-
-### 静态变量
-
-局部变量被`static`修饰后，我们称为**静态局部变量**。
-
-```c
-#include <stdio.h>
-void main(){
-    static int n;//n就是静态局部变量，默认初始化值为0
-    printf("\n n=%d",n);
-}
-```
-
-**说明**：
-
-1. 对应静态局部变量在声明时未赋初值，编译器也会把它**初始化**为0。
-2. 静态局部变量存储于进程的静态存储区(全局性质)，只会被初始一次，即使函数返回，它的值也会**保持不变**。
-
-  C语言内存布局 --> [Here](#C语言内存布局)
-
-**例**：
-
-```c
-#include <stdio.h>
-void fn(void){
-    int n = 10;//普通局部变量，每次执行都会初始化，n在栈区
-    printf("n = %d\n",n);
-    n++;
-    printf("n++=%d\n",n);
-}
-void fn_static(void){
-    static int n = 10;//静态局部变量，放在静态存储区，全局性质空间
-    printf("static n = %d\n",n);
-    n++;
-    printf("static n++ = %d\n",n);
-}
-int main(){
-    fn();//10 11
-    printf("---\n");
-    fn_static();//10 11
-    printf("---\n");
-    fn();//10 11
-    printf("---\n");
-    fn_static();//11 12
-    return 0;
-}
-```
-
-**注意**：
-
-1. 普通全局变量对整个工程可见，其他文件可以使用`extern`外部声明后直接使用。也就是说其他文件不能再定义一个与其相同名字的变量了(否则编译器会认为它们是同一个变量)，静态全局变量**仅对当前文件可见，其他文件不可访问**，其他文件可以定义与其同名的变量，两者互不影响。
-
-   `file01.c`:
-
-   ```c
-   int num = 10;//普通全局变量
-   static int num2 = 20;//静态全局变量，只能在本文件中使用，而不能在其他文件使用
-   ```
-
-   `file02.c`:
-
-   ```c
-   #include <stdio.h>
-   
-   extern int num;
-   //extern int num2;//显示没有找到num2
-   //int num = 20; 显示已经定义
-   int num2 = 60;//不会报错
-   void main(){
-       printf("\nnum = %d",num);
-   }
-   ```
-
-2. 定义不需要与其他文件共享的全局变量时，加上`static`关键字能够有效地降低程序模块之间的耦合，避免不同文件同名变量的冲突，且不会误使用。
-
-### 静态函数
-
-​	函数的使用方式与静态变量类似，在函数的返回类型前加上`static`，就是**静态函数**。
-
-**例**：
-
-```c
-#include <stdio.h>
-void fun1(void){//普通函数(非静态函数)
-	printf("hello from fun1 \n");
-}
-static void fun2(void){//静态函数 只能在本文件中使用
-	printf("hello from fun2 \n");
-}
-```
-
-**说明**：
-
-1. 非静态函数可以在另一个文件中通过`extern`引用。
-
-2. 静态函数只能在声明它的文件中可见,其他文件不能引用该函数。
-
-3. 不同的文件可以使用相同名字的静态函数，互不影响。
-
-   ```c
-   #include <stdio.h>
-   
-   extern void fun1(void);
-   //extern void fun2(void);//不可以
-   //void fun1(){}//不可以
-   void fun2(){//可以定义
-       ...
-   }
-   void main(){
-       fun1();
-   	//fun2(); 不可以
-   }
-   ```
 
 # 宏定义
 
