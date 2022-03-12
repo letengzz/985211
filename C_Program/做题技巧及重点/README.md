@@ -108,6 +108,8 @@
 
 ## 经典例题
 
+![image-20220213100315018](C:\Users\LetengZzz\AppData\Roaming\Typora\typora-user-images\image-20220213100315018.png)
+
 ### C语言基本构成
 
 1. <p name ="ti1">(2018) 下列关于C语言程序结构的说法中，不正确的是( )</p>
