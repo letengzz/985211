@@ -37,10 +37,12 @@
 > 移位指令：`SHL`、`SAL`、`SHR`、`SAR`、`ROL`、`ROR`、`RCL`、`RCR`
 >
 > 字符串传送指令：`MOVS  OP目，OP源`、字符串比较指令：`CMPS	OP目，OP源` 、字符串搜索指令：`SCAS	OP`
+>
+> 处理器交权指令：`ESC EXTOPCD，OP源`
 
 - 一地址指令：
 
-> 处理器交权指令：`ESC EXTOPCD，OP源`、逻辑非运算指令`NOT　OP`、堆栈操作指令`PUSH	OP` `POP	OP`、加1指令：`INC	OP`、减1指令`DEC	OP`、无符号数乘法：`MUL	OP`、带符号乘法：`IMUL	OP`、无符号数除法：`DIV	OP`、带符号数除法：`IDIV	OP`
+> 逻辑非运算指令`NOT　OP`、堆栈操作指令`PUSH	OP` `POP	OP`、加1指令：`INC	OP`、减1指令`DEC	OP`、无符号数乘法：`MUL	OP`、带符号乘法：`IMUL	OP`、无符号数除法：`DIV	OP`、带符号数除法：`IDIV	OP`
 >
 > 条件转移指令：`JA/JNBE	目标标号`、`JAE/JNB	目标标号`、`JB/JNAE	目标标号`、`JBE/JNA	目标标号`、`JG/JNLE	目标标号`、`JGE/JNL	目标标号`、`JL/JNGE	目标标号`、`JLE/JNG	目标标号`、`JC	目标标号`、`JNC	目标标号`、`JZ/JE	目标标号`、`JNZ/JNE	目标标号`、`JO	目标标号`、`JNO	目标标号`、`JNP/JPO	目标标号`、`JP/JPE	目标标号`、`JNS	目标标号`、`JS	目标标号`
 >
