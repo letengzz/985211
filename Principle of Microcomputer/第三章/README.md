@@ -10,7 +10,7 @@
 
 ​	在现代微机中同时采用这两种存储层次，构成**cache-内存-外存**三级存储系统。这三级存储系统的形成，满足了现代微型计算机对存储系统的速度快、容量大且价格低廉的要求。
 
-![image-20220601120005070](D:/Data/typora/photo/image-20220601120005070.png)
+![image-20220601120005070](https://cdn.jsdelivr.net/gh/letengzz/Two-C@main/img/PM/Third/202206111501858.png)
 
 **存储器与CPU连接时要考虑的问题**：
 
@@ -19,6 +19,8 @@
 3. 存储器的电平信号与CPU的电平匹配
 4. 存储器的地址要合理分配 
 5. 控制信号的连接 
+
+![image-20220609162107262](https://cdn.jsdelivr.net/gh/letengzz/Two-C@main/img/PM/Third/202206111501590.png)
 
 **编址方式**：
 
