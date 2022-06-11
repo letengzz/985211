@@ -34,7 +34,7 @@
 
 ## Flash Memory 
 
-能够快速擦写的`EEPROM`([闪存]())
+能够快速擦写的`EEPROM`(闪存)
 
 ## 特点
 
