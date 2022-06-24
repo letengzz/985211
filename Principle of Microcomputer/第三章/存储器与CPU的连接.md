@@ -11,7 +11,7 @@
 
 **片外**：系统的高位地址总线
 
-1. 进地址译码器([2:4]()或[3:8]())进行片选
+1. 进地址译码器(2:4或3:8)进行片选
 2. 或者未使用
 3. 或者直接片选
 
@@ -43,7 +43,7 @@
 
 ②：**总容量**：地址线A<sub>0</sub>~A<sub>9</sub>、数据线D<sub>0</sub>~D<sub>7</sub>
 
-③需要=![image-20220606214108601](D:/Data/typora/photo/image-20220606214108601.png)
+③需要=![image-20220606214108601](https://cdn.jsdelivr.net/gh/letengzz/Two-C@main/img/PM/Third/202206240942988.png)
 
 ![image-20220607190802117](https://cdn.jsdelivr.net/gh/letengzz/Two-C@main/img/PM/Third/202206111116853.png)
 
