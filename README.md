@@ -6,5 +6,5 @@
 
 ## C语言---》[Here](https://github.com/letengzz/985211/tree/master/C_Program)
 
-## 数据结构---》[Here](https://github.com/letengzz/985211/tree/master/Principle%20of%20Microcomputer)
+## 微机原理---》[Here](https://github.com/letengzz/985211/tree/master/Principle%20of%20Microcomputer)
 
