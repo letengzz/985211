@@ -18,6 +18,15 @@
 
 参加操作的数据：**目的操作数**、**源操作数**
 
+**注意**：在表达时八位对应八位的目的操作数 双操作数 指令中 长度要匹配
+
+![image-20220630150141187](https://cdn.jsdelivr.net/gh/letengzz/Two-C@main/img/PM/Fourth/202206301502804.png)
+
+**汇编语言的两种语句格式**：
+
+- 执行性语句：指令(也称为硬指令)
+- 说明性语句：伪指令
+
 **指令中的操作数表征方法**：
 
 ![2](https://cdn.jsdelivr.net/gh/letengzz/Two-C@main/img/PM/Fourth/202205261923144.png)
